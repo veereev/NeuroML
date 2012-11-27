@@ -1,0 +1,88 @@
+       <!-- ============================== Slidorion Content ========================= -->
+        <div id="slidorion">
+		<div id="accordion">
+			<div class="link-header">Model Descriptions</div>
+			<div class="link-content">
+			<p><strong>Model descriptions for Computational Neuro Science</strong></p>
+<p>
+Computational models based on detailed neuroanatomical and electrophysiological data have been used for many years as an aid for understanding the function of the nervous system. NeuroML is an international, collaborative initiative to develop a language for describing detailed models of neural systems. 
+</p>
+
+			</div>
+			<div class="link-header">NeuroML Version2.0</div>
+			<div class="link-content">
+			<p>NeuroML version 2.0 is in active development. See here for details on the ongoing work towards this new version of the language.</p>
+			</div>
+			<div class="link-header">News and Events</div>
+			<div class="link-content">
+				<p>Need Description about news and events ?????</p>
+				<p>For a cool background effect, check out this <a href="demos/slidorion-background-demo.html">demo</a></p>
+			</div>
+		</div>
+		<div id="slider">
+			<div id="slide1" class="slide">
+				<div class="content_slide">
+	
+				<p><strong>The aims of the NeuroML initiative are:</strong></p>
+
+
+   To create specifications for a language in XML to describe the biophysics, anatomy and network architecture of neuronal systems at multiple scales
+<br/>
+    To facilitate the exchange of complex neuronal models between researchers, allowing for greater transparency and accessibility of models
+   <br/>
+  To promote software tools which support NeuroML and support the development of new software and databases
+<br/>
+
+    To encourage researchers with models within the scope of NeuroML to exchange and publish their models in this format.
+<br />
+NeuroML is a free and open community effort developed with input from many contributors. We need your help as the language and tools continue to evolve. NeuroML v1.8.1 is the latest stable release of the specification, and has been described in detail in a recent publication.
+
+NeuroML version 2.0 is in active development. See here for details on the ongoing work towards this new version of the language.
+			</div>
+			</div>
+			<div id="slide2" class="slide">
+				<div class="content_slide">Developments towards NeuroML version 2.0 are well under way, but version 1.8.x should be considered the stable version for now, especially for application/model developers who want maximum compatibility with other tools.
+
+For details of the meetings which have taken place to date where NeuroML v2.0 has been discussed see here.
+<br />
+<img src="../images/mont.png" alt="mont" />
+<br/>
+ A pyramidal cell model in NeuroML which has been loaded into and visualised by (from left): neuroConstruct, NEURON, PSICS, X3D via the NeuroML Validator and NeuronLand. More details on NeuroML compliant software can be found here.
+<br/>
+<img src="../images/nets.png" alt="nets" />
+<br />
+ A network model of the cerebellar granule cell layer which can be fully expressed as a Level 3 NeuroML file. Visualised in the Whole Brain Catalog (left), and neuroConstruct (right). This and other detailed cell and network models are available for download here.
+
+
+</div>
+			</div>
+			<div id="slide3" class="slide">
+				<div class="content_slide">
+					March 12-16, 2012: The fourth annual NeuroML Development Workshop took place at the Informatics Forum in Edinburgh, UK. The NeuroML workshop was combined with the BrainScales (previously FACETS) CodeJam meeting. More details can be found here.
+<br />
+March 31st & April 1st, 2011: The third annual NeuroML Development Workshop took place in London. Minutes for this meeting can be found here. A key outcome of the meeting was the creation of a Scientific Committee for NeuroML.
+<br />
+June 17, 2010: A paper describing the latest stable version of NeuroML has been published in PLoS Computational Biology: NeuroML: A Language for Describing Data Driven Models of Neurons and Networks with a High Degree of Biological Detail, P Gleeson, S Crook, RC Cannon, ML Hines, GO Billings, M Farinella, TM Morse, AP Davison, S Ray, US Bhalla, SR Barnes, YD Dimitrova, RA Silver. It can be downloaded here and it describes in detail the structure of version 1.x (Levels 1-3, MorphML, ChannelML, NetworkML), includes a detailed discussion of the elements present at each level along with example NeuroML code (see the supporting text of the paper), outlines current simulator support, and presents a number of new cell and network models which have recently been converted to the format. These new models, including a morphologically detailed CA1 pyramidal cell and a number of cells from the Traub et al. 2005 thalamocortical network model are available here: http://www.neuroml.org/models.
+<br />
+May 19, 2010: A second joint NeuroML and SBML meeting was held at the European Bioinformatics Institute, Hinxton, UK between contributors to both of these initiatives. Discussions centered on the extensions needed in NeuroML version 2.0 to allow access to model elements specified in SBML and other model description languages. Minutes of the meeting are available here and more details of the agenda items can be found here.
+<br />
+March 4-5, 2010: The second NeuroML Development Workshop was held in Arizona State University to plan for version 2.0 of the NeuroML model description language. More details about the workshop are available here. For the meeting minutes, see the 2010 workshop report. There was also a Symposium on Multiscale Approaches to Understanding Neural Plasticity held at ASU before the main meeting and a number of tutorials on software for multiscale modeling given by the meeting participants on the following day.
+<br />
+October 7, 2009: A meeting was held at the European Bioinformatics Institute, Hinxton, UK between contributors to the NeuroML and SBML initiatives to discuss scenarios for creation of models incorporating elements from both modelling languages. Minutes of the meeting are available here.
+<br />
+March 9-10, 2009: A NeuroML Development Workshop was held at University College London. The focus of the workshop was to refine the specifications for describing models of channel kinetics and the biophysical properties of cells. Special thanks to the Wellcome Trust, the INCF, and the NSF for their generous support of this endeavor. More details are available here.
+<br />
+September 7-9, 2008: Padraig Gleeson and Sharon Crook conducted a demo of NeuroML at the 1st Congress of the International Neuroinformatics Coordinating Facility on Neuroinformatics in Stockholm, Sweden.
+<br />
+Padraig Gleeson and Sharon Crook moderated a workshop on "Interoperability of Software for Computational and Experimental Neuroscience" at the 2008 Computational Neuroscience Meeting in Portland, Oregon. For an overview of the speakers and discussion, click here.
+
+</div>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+	
+        <!-- ============================ End of slidorion ============================= -->
+ 

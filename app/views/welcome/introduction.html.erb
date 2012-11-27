@@ -1,0 +1,31 @@
+<div>
+<img src="../images/intro.png" style="float:right;">
+Introduction to NeuroML
+
+The NeuroML project focuses on the development of an XML (eXtensible Markup Language) based description language that provides a common data format for defining and exchanging descriptions of neuronal cell and network models. The current approach in the project uses XML schemas to define the model specifications.
+
+The current scope of NeuroML focuses on models which are based on the biophysical and anatomical properties of real neurons, i.e. which include details of the detailed neuronal morphologies, the membrane conductances which underly action potential generation (conductance based models), and which are based on known anatomical connectivity.
+
+For this reason, the NeuroML model description language is being developed in Levels, where each Level concentrates on a particular biophysical scale.
+
+Level 1 focuses on the anatomical aspects of cells and consists of a schema for Metadata and the main MorphML schema.
+
+This Level is most suitable for tools (such as NeuronLand) which focus solely on detailed neuronal morphologies. Note that the Metadata elements are used at this and higher Levels.
+Level 2 adds the ability to include information about the biophysical properties of cells using the Biophysics schema and also includes the properties of channel and synaptic mechanisms using ChannelML.
+
+This Level of model description is useful for applications (such as NEURON and MOOSE) which can be used to simulate neuronal spiking behaviour.
+Level 3 adds the ability to specify cell placement and network connectivity using NetworkML.
+
+Files containing positions and synaptic connections in NetworkML can be used by applications (such as CX3D and PCSIM) to exchange details on (generated) network structure. Full Level 3 files containing cell structure and 3D connectivity can be used by applications such as neuroConstruct for building and analysing complex network of biophysically detailed neurons.
+	
+ The modular nature of the specifications makes them easier to develop, understand, and use since one can focus on one module at a time; however, the modules are designed to fit together seamlessly.
+
+Current schemas and more readable formats for the schemas are available on the specifications page. One of the best ways to gain a better understanding of the structure of the standards is to view the XML source for examples of specific models.
+
+A paper describing the latest stable version of NeuroML has recently been published in PLoS Computational Biology: NeuroML: A Language for Describing Data Driven Models of Neurons and Networks with a High Degree of Biological Detail, P Gleeson, S Crook, RC Cannon, ML Hines, GO Billings, M Farinella, TM Morse, AP Davison, S Ray, US Bhalla, SR Barnes, YD Dimitrova, RA Silver. It can be downloaded here and it describes in detail the structure of version 1.x (Levels 1-3, MorphML, ChannelML, NetworkML), includes a detailed discussion of the elements present at each level along with example NeuroML code (see the supporting text of the paper), outlines current simulator support, and presents a number of new cell and network models which have recently been converted to the format.
+
+If you are interested in creating NeuroML documents or generating code to simulate models from NeuroML documents, visit our tools page and view related projects to see how NeuroML can be used with existing simulation platforms.
+
+NeuroML version 2.0 is in active development. See here for details on the ongoing work towards this new version of the language.
+</pre>
+</div>

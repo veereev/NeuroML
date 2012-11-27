@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <%= csrf_meta_tag %>
+<%= favicon %>
+    <title>NeuroML</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
+  <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.slidertron-1.1.js"></script>
+  <script type="text/javascript">
+      $(function() {
+          $('#menu > ul').dropotron({
+              mode: 'fade',
+              globalOffsetY: 11,
+              offsetY: -15
+          });
+          $('#slider').slidertron({
+              viewerSelector: '.viewer',
+              indicatorSelector: '.indicator span',
+              reelSelector: '.reel',
+              slidesSelector: '.slide',
+              speed: 'slow',
+              advanceDelay: 4000
+          });
+      });
+  </script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <div id="header_menu">
+      <div id="header">
+          <div id="logo">
+               <div id="shadow">NeuroML</div> 
+                          <img src="images/neuron_blue.jpg" alt="NeuroML"></img>
+          </div>
+         <div id="slogan">
+      <% if User.current.logged? || !Setting.login_required? %>
+          <%= form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
+        <%= hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope %>
+        <label for='q'>
+          <%= link_to l(:label_search), {:controller => 'search', :action => 'index', :id => @project}, :accesskey => accesskey(:search) %>:
+        </label>
+        <%= text_field_tag 'q', @question, :size => 20, :class => 'small round_5', :accesskey => accesskey(:quick_search) %>
+        <% end %>
+        <%= render_project_jump_box %>
+<% end  %>
+              <!-- <h1></h1>-->
+          </div>
+      </div>
+      <div id="menu">
+          <ul>
+              <li class="first">
+                  <span class="opener">Home<b></b></span>
+                  <ul>
+                      <li><a href="#">Welcome</a></li>
+                      <li>
+                          <span>Workshops<b></b></span>
+                          <ul>
+                              <li><a href="#">NeuroML Development Workshops</a></li>
+                              <li><a href="#">Other Workshops / Collaborations</a></li>
+                              
+                          </ul>
+                      </li>
+                      </ul>
+              </li>
+              <li><span class="opener">Documents<b></b></span>
+              <ul>
+                      <li><a href="#">Introduction</a></li>
+                      <li>
+                          <span>Specifications<b></b></span>
+                          <ul>
+                              <li><a href="#">Level 1</a></li>
+                              <li><a href="#">Level 2</a></li>
+                              <li><a href="#">Level 3</a></li>
+   
+                          </ul>
+                      </li>
+  
+                      <li><a href="#">Extending NeuroML</a></li>
+                      <li>
+                          <span>NeuroML V2.0<b></b></span>
+                          <ul>
+                              <li><a href="#">NeuroML V2alpha schema</a></li>
+                              <li><a href="#">Development of LEMS & mapping to NeuroML2</a></li>
+                              <li><a href="#">libNeuroML</a></li>
+                              <li><span>Compatibility with other MLs<b></b></span>
+                              <ul>
+                              <li><a href="#">SBML</a></li>
+                              <li><a href="#">Cell ML</a></li>
+                              <li><a href="#">Nine ML</a></li>
+                              <li><a href="#">Nine ML</a></li>
+  
+                          </ul>
+                              </li>
+  
+   
+                          </ul>
+                      </li>
+                      <li><a href="#">LEMS</a></li>
+                      <li>
+                          <span>Publications<b></b></span>
+                          <ul>
+                              <li><a href="#">Relevant Publications</a></li>
+                              <li><a href="#">Abstracts</a></li>
+   
+                          </ul>
+                      </li>
+  
+                      <li><a href="#">Presentations</a></li>
+  
+              </ul>	
+              </li>
+              <li><span class="opener">Examples<b></b></span>
+              <ul>
+                      <li><a href="#">Level1: Anatomy only cells specified in MorphML</a></li>
+                      <li><a href="#">Level2: ChannelIML and biophysical cell models</a></li>
+                      <li><a href="#">Level3: Networks of cells specified using NetworkML</a></li>
+                      <li><a href="#">Level2: ChannelIML based synaptic mechanisms</a></li>
+                      
+  
+              </ul>
+              </li>
+              <li>
+                  <span class="opener">Tools<b></b></span>
+                  <ul>
+                      <li><span>Tool Support<b></b></span>
+                      <ul>
+                              <li><a href="#">Current Application Support for NeuroML</a></li>
+                              <li><a href="#">Planning support for NeuroML</a></li>
+                              
+                          </ul>
+                      </li>
+                      <li><a href="#">NEURON Tools</a></li>
+                      <li><a href="#">PyNN</a></li>
+                      
+                      <li><a href="#">X3D Tools</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">Models</a></li>
+              <li><span>Validators<b></b></span>
+               <ul>
+                              <li><a href="#">Validate</a></li>
+                              <li><a href="#">Latest Release Notes</a></li>
+                              
+                          </ul>
+                      
+              </li>
+              <li><span>Community<b></b></span>
+              <ul>
+                              <li><a href="#">Development</a></li>
+                              <li><span>Contributors<b></b></span>
+                              <ul>
+                              <li><a href="#">Contributors</a></li>
+                              <li><a href="#">Brief history of NeuroML</a></li>
+                              <li><span>Related Projects<b></b></span>
+                              <ul>
+                              <li><a href="#">Standard Project for Biosciences</a></li>
+                              <li><a href="#">Database projects relevant to Neurol Models</a></li>
+                              <li><a href="#">General Information on XML Tools & Technology</a></li>
+                              
+                          </ul>
+                              </li>
+  
+                          </ul>
+                      
+                              
+                              </li>
+                              
+                          </ul>
+                      
+              </li>
+  
+              <li class="last"><span>Contacts<b></b></span>
+              <ul>
+                              <li><a href="contact.html">Contacts</a></li>
+                              <li><a href="#">Acknowledgements</a></li>							
+                          </ul>
+              </li>
+          </ul>
+      </div>
+          </div>
+      <div id="slider_content">    
+      <div id="slider">
+          <div class="viewer">
+              <div class="reel">
+                  <div class="slide">
+                      <img src="images/back1.jpg" alt="" />
+                  </div>
+                  <div class="slide">
+                      <img src="images/back2.jpg" alt="" />
+                  </div>
+                  <div class="slide">
+                      <img src="images/back3.jpg" alt="" />
+                  </div>
+                  <div class="slide">
+                      <img src="images/back4.png" alt="" />
+                  </div>
+                  <div class="slide">
+                      <img src="images/back5.jpg" alt="" />
+                  </div>
+              </div>
+          </div>
+          <div class="indicator">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+          </div>
+      </div>
+      <div id="page">
+          <div id="content">
+              <div class="box" id="intro">
+                  <h3>Model descriptions for Computational Neuroscience</h3>
+                  <p>
+Computational models based on detailed neuroanatomical and electrophysiological data have been used for many years as an aid for understanding the function of the nervous system. NeuroML is an international, collaborative initiative to develop a language for describing detailed models of neural systems.                  </p>
+              </div>
+              <div class="box" id="content-box1">
+                  <h3>Models</h3>
+                  <ul class="section-list">
+                      <li class="first">
+                          <img class="pic alignleft" src="images/neuro_sample.png" width="70" height="70" alt="" />
+                          <span>Model 1</span>
+                      </li>
+                      <li>
+                          <img class="pic alignleft" src="images/neuro_sample.png" width="70" height="70" alt="" />
+                          <span>Model 2</span>
+                      </li>
+                      <li class="last">
+                          <img class="pic alignleft" src="images/neuro_sample.png" width="70" height="70" alt="" />
+                          <span>Model 3</span>
+                      </li>
+                  </ul>
+              </div>
+              <div class="box" id="content-box2">
+                  <h3>News & Events</h3>
+                  <p>
+                      DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription.
+                  </p>
+                  <ul class="list">
+                      <li class="first"><a href="#">Event 1 </a><span class="date">2/05/12</span></li>
+                      <li><a href="#">Event 2 </a><span class="date">3/05/12</span></li>
+                      <li><a href="#">Event 3 </a><span class="date">4/05/12</span></li>
+                      <li><a href="#">Event 4 </a><span class="date">5/05/12</span></li>
+                      <li class="last"><a href="#">Event 5 </a><span class="date">6/05/12</span></li>
+                  </ul>
+              </div>
+              <br class="clearfix" />
+          </div>
+          <div id="sidebar">
+              <div class="box" id="tweets">
+                  <h4>Follow us on Twitter</h4>
+                  <ul class="list">
+                      <li class="first"><a href="#">Tweet1</a></li>
+                      <li><a href="#">Tweet2</a></li>
+                      <li><a href="#">Tweet3</a></li>
+                      <li><a href="#">Tweet4</a></li>
+                      <li class="last"><a href="#">Tweet5</a></li>
+                  </ul>
+              </div>
+              <div class="box" id="what">
+                  <h3>What?</h3>
+                  <div class="date-list">
+                      <ul class="list date-list">
+                          <li class="first"> <a href="#">What 1</a></li>
+                          <li><a href="#">What 2</a></li>
+                          <li> <a href="#">What 3</a></li>
+                          <li class="last"><a href="#">What 4</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <br class="clearfix" />
+      </div>
+            </div>
+
+      <div id="page-bottom">
+              <!--<h3>Funding sources for NeuroML initiative</h3>-->
+              
+			  <image src="images/funding.png" alt="funding"></image>
+              
+         <!-- <div id="page-bottom-sidebar">
+              <h3>Nothing</h3>
+              <ul class="list">
+                  <li class="first"><a href="#">Nothing</a></li>
+                  <li><a href="#">Nothing</a></li>
+                  <li class="last"><a href="#">Nothing</a></li>
+              </ul>
+          </div>-->
+         <br class="clearfix" />
+      </div>
+       
+       
+  </div>
+
+  <div id="footer">
+      Copyright (c) 2012 NeuroML.org. All rights reserved. 
+  </div>
+
+  </body>
+  </html>

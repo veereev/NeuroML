@@ -1,0 +1,29 @@
+<div>
+Compact model specification with user-defined types
+A proposal for supporting models of synapses and other user-definable component types in NeuroML
+
+Current version: 0.8.2  4-Nov-2011    These pages as a single PDF
+LEMS - Low Entropy Model Specification
+
+This proposal consists of:
+
+    A An overview of how types and models are declared
+    A set of XML elements for defining and using user-defined types
+    A proof-of-concept interpreter for processing and running models built with these elements
+    Some examples (left menu) illustrating how elements can be defined and used.
+    A summary of the canonical form for a model that corresponds to the elements presented here
+    Miscellaneous discussion of the objectives, design issues, benefits and weaknesses of this approach
+
+The best place to start is probably the first example. Anyone familiar with modeling and model specification should be able to read the XML and make out what is going on.
+
+After that, feel free to download the interpreter, run the examples, and try constructing your own.
+
+A discussion of how LEMS is being used to specify NeuroML v2.0 ComponentTypes is available here.
+What it does so far
+
+You can define ComponentTypes (e.g. a "HH channel" or "a bi-exponential synapse") which express the general properties of a particular type of thing that goes in a model. This includes saying what parameters they have, what child elements they are allowed, and how they behave (the equations).
+
+You can then define Components based on these types by supplying values for the parameters and adding any child elements that are required, so, for example, a bi-exponential synapse model with rise time 1ms and decay 5ms would be a component.
+
+
+</div>

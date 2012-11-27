@@ -1,0 +1,13 @@
+<div>
+There is a preliminary SBML export function from libNeuroML which generates an SBML file containing the model as defined in LEMS/NeuroML 2 Components/ComponentTypes. Try downloading libNeuroML and running:
+
+ant testSBML
+
+This export function requires more work, particularly related to the unit handling, but see here for a working example.
+
+It should be possible to import a large class of SBML models into the LEMS framework to allow seamless use of SBML model elements beside NeuroML 2 elements for any simulator which understands LEMS. This is a work in progress using JSBML. To test this try:
+
+ant testSBMLRead
+
+</div>
+
