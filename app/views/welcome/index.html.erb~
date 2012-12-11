@@ -1,22 +1,35 @@
        <!-- ============================== Slidorion Content ========================= -->
         <div id="slidorion">
 		<div id="accordion">
-			<div class="link-header">Model Descriptions</div>
+			<div class="link-header">Our Mission</div>
 			<div class="link-content">
-			<p><strong>Model descriptions for Computational Neuro Science</strong></p>
+
 <p>
-Computational models based on detailed neuroanatomical and electrophysiological data have been used for many years as an aid for understanding the function of the nervous system. NeuroML is an international, collaborative initiative to develop a language for describing detailed models of neural systems. 
+Mission basic content
 </p>
 
 			</div>
-			<div class="link-header">NeuroML Version2.0</div>
+
+
+<div class="link-header">Introduction</div>
 			<div class="link-content">
-			<p>NeuroML version 2.0 is in active development. See here for details on the ongoing work towards this new version of the language.</p>
+			Introduction Basic content
+
+			</div>
+
+
+			<div class="link-header">Featured Model</div>
+			<div class="link-content">
+			<p>Featured Model basic content.</p>
+			</div>
+<div class="link-header">Featured Tool</div>
+			<div class="link-content">
+			<p>Featured Tool basic content.</p>
 			</div>
 			<div class="link-header">News and Events</div>
 			<div class="link-content">
 				<p>Need Description about news and events ?????</p>
-				<p>For a cool background effect, check out this <a href="demos/slidorion-background-demo.html">demo</a></p>
+
 			</div>
 		</div>
 		<div id="slider">
@@ -40,7 +53,12 @@ NeuroML is a free and open community effort developed with input from many contr
 NeuroML version 2.0 is in active development. See here for details on the ongoing work towards this new version of the language.
 			</div>
 			</div>
-			<div id="slide2" class="slide">
+<div id="slide2" class="slide">
+<div class="content_slide">
+<p>Mission Main content</p>
+</div>
+</div>
+			<div id="slide3" class="slide">
 				<div class="content_slide">Developments towards NeuroML version 2.0 are well under way, but version 1.8.x should be considered the stable version for now, especially for application/model developers who want maximum compatibility with other tools.
 
 For details of the meetings which have taken place to date where NeuroML v2.0 has been discussed see here.
@@ -56,7 +74,7 @@ For details of the meetings which have taken place to date where NeuroML v2.0 ha
 
 </div>
 			</div>
-			<div id="slide3" class="slide">
+			<div id="slide4" class="slide">
 				<div class="content_slide">
 					March 12-16, 2012: The fourth annual NeuroML Development Workshop took place at the Informatics Forum in Edinburgh, UK. The NeuroML workshop was combined with the BrainScales (previously FACETS) CodeJam meeting. More details can be found here.
 <br />

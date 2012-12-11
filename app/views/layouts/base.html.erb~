@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title><%=h html_title %></title>
+<title>NeuroML</title>
 <meta name="description" content="<%= Redmine::Info.app_name %>" />
 <meta name="keywords" content="issue,bug,tracker" />
 <%= csrf_meta_tag %>
@@ -30,7 +30,8 @@
 			hoverPause: true,
 			autoPlay:false,
 			//interval: 200000000000000000000000000000000000000000000000000000000000000000000000,
-			speed: 800
+			speed: 800,
+                       slideCount:4
 		});
 		
 		$(window).scroll(function(){
@@ -79,8 +80,8 @@
                       <li>
                           <span>Workshops<b></b></span>
                           <ul>
-                              <li><a href="#">NeuroML Development Workshops</a></li>
-                              <li><a href="#">Other Workshops / Collaborations</a></li>
+                              <li><a href="/neuro_workshop">NeuroML Development Workshops</a></li>
+                              <li><a href="/other_workshop">Other Workshops / Collaborations</a></li>
                               
                           </ul>
                       </li>
@@ -88,30 +89,29 @@
               </li>
               <li><span class="opener">Documents<b></b></span>
               <ul>
-                      <li><a href="#">Introduction</a></li>
+                      <li><a href="/introduction">Introduction</a></li>
                       <li>
                           <span>Specifications<b></b></span>
                           <ul>
-                              <li><a href="#">Level 1</a></li>
-                              <li><a href="#">Level 2</a></li>
-                              <li><a href="#">Level 3</a></li>
+                              <li><a href="/level1">NeuroML V1.X Schemas</a></li>
+                              <li><a href="/level2">NeuroML 2.0</a></li>
+
    
                           </ul>
                       </li>
   
-                      <li><a href="#">Extending NeuroML</a></li>
+                      <li><a href="/extend_neuroml">Extending NeuroML</a></li>
                       <li>
                           <span>NeuroML V2.0<b></b></span>
                           <ul>
-                              <li><a href="#">NeuroML V2alpha schema</a></li>
-                              <li><a href="#">Development of LEMS & mapping to NeuroML2</a></li>
-                              <li><a href="#">libNeuroML</a></li>
+                              <li><a href="/alpha_schema">NeuroML V2alpha schema</a></li>
+                              <li><a href="/lems_dev">Development of LEMS & mapping to NeuroML2</a></li>
+                              <li><a href="/libnml">libNeuroML</a></li>
                               <li><span>Compatibility with other MLs<b></b></span>
                               <ul>
-                              <li><a href="#">SBML</a></li>
-                              <li><a href="#">Cell ML</a></li>
-                              <li><a href="#">Nine ML</a></li>
-                              <li><a href="#">Nine ML</a></li>
+                              <li><a href="/sbml">SBML</a></li>
+                              <li><a href="/cellml">Cell ML</a></li>
+                              <li><a href="/nineml">Nine ML</a></li>
   
                           </ul>
                               </li>
@@ -119,68 +119,84 @@
    
                           </ul>
                       </li>
-                      <li><a href="#">LEMS</a></li>
+                      <li><a href="/lems">LEMS</a></li>
                       <li>
                           <span>Publications<b></b></span>
                           <ul>
-                              <li><a href="#">Relevant Publications</a></li>
-                              <li><a href="#">Abstracts</a></li>
+                              <li><a href="/relevant_publications">Relevant Publications</a></li>
+                              <li><a href="/abstracts">Abstracts</a></li>
    
                           </ul>
                       </li>
   
-                      <li><a href="#">Presentations</a></li>
-  
-              </ul>	
-              </li>
-              <li><span class="opener">Examples<b></b></span>
+                     <!-- <li><a href="/presentations">Presentations</a></li>-->
+  <li><span class="opener">Examples<b></b></span>
               <ul>
-                      <li><a href="#">Level1: Anatomy only cells specified in MorphML</a></li>
-                      <li><a href="#">Level2: ChannelIML and biophysical cell models</a></li>
-                      <li><a href="#">Level3: Networks of cells specified using NetworkML</a></li>
-                      <li><a href="#">Level2: ChannelIML based synaptic mechanisms</a></li>
+                      <li><a href="/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
+                      <li><a href="/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
+                      <li><a href="/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
+                      <li><a href="/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
                       
   
               </ul>
               </li>
+<li><a href="/presentations">Workshops Reports</a></li>
+              </ul>	
+              </li>
+<!--
+              <li><span class="opener">Examples<b></b></span>
+              <ul>
+                      <li><a href="/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
+                      <li><a href="/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
+                      <li><a href="/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
+                      <li><a href="/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
+                      
+  
+              </ul>
+              </li> -->
               <li>
                   <span class="opener">Tools<b></b></span>
                   <ul>
+                      <li><a href="#">Validator</a></li>
                       <li><span>Tool Support<b></b></span>
                       <ul>
-                              <li><a href="#">Current Application Support for NeuroML</a></li>
-                              <li><a href="#">Planning support for NeuroML</a></li>
+                              <li><a href="/current_app_support">Current Application Support for NeuroML</a></li>
+                              <li><a href="/planning_support">Planning support for NeuroML</a></li>
                               
                           </ul>
                       </li>
-                      <li><a href="#">NEURON Tools</a></li>
-                      <li><a href="#">PyNN</a></li>
+                      <li><a href="/neuron_tools">NML Validator</a></li>
+                      <li><a href="/neuron_tools">NEURON Tools</a></li>
+                      <li><a href="/pynn">PyNN</a></li>
                       
-                      <li><a href="#">X3D Tools</a></li>
+                      <li><a href="/x3dtools">X3D Tools</a></li>
                   </ul>
               </li>
-              <li><a href="#">Models</a></li>
+              <li><a href="/models">Models</a></li>
+<!--
               <li><span>Validators<b></b></span>
                <ul>
-                              <li><a href="#">Validate</a></li>
-                              <li><a href="#">Latest Release Notes</a></li>
+                              <li><a href="/validate">Validate</a></li>
+                              <li><a href="/latest_release_notes">Latest Release Notes</a></li>
                               
                           </ul>
                       
               </li>
+-->
               <li><span>Community<b></b></span>
               <ul>
-                              <li><a href="#">Development</a></li>
+                              <li><a href="/development">History of NeuroML</a></li><!--
                               <li><span>Contributors<b></b></span>
                               <ul>
-                              <li><a href="#">Contributors</a></li>
-                              <li><a href="#">Brief history of NeuroML</a></li>
+                              <li><a href="/contributors">Contributors</a></li>
+                              <li><a href="/brief_history">Brief history of NeuroML</a></li>
                               <li><span>Related Projects<b></b></span>
                               <ul>
-                              <li><a href="#">Standard Project for Biosciences</a></li>
-                              <li><a href="#">Database projects relevant to Neurol Models</a></li>
-                              <li><a href="#">General Information on XML Tools & Technology</a></li>
+                              <li><a href="/standard_proj_biosciences">Standard Project for Biosciences</a></li>
+                              <li><a href="/db_proj">Database projects relevant to Neurol Models</a></li>
+                              <li><a href="/general_info_xmltools">General Information on XML Tools & Technology</a></li>
                               
+
                           </ul>
                               </li>
   
@@ -188,17 +204,19 @@
                       
                               
                               </li>
-                              
+                              -->
+<li><a href="/development">Scientific Committee</a></li>
+<li><a href="/development">Acknowledgements</a></li>
                           </ul>
                       
               </li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="/projects">Projects</a></li><!--
               <li class="last"><span>Contacts<b></b></span>
               <ul>
-                              <li><a href="contact.html">Contacts</a></li>
-                              <li><a href="#">Acknowledgements</a></li>							
+                              <li><a href="/contacts">Contacts</a></li>
+                              <li><a href="/acknowledgements">Acknowledgements</a></li>							
                           </ul>
-              </li>
+              </li>-->
           </ul>
       </div>
      <!-- End of Menu -->
@@ -237,7 +255,7 @@
         <%= yield %>
         
         
-        <%#= call_hook :view_layouts_base_content %>
+        <%= call_hook :view_layouts_base_content %>
         <div style="clear:both;"></div>
     </div>
     <div id="right_sidebar_top" class="right_sidebar_top round_5">
