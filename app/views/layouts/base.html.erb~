@@ -76,7 +76,7 @@
               <li class="first">
                   <span class="opener">Home<b></b></span>
                   <ul>
-                      <li><a href="#">Welcome</a></li>
+                      <li><a href="/index">Welcome</a></li>
                       <li>
                           <span>Workshops<b></b></span>
                           <ul>
@@ -93,8 +93,18 @@
                       <li>
                           <span>Specifications<b></b></span>
                           <ul>
-                              <li><a href="/level1">NeuroML V1.X Schemas</a></li>
-                              <li><a href="/level2">NeuroML 2.0</a></li>
+                              <li><span>NeuroML V1.X Schemas<b></b></span>
+<ul>
+                              <li><a href="/level1">Level 1</a></li>
+                              <li><a href="/level2">Level 2</a></li>
+                              <li><a href="/level3">Level 3</a></li>
+                                <li><a href="/latest_release_notes">General Release Notes</a></li>
+                          </ul>
+
+
+                              </li>
+
+                              <li><a href="#">NeuroML 2.0</a></li>
 
    
                           </ul>
@@ -277,9 +287,7 @@
     <%= call_hook(:view_welcome_index_right, :projects => @projects) %>
 </div>
 <div id="right_sidebar_bottom" class="right_sidebar_bottom round_5">
-<!--	<a class="twitter-timeline" data-dnt=true href="https://twitter.com/veereev" data-widget-id="271040966864027649">Tweets by @veereev</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
--->
+<div class="twitter box"></div>
 </div>
 <div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
 <div id="ajax-modal" style="display:none;"></div>
@@ -293,6 +301,9 @@
          
           <br class="clearfix" />
       </div>
+      <div id="copyrights">
+
+</div>
   </div>
 	<!--
   <div class="bgl"><div class="bgr">
