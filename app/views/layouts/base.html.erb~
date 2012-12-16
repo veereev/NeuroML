@@ -76,7 +76,7 @@
               <li class="first">
                   <span class="opener">Home<b></b></span>
                   <ul>
-                      <li><a href="/index">Welcome</a></li>
+                      <li><a href="/home">Welcome</a></li>
                       <li>
                           <span>Workshops<b></b></span>
                           <ul>
@@ -269,21 +269,21 @@
         <div style="clear:both;"></div>
     </div>
     <div id="right_sidebar_top" class="right_sidebar_top round_5">
-    	<% if @projects.any? %>
+    	<%# if @projects.any? %>
   <div class="projects box">
-  <h3><%=l(:label_project_latest)%></h3>
+  <h3><%#=l(:label_project_latest)%></h3>
     <ul>
-    <% for project in @projects %>
-      <% @project = project %>
+   <!-- <%# for #project in @projects %>
+      <%# @project = project %> -->
       <li>
-      <%= link_to_project project %> (<%= format_time(project.created_on) %>)
-      <%= textilizable project.short_description, :project => project %>
+   <!--   <%#= link_to_project project %> (<%= format_time(project.created_on) %>)
+      <%#= textilizable project.short_description, :project => project %>-->
       </li>
-    <% end %>
-    <% @project = nil %>
+   <!-- <%# end %>
+    <%# @project = nil %>-->
     </ul>
   </div>
-  <% end %>
+  <!--<%# end %>-->
     <%= call_hook(:view_welcome_index_right, :projects => @projects) %>
 </div>
 <div id="right_sidebar_bottom" class="right_sidebar_bottom round_5">
