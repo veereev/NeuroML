@@ -1607,3 +1607,7 @@ border-radius:10px;
 .rightfloat{
 float:right;
 }
+img{
+border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;}

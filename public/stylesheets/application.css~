@@ -1557,7 +1557,7 @@ align:center;
 }
 .h1_properties{
     color:#4169e1 !important;
-    background-color:#dedeff;
+    background-color:#dedede;
 }
 #copyrights{
     
