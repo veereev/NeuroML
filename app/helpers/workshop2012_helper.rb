@@ -1,0 +1,2 @@
+module Workshop2012Helper
+end

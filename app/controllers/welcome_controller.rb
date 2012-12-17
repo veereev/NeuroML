@@ -39,6 +39,9 @@ class WelcomeController < ApplicationController
   def other_workshop
     @projects = Project.latest User.current
   end
+  def workshop2012
+    @projects = Project.latest User.current
+  end
  #===================== End of Home Menu============
 
  #===================Documents Menu================
