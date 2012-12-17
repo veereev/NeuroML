@@ -66,7 +66,14 @@ class WelcomeController < ApplicationController
  def libnml
     @projects = Project.latest User.current
  end
- def compatibility
+ def sbml
+     @projects = Project.latest User.current 
+ end
+ def nineml
+
+     @projects = Project.latest User.current 
+ end
+ def cellml
      @projects = Project.latest User.current 
  end
  def lems

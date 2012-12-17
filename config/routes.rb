@@ -49,6 +49,7 @@ RedmineApp::Application.routes.draw do
   match 'contributors', :to => 'welcome#contributors', :as => 'contributors'
   match 'brief_history', :to => 'welcome#brief_history', :as => 'brief_history'
   match 'standard_proj_biosciences', :to => 'welcome#standard_proj_biosciences', :as => 'standard_proj_biosciences'
+  match 'history', :to=>'welcome#history', :as => 'history'
   match 'db_proj', :to => 'welcome#db_proj', :as => 'db_proj'
   match 'general_info_xmltools', :to => 'welcome#general_info_xmltools', :as => 'general_info_xmltools'
   match 'contacts', :to => 'welcome#contacts', :as => 'contacts'

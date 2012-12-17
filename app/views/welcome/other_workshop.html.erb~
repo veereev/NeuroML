@@ -1,11 +1,29 @@
 <div>
-<pre>
-Other Workshops/Collaborations
 
-    May 19, 2010: A second joint NeuroML and SBML meeting was held at the European Bioinformatics Institute, Hinxton, UK between contributors to both of these initiatives. Discussions centered on the extensions needed in NeuroML version 2.0 to allow access to model elements specified in SBML and other model description languages. Minutes of the meeting are available here and more details of the agenda items can be found here.
+<br>
+<br>
+<h1>Other Workshops/Collaborations</h1>
 
-    October 7, 2009: A meeting was held at the European Bioinformatics Institute, Hinxton, UK between contributors to the NeuroML and SBML initiatives to discuss scenarios for creation of models incorporating elements from both modelling languages. Minutes of the meeting are available here.
 
-    September 7-9, 2008: Padraig Gleeson and Sharon Crook conducted a demo of NeuroML at the 1st Congress of the International Neuroinformatics 
-</pre>
+<ul>
+<li> May 19, 2010: A second joint <b>NeuroML and SBML</b> meeting was held at the <a href="http://www.ebi.ac.uk">European Bioinformatics Institute</a>, Hinxton, UK between contributors to
+    both of these initiatives. Discussions centered on the extensions needed in NeuroML version 2.0 to allow access to model elements specified in SBML and other model description languages.
+    Minutes of the meeting are available <a href="files/NeuroMLSBML_May2010.pdf">here</a> and more details of the agenda items can be found
+    <a href="http://sbml.org/Events/Other_Events/SBML-NeuroML_interfaces_mini-workshop_2010">here</a>.</li><br>
+
+<li> October 7, 2009: A meeting was held at the <a href="http://www.ebi.ac.uk">European Bioinformatics Institute</a>, Hinxton, UK between contributors to the <b>NeuroML and SBML</b> initiatives
+to discuss scenarios for creation of models incorporating elements from both modelling languages. Minutes of the meeting are available <a href="files/NeuroMLSBML_HinxtonOct09.pdf">here</a>.</li>
+<br>
+<li> September 7-9, 2008: Padraig Gleeson and Sharon Crook conducted a demo of NeuroML at the <b>1st Congress of the
+<a href="http://www.incf.org">International Neuroinformatics Coordinating Facility</a></b> on
+<a href="http://www.neuroinformatics2008.org">Neuroinformatics</a> in Stockholm,
+Sweden.</li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+  
+
+<p><a href="acknowledgments.php">Funding for the NeuroML initiative</a> has been received from a number of sources:</p>
 </div>

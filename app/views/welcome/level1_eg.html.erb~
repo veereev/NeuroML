@@ -1,25 +1,10 @@
-<div>
-Extending NeuroML
 
-One of the most frequently asked questions we get is: How can I extend NeuroML to support my model?
-
-The following information is intended to clarify the various options which are available at present and outline the procedures for incorporating native support for new model features into NeuroML.
-Clarifying the question
-
-NeuroML is intended to be an open and evolving language which will increase in scope with time. It is however a model description language which is built on a number of key concepts commonly used in biophysically detailed computational neuroscience modelling (neuronal morphologies, ion channels, synaptic connections) and provides a way to represent these entities in a structured language which can be used by applications which also deal with these physiological entities.
-
-This has the advantage of providing an efficient way to represent the key elements of models which can be exchanged between applications and researchers (e.g. without needing the Hodgkin Huxley model to be redefined in full for every channel). This approach is different to that of languages like SBML and CellML where more generic dynamical (biological) model systems can be described in terms of interacting entities and rates of change of variables. While a multicompartment cell with multiple ion channels can be expressed in one of these languages, it would be difficult to extract the key neuroscience elements out of them in a standardised way, or to simulate the models as efficiently as a dedicated compartmental modelling simulator could.
-
-While the approach of SBML and CellML has some clear advantages, in particular the flexibility afforded for developing custom models, the benefits of the current approach with NeuroML (ease of portability and efficiency of simulations) have driven the developments in the initiative to date. It does mean however that if a concept is not present in NeuroML (e.g. a firing rate model of a neuron; a voltage dependent gap junction) it is more difficult to express that type of model in "pure" NeuroML
-
-The list below gives a number of options for those who wish to use NeuroML but find that some features of their models are not currently natively supported in the language.
-
-    Annotate NeuroML files with model/application specific data
-    Create models with a subset of components in NeuroML
-    Create a domain specific schema
-    Propose extensions to current version of NeuroML
-    Propose major changes for NeuroML v2.0
-
-If there are additional scenarios which also need to be included/discussed please get in touch via the mailing lists.
-
+<div class="overflowcontent">
+<h3>Level 1: Anatomy only cells specified in MorphML</h3>
+<table style="longlist"><tr><th> &nbsp;</th><th>Show HTML</th><th>Show XML</th><th>Current schema (v1.8.1)</th><th>All schemas</th></tr>
+<tr><td width=250>CablesIncluded.xml</td><td width=120 align="center"><a href="Transform.jsp?localFile=NeuroMLFiles/Examples/MorphML/CablesIncluded.xml&xslFile=NeuroMLFiles/Schemata/v1.8.1/Level3/NeuroML_Level3_v1.8.1_HTML.xsl">View</a></td><td width=120 align="center"><a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/MorphML/CablesIncluded.xml">Source</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/CablesIncluded.xml&onlyUseSchema=v1.8.1">Validate</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/CablesIncluded.xml">Validate</a></td></tr>
+<tr><td width=250>Simple.morph.xml</td><td width=120 align="center"><a href="Transform.jsp?localFile=NeuroMLFiles/Examples/MorphML/Simple.morph.xml&xslFile=NeuroMLFiles/Schemata/v1.8.1/Level3/NeuroML_Level3_v1.8.1_HTML.xsl">View</a></td><td width=120 align="center"><a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/MorphML/Simple.morph.xml">Source</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/Simple.morph.xml&onlyUseSchema=v1.8.1">Validate</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/Simple.morph.xml">Validate</a></td></tr>
+<tr><td width=250>SimpleNeuroML.xml</td><td width=120 align="center"><a href="Transform.jsp?localFile=NeuroMLFiles/Examples/MorphML/SimpleNeuroML.xml&xslFile=NeuroMLFiles/Schemata/v1.8.1/Level3/NeuroML_Level3_v1.8.1_HTML.xsl">View</a></td><td width=120 align="center"><a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/MorphML/SimpleNeuroML.xml">Source</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/SimpleNeuroML.xml&onlyUseSchema=v1.8.1">Validate</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/SimpleNeuroML.xml">Validate</a></td></tr>
+<tr><td width=250>L23PyrFRB.morph.xml</td><td width=120 align="center"><a href="Transform.jsp?localFile=NeuroMLFiles/Examples/MorphML/L23PyrFRB.morph.xml&xslFile=NeuroMLFiles/Schemata/v1.8.1/Level3/NeuroML_Level3_v1.8.1_HTML.xsl">View</a></td><td width=120 align="center"><a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/MorphML/L23PyrFRB.morph.xml">Source</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/L23PyrFRB.morph.xml&onlyUseSchema=v1.8.1">Validate</a></td><td  width=120 align="center"><a href="ValidationResults.jsp?localFile=NeuroMLFiles/Examples/MorphML/L23PyrFRB.morph.xml">Validate</a></td></tr>
+</table>
 </div>

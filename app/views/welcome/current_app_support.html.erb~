@@ -1,4 +1,3 @@
-<div class="overflowcontent">
 <h1>Current application support for NeuroML</h1>
 
 <p>The following is a list of software applications which currently support NeuroML
@@ -567,5 +566,12 @@ addition to this functionality, and this has now been added to the viewer.</td>
 
 <br>
 
- 
-</div>
+
+<div id="footer">
+<p align="right">
+Website & Images<br>
+Copyright &copy; 2012<br>
+All rights reserved.
+</p>
+</div>  
+

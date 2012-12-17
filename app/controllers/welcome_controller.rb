@@ -89,7 +89,9 @@ class WelcomeController < ApplicationController
     @projects = Project.latest User.current
  end
 #=========================== End of Documents Menu ===============
-
+ def history
+      @projects = Project.latest User.current
+ end
 #============================ Examples menu =====================
  def level1_eg
     @projects = Project.latest User.current

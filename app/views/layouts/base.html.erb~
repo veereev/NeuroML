@@ -12,6 +12,7 @@
 <%= javascript_heads %>
 <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
   <link rel="stylesheet" type="text/css" href="stylesheets/presentationCycle.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/tp.css" />
   <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script>
   <script type="text/javascript" src="javascripts/jquery.slidertron-1.1.js"></script>
@@ -150,7 +151,7 @@
   
               </ul>
               </li>
-<li><a href="/presentations">Workshops Reports</a></li>
+<li><a href="#">Workshops Reports</a></li>
               </ul>	
               </li>
 <!--
@@ -215,8 +216,8 @@
                               
                               </li>
                               -->
-<li><a href="/development">Scientific Committee</a></li>
-<li><a href="/development">Acknowledgements</a></li>
+<li><a href="#">Scientific Committee</a></li>
+<li><a href="#">Acknowledgements</a></li>
                           </ul>
                       
               </li>
@@ -273,14 +274,7 @@
   <div class="projects box">
   <h3><%#=l(:label_project_latest)%></h3>
     <ul>
-   <!-- <%# for #project in @projects %>
-      <%# @project = project %> -->
-      <li>
-   <!--   <%#= link_to_project project %> (<%= format_time(project.created_on) %>)
-      <%#= textilizable project.short_description, :project => project %>-->
-      </li>
-   <!-- <%# end %>
-    <%# @project = nil %>-->
+   
     </ul>
   </div>
   <!--<%# end %>-->
