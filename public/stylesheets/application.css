@@ -349,29 +349,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 	margin-left: 8px;
 	position: relative;
 	top: -1px;
+
 }
 
 #menu ul li.active {
-	/*background: #1C7575;*/
-	/*background:url("../images/menu_word.png") repeat-x top left;*/
-        background:#32cd32;
-	/*border-top: solid 1px #000000;
-	border-bottom: solid 1px #000000;*/
+	
 	border-radius: 3px;
 	padding-top: 4px;
 	padding-bottom: 4px;
+background: #f7fbfc; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #f7fbfc 0%, #d9edf2 40%, #add9e4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f7fbfc), color-stop(40%,#d9edf2), color-stop(100%,#add9e4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* IE10+ */
+background: linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+color:blue !important;
 }
 
 
 #menu ul li.active span b {
 	border-top-color: #165E5E;
+
 }
 
 .dropotron {
 	/*background: rgba(32,157,157,0.9);*/
 
-	border-top: solid 1px #000000;
-	border-bottom: solid 1px #000000;
+	/*border-top: solid 1px #white;*/
+	border-bottom: solid 1px #white;
 	/*text-shadow: 0 1px 1px #007D7D;*/
 	list-style: none;
 	margin: 0;
@@ -380,7 +387,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 	border-radius: 6px;
 	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
 	color:white;
-
+margin-top:-8px;
 
 background: #f7fbfc; /* Old browsers */
 background: -moz-linear-gradient(45deg,  #f7fbfc 0%, #d9edf2 40%, #add9e4 100%); /* FF3.6+ */
@@ -433,14 +440,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', end
 	padding-bottom: 2px;
 	/*background: rgba(28,117,117,0.9);*/
 	/*background:url("../images/menu_word.png") repeat-x;*/
-        background:#32cd32;
+       /* background:#32cd32; */
 	/*border-top: solid 1px #1A6B6B;
 	border-bottom: solid 1px #5AD7D7;*/
+
 }
 
 .dropotron-level-1 {
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	
 }
 /* =================================== End of Drop down menu ============================*/
 #wrapper2{
