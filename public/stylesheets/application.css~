@@ -1494,11 +1494,13 @@ border-color:#996600;
 	top:126px;
 	width:225px;
         border: 1px solid white;
+        right:0px;
 }
 .right_sidebar_bottom{
 	position:absolute;
 	height:332px;
-	left:1055px;
+	/*left:1055px;*/
+        right:0px;
 	top:398px;
 	width:225px;
         border: 1px solid white;
