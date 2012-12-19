@@ -1484,9 +1484,12 @@ input:focus,textarea:focus{
 background-color:#ababab;
 border-color:#996600;
 }
+.right_sidebar{
+
+}
 .right_sidebar_top{
 	height:263px;
-	left:1055px;
+	/*left:1055px;*/
 	position:absolute;
 	top:126px;
 	width:225px;
@@ -1607,3 +1610,7 @@ border-radius:10px;
 .rightfloat{
 float:right;
 }
+img{
+border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;}

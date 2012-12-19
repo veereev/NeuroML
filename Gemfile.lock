@@ -52,7 +52,6 @@ GEM
     mysql (2.8.2)
     mysql2 (0.3.11)
     net-ldap (0.3.1)
-    pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -115,7 +114,6 @@ DEPENDENCIES
   mysql
   mysql2 (~> 0.3.11)
   net-ldap (~> 0.3.1)
-  pg (>= 0.11.0)
   rack-openid
   rails (= 3.2.8)
   rdoc (>= 2.4.2)
