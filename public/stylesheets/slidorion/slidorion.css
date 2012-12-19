@@ -1,8 +1,9 @@
 /* Slidorion Stylesheet */
 #slidorion {
-	width: 1010px;			/* Set to slidorion width. Is equal to #slider + #accordion width */
+	/*width: 1010px;	*/		/* Set to slidorion width. Is equal to #slider + #accordion width */
 	height: 547px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
 	position: absolute;
+        width:79%;
 	left: 392px;
 	top:126px;
 	margin-left: -384px;
@@ -13,15 +14,17 @@
 	-moz-box-shadow: 0 0 34px #bbb;
 	box-shadow: 0 0 34px #bbb;
 	z-index:0;
+       
 }
 
 #slider {
-	width: 823px;			/* Set to slider width */
+	/*width: 823px;	*/		/* Set to slider width */
 	height: 100%;			/* Set to slider height */
 	position: relative;
 	float: left;
 	overflow: hidden;	
         border:1px solid white;/* Hides the animations */
+       width:84%;
 }
 
 #slider > div {
@@ -31,7 +34,7 @@
 }
 
 #accordion {
-	width: 185px;			/* Set to accordion width */
+	/*width: 185px;*/			/* Set to accordion width */
 	height: 100%;			/* Set to image height */
 	font-family: Verdana;
 	background: #eee;
@@ -42,6 +45,8 @@
 	z-index:999;
 	overflow: hidden;
 	float: left;
+        width:15%;
+        
 }
 
 #accordion > .link-header {
