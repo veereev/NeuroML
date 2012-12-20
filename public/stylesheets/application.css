@@ -1,7 +1,7 @@
 html {overflow-y:scroll;}
-body { font-family: 'trajan_proregular',Georgia,Verdana,serif, sans-serif; font-size: 12px; color:black; margin: 0; padding: 0; min-width: 1288px; }
+body { font-family: arial,'trajan_proregular',Georgia,Verdana,serif, sans-serif; font-size: 12px; color:black; margin: 0; padding: 0; min-width: 1288px; }
 
-h1, h2, h3, h4 {font-family:'trajan_proregular', "Trebuchet MS", Verdana, sans-serif;padding: 2px 10px 1px 0px;margin: 0 0 10px 0;
+h1, h2, h3, h4 {font-family:arial,'trajan_proregular', "Trebuchet MS", Verdana, sans-serif;padding: 2px 10px 1px 0px;margin: 0 0 10px 0;
 font-variant:small-caps;}
 #content h1, h2, h3, h4 {color: #37ABC8;}
 h2, .wiki h1 {font-size: 20px;}
@@ -446,6 +446,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', end
 	display: block;
 	width: 100%;
 	position: relative;
+        letter-spacing:1px;
 }
 
 .dropotron span b {
@@ -467,7 +468,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', end
 	margin: 2px 0 2px 0;
 	border-radius: 3px;
 	color:white;
-	font-size:16px;
+	font-size:14px;
 }
 
 .dropotron li:hover, .dropotron li.active {

@@ -91,6 +91,9 @@ class WelcomeController < ApplicationController
  def presentations
     @projects = Project.latest User.current
  end
+ def workshop2011
+  @projects=Project.latest User.current
+ end
 #=========================== End of Documents Menu ===============
  def history
       @projects = Project.latest User.current

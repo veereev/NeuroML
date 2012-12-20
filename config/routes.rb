@@ -20,6 +20,7 @@ RedmineApp::Application.routes.draw do
   match 'home', :to  => 'welcome#index', :as => 'home'
   match 'neuro_workshop', :to => 'welcome#neuro_workshop', :as => 'neuro_workshop'
   match 'other_workshop', :to => 'welcome#other_workshop', :as => 'other_workshop'
+  match 'workshop2011', :to => 'welcome#workshop2011', :as => 'workshop2011'
   match 'introduction', :to => 'welcome#introduction', :as => 'introduction'
   match 'level1', :to => 'welcome#level1', :as => 'level1'
   match 'level2', :to => 'welcome#level2', :as => 'level2'
