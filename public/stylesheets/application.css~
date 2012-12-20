@@ -250,13 +250,13 @@ font-size:1.2em;
 }
 #contactus{
 border:1px solid #ababab;
-height:83%;
+height:79%;
 position:absolute;
 right:40%;
 top:2%;
-width:275px;
+width:220px;
 text-align:center;
-padding-top:7px;
+padding-top:10px;
 }
 #contactus #message{
 font-size:1.5em;

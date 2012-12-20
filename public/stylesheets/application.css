@@ -401,15 +401,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 	border-radius: 3px;
 	padding-top: 4px;
 	padding-bottom: 4px;
-background: #f7fbfc; /* Old browsers */
-background: -moz-linear-gradient(45deg,  #f7fbfc 0%, #d9edf2 40%, #add9e4 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f7fbfc), color-stop(40%,#d9edf2), color-stop(100%,#add9e4)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* IE10+ */
-background: linear-gradient(45deg,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-color:blue !important;
 }
 
 
