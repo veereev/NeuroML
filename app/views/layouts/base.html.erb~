@@ -217,7 +217,7 @@
                               </li>
                               -->
 <li><a href="#">Scientific Committee</a></li>
-<li><a href="#">Acknowledgements</a></li>
+<li><a href="/acknowledgements">Acknowledgements</a></li>
                           </ul>
                       
               </li>
@@ -291,16 +291,33 @@
 
 <div id="footer">
 	<div id="page-bottom">
-              <!--<h3>Funding sources for NeuroML initiative</h3>-->
               
-			  <image src="images/funding.png" alt="funding"></image>
-              
-         
+<ul>
+<li><a><span>QuickLinks</span></a></li>
+<li><a href="#" target="_blank">QuickLink1</a></li>
+<li><a href="#" target="_blank">QuickLink2</a></li>
+<li><a href="#" target="_blank">QuickLink3</a></li>
+<li><a href="#" target="_blank">QuickLink4</a></li>
+</ul>
+<br /><br />
+
+
+<ul>
+<li><a><span>QuickLinks</span></a></li>
+<li><a href="#" target="_blank">QuickLink1</a></li>
+<li><a href="#" target="_blank">QuickLink2</a></li>
+<li><a href="#" target="_blank">QuickLink3</a></li>
+<li><a href="#" target="_blank">QuickLink4</a></li>
+</ul>
+<div id="contactus">
+<span id="message">For Queries or Assistance</span>
+<span id="email">abc@neuroml.org</span>
+</div>
+
+   
           <br class="clearfix" />
       </div>
-      <div id="copyrights">
-
-</div>
+      
   </div>
 	<!--
   <div class="bgl"><div class="bgr">
