@@ -1,4 +1,12 @@
 <div class="overflowcontent">
+<h1>NeuroML Scientific Committee</h1>
+
+
+<p>We are indebted to the many <a href ="contributors.php">contributors</a> to NeuroML over the years.</p>
+
+<p>At the <a href="workshop2011.php">2011 NeuroML Development Workshop</a> in London, the decision was made to create a Scientific Committee
+    for NeuroML. Nominations were requested for members of this committee and the following were nominated and agreed to be part of the committee:</p>
+
 <div class="contributors">
 <div class="contributor">
  <div class="contributor_image"></div>
@@ -59,4 +67,47 @@
  <div class="contributor_description"></div>
 </div>
 </div>
+
+
+The responsibilities of the Scientific Committee have been agreed to be:
+
+<br/>
+<br/>
+<ul>
+    <li>To advise on the scientific focus of the NeuroML initiative; to ensure 
+that the structure of the language is based on the latest knowledge of 
+neuronal anatomy and physiology</li>
+
+<br/>
+    <li>To agree on the technical implementation for the core specifications 
+and to ensure that best practices are encouraged in model specification
+</li>
+
+<br/>
+    <li>To promote NeuroML internationally, both the core specifications and 
+the tools which support the language
+
+</li>
+
+<br/>
+    <li>To define the governance structure of the NeuroML Initiative and 
+outline a path towards a specification process with dedicated, elected 
+editors
+
+</li>
+<br/>
+
+    <li>To engage with other standardisation and databasing initiatives in the computational neuroscience and wider biology fields</li>
+<br/>
+
+    <li>To review and agree on extensions to the core specifications and the 
+scope of the initiative; to address issues the community raises 
+regarding the direction of the initiative</li>
+</ul>
+<br/>
+
+<p>The best way to get in contact with members of the NeuroML initiative is through the 
+    <a href="http://sourceforge.net/mailarchive/forum.php?forum_name=neuroml-technology">neuroml-technology</a>
+       mailing list.</p>
+
 </div>
