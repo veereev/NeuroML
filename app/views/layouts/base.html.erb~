@@ -11,7 +11,7 @@
 <%= stylesheet_link_tag 'rtl', :media => 'all' if l(:direction) == 'rtl' %>
 <%= javascript_heads %>
 <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
-  <link rel="stylesheet" type="text/css" href="stylesheets/presentationCycle.css" />
+
   <link rel="stylesheet" type="text/css" href="stylesheets/tp.css" />
   <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script>
@@ -72,6 +72,7 @@
     <%= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
 </div>
 <!-- start of Menu -->
+
 <div id="menu">
           <ul>
               <li class="first">
@@ -216,7 +217,7 @@
                               
                               </li>
                               -->
-<li><a href="#">Scientific Committee</a></li>
+<li><a href="/scientific_committee">Scientific Committee</a></li>
 <li><a href="/acknowledgements">Acknowledgements</a></li>
                           </ul>
                       
@@ -261,7 +262,7 @@
         <%#= view_layouts_base_sidebar_hook_response %>
     </div>
 -->
-    <div id="content">
+    <div id="content_others">
         <%= render_flash_messages %>
         <%= yield %>
         
@@ -269,23 +270,7 @@
         <%= call_hook :view_layouts_base_content %>
         <div style="clear:both;"></div>
     </div>
-<!--<div class="right_sidebar">-->
-    <div id="right_sidebar_top" class="right_sidebar_top round_5">
-    	<%# if @projects.any? %>
-  <div class="projects box">
-  <h3><%#=l(:label_project_latest)%></h3>
-    <ul>
-   
-    </ul>
-  </div>
-  <!--<%# end %>-->
-    <%= call_hook(:view_welcome_index_right, :projects => @projects) %>
-</div>
 
-<div id="right_sidebar_bottom" class="right_sidebar_bottom round_5">
-<div class="twitter box"></div>
-</div>
-<!--</div>-->
 <div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
 <div id="ajax-modal" style="display:none;"></div>
 
@@ -311,7 +296,7 @@
 </ul>
 <div id="contactus">
 <span id="message">For Queries or Assistance</span>
-<span id="email">abc@neuroml.org</span>
+<div id="email">abc@neuroml.org</div>
 </div>
 
    

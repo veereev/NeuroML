@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <% content_for :header_tags do %>
     <%= auto_discovery_link_tag(:atom, {:action => 'index', :format => 'atom', :key => User.current.rss_key}) %>
 <% end %>
@@ -11,7 +12,7 @@
                   :id => nil } %>
 </div>
 
-<h2><%=l(:label_project_plural)%></h2>
+<h1><%=l(:label_project_plural)%></h1>
 
 <div id="projects-index">
 <%= render_project_hierarchy(@projects)%>
@@ -36,3 +37,4 @@
 <% end %>
 
 <% html_title(l(:label_project_plural)) -%>
+</div>

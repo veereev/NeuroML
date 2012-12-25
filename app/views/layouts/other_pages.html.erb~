@@ -261,7 +261,7 @@
         <%#= view_layouts_base_sidebar_hook_response %>
     </div>
 -->
-    <div id="content_others">
+    <div id="content">
         <%= render_flash_messages %>
         <%= yield %>
         
@@ -269,7 +269,23 @@
         <%= call_hook :view_layouts_base_content %>
         <div style="clear:both;"></div>
     </div>
+<!--<div class="right_sidebar">-->
+    <div id="right_sidebar_top" class="right_sidebar_top round_5">
+    	<%# if @projects.any? %>
+  <div class="projects_side box">
+  <h3><%#=l(:label_project_latest)%></h3>
+    <ul>
+   
+    </ul>
+  </div>
+  <!--<%# end %>-->
+    <%= call_hook(:view_welcome_index_right, :projects => @projects) %>
+</div>
 
+<div id="right_sidebar_bottom" class="right_sidebar_bottom round_5">
+<div class="twitter box"></div>
+</div>
+<!--</div>-->
 <div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
 <div id="ajax-modal" style="display:none;"></div>
 

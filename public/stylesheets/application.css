@@ -1558,7 +1558,7 @@ border-color:#996600;
 	width:18.5%;
         border: 1px solid white;
 }
-.projects{
+.projects_side{
 	height:249px;
         background: #1e5799; /* Old browsers */
 background: -moz-linear-gradient(-45deg,  #1e5799 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
@@ -1741,3 +1741,13 @@ margin-left:auto;
 margin-right:auto;
 width:850px;
 }
+#longlist{
+border-collapse:collapse;
+}
+#longlist tr, td{
+border:1px solid black;
+}
+.alt{
+background-color:#dedede;
+}
+

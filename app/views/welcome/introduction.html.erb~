@@ -1,9 +1,7 @@
-<div>
+<div class="overflowcontent">
 <!--<img src="../images/intro.png" style="float:right;">-->
 
-<br>
-<br>
-<br>
+
 <h1>Introduction to NeuroML</h1>
 
 
@@ -25,9 +23,9 @@ For this reason, the NeuroML model description language is being developed in Le
     <tr>
         <td width="50%">
 
-<table id="longlist">
+<table id="longlist" style="border:1px solid black;">
     <tr>
-        <td><a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level1">Level 1</a> focuses on the anatomical aspects of cells and consists of a schema for
+        <td style="border-bottom:1px solid black;"><a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level1">Level 1</a> focuses on the anatomical aspects of cells and consists of a schema for
             <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Metadata">Metadata</a> and the main
 <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=MorphML">MorphML</a> schema.
 <br/>
@@ -37,7 +35,7 @@ Note that the <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Meta
         </td>
     </tr>
     <tr>
-        <td><a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level2">Level 2</a> adds the ability to include information about the biophysical properties
+        <td style="border-bottom:1px solid black;"><a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level2">Level 2</a> adds the ability to include information about the biophysical properties
 of cells using the <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Biophysics">Biophysics</a> schema and also includes the properties of channel and
 synaptic mechanisms using <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=ChannelML">ChannelML</a>.
 <br/>
@@ -48,7 +46,7 @@ can be used to simulate neuronal spiking behaviour.
         </td>
     </tr>
     <tr>
-        <td>
+        <td style="border-bottom:1px solid black;">
             <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level3">Level 3</a> adds the ability to specify cell placement and network connectivity 
             using <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=NetworkML">NetworkML</a>.
             <br/>
