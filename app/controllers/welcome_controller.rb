@@ -34,144 +34,145 @@ class WelcomeController < ApplicationController
     @projects = Project.latest User.current
   end
   def  neuro_workshop
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
   end
   def other_workshop
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
   end
   def workshop2012
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
   end
  #===================== End of Home Menu============
 
  #===================Documents Menu================
  def introduction
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
+  
  end
  def level1
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def level2
-     @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def level3
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def extend_neuroml
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def alpha_schema
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def lems_dev
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def libnml
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def sbml
-     @projects = Project.latest User.current 
+render :layout => 'other_pages'
  end
  def nineml
 
-     @projects = Project.latest User.current 
+render :layout => 'other_pages'
  end
  def cellml
-     @projects = Project.latest User.current 
+render :layout => 'other_pages'
  end
  def lems
-    @projects = Project.latest User.current 
+render :layout => 'other_pages'
  end
  def relevant_publications
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def abstracts
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def presentations
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def workshop2011
-  @projects=Project.latest User.current
+render :layout => 'other_pages'
  end
 #=========================== End of Documents Menu ===============
  def history
-      @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
 #============================ Examples menu =====================
  def level1_eg
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def level2_eg
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def level3_eg
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def level4_eg
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
 #========================= End of Examples Menu ==================
 #===================== Tools Menu ==============
  def current_app_support
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def planning_support
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def neuron_tools
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def pynn
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def x3dtools
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
 #===================== End of Tools Menu ==============
 
 
 #==================== Models=============
  def models
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
 #======================End of Models======
 
 #=====================Validators Menu ========================
  def validate
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def latest_release_notes
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
 #=======================End of Validators Menu ===============
 
 #========================= Community Menu ===========
  def development
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
- def contributors
-    @projects = Project.latest User.current
+ def scientific_committee
+render :layout => 'other_pages'
  end
  def brief_history
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def standard_proj_biosciences
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def db_proj
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def general_info_xmltools
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
 #=========================== End of Community Menu ===========
 #============================ Contact Menu====================
  def contacts
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
  def acknowledgements
-    @projects = Project.latest User.current
+render :layout => 'other_pages'
  end
 #============================ End of Contacts Menu =============
 

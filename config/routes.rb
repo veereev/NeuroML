@@ -47,7 +47,7 @@ RedmineApp::Application.routes.draw do
   match 'validate', :to => 'welcome#validate', :as => 'validate'
   match 'latest_release_notes', :to => 'welcome#latest_release_notes', :as => 'latest_release_notes'
   match 'development', :to => 'welcome#development', :as => 'development'
-  match 'contributors', :to => 'welcome#contributors', :as => 'contributors'
+  match 'scientific_committee', :to => 'welcome#scientific_committee', :as => 'scientific_committee'
   match 'brief_history', :to => 'welcome#brief_history', :as => 'brief_history'
   match 'standard_proj_biosciences', :to => 'welcome#standard_proj_biosciences', :as => 'standard_proj_biosciences'
   match 'history', :to=>'welcome#history', :as => 'history'
