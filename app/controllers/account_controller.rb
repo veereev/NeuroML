@@ -97,6 +97,7 @@ class AccountController < ApplicationController
     if request.get?
       session[:auth_source_registration] = nil
       @user = User.new(:language => Setting.default_language)
+
     else
       user_params = params[:user] || {}
       @user = User.new

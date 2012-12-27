@@ -77,6 +77,7 @@ border:0px;
     <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
 </div>
 <!-- start of Menu -->
+<% if !@project %>
 <div id="menu">
           <ul>
               <li class="first">
@@ -231,6 +232,7 @@ border:0px;
           </ul>
       </div>
      <!-- End of Menu -->
+<% end %>
 <div id="header">
     <% if User.current.logged? || !Setting.login_required? %>
     <div id="quick-search">
