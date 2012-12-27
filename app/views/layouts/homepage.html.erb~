@@ -10,6 +10,11 @@
 <%= stylesheet_link_tag 'jquery/jquery-ui-1.8.21', 'application', :media => 'all' %>
 <%= stylesheet_link_tag 'rtl', :media => 'all' if l(:direction) == 'rtl' %>
 <%= javascript_heads %>
+<style>
+#main{
+border:0px;
+}
+</style>
 <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
   <link rel="stylesheet" type="text/css" href="stylesheets/presentationCycle.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/tp.css" />
@@ -69,7 +74,7 @@
         <%= render_menu :account_menu -%>
     </div>
     <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
-    <%= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
+    <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
 </div>
 <!-- start of Menu -->
 <div id="menu">
@@ -265,20 +270,27 @@
         <div style="clear:both;"></div>
     </div>
 <!--<div class="right_sidebar">-->
-    <div id="right_sidebar_top" class="right_sidebar_top round_5">
+  <!--  <div id="right_sidebar_top" class="right_sidebar_top round_5">
     	<%# if @projects.any? %>
   <div class="projects_side box">
   <h3><%#=l(:label_project_latest)%></h3>
     <ul>
    
     </ul>
-  </div>
+  </div>-->
   <!--<%# end %>-->
     <%= call_hook(:view_welcome_index_right, :projects => @projects) %>
-</div>
+<!--</div>-->
 
 <div id="right_sidebar_bottom" class="right_sidebar_bottom round_5">
-<div class="twitter box"></div>
+<div class="twitter box">
+<!-- BEGIN: Twitter Website Box (http://twitterforweb.com) -->
+<div style="border:0;width:100;font-size:10px;text-align:right;"><script type="text/javascript">//<![CDATA[
+//document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=veereev&settings=1,1,3,236,600,,1,,ffffff' type='text/javascript'%3E%3C/script%3E"));
+
+//]]></script></div>
+<!-- END: Twitter Website Box (http://twitterforweb.com) -->
+</div>
 </div>
 <!--</div>-->
 <div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
