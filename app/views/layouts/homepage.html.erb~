@@ -71,7 +71,7 @@ border:0px;
 <div id="wrapper2">
 <div id="top-menu">
     <div id="account">
-        <%= render_menu :account_menu -%>
+        <%#= render_menu :account_menu -%>
     </div>
     <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
     <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
@@ -173,7 +173,7 @@ border:0px;
               <li>
                   <span class="opener">Tools<b></b></span>
                   <ul>
-                      <li><a href="#">Validator</a></li>
+                      <li><a href="/validate">Validator</a></li>
                       <li><span>Tool Support<b></b></span>
                       <ul>
                               <li><a href="/current_app_support">Current Application Support for NeuroML</a></li>
@@ -321,7 +321,12 @@ document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?u
 <div id="email">abc@neuroml.org</div>
 </div>
 
-   
+   <div id="copyrights">
+Website & Images<br />
+Copyright &copy; 2013<br />
+All rights reserved
+</div>
+
           <br class="clearfix" />
       </div>
       
