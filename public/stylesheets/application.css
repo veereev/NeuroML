@@ -1571,7 +1571,7 @@ border-color:#996600;
 	top:124px;
 	width:18.5%;
         border: 0px;
-       height:94.2%;
+       height:84.2%;
 }
 .projects_side{
 	height:249px;
@@ -1586,7 +1586,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
 }
 .twitter{
-height:76%;
+height:85.5%;
 background: #1e5799; /* Old browsers */
 background: -moz-linear-gradient(45deg,  #1e5799 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
@@ -1784,6 +1784,14 @@ padding-top:4px;
 .content_slide .featured_model{
 text-align:center;
 }
-#main{
-border:0px !important;
+#validate{
+text-align:center;
+}
+#validate form textarea{
+width:80%;
+border:1px solid #37ABC8;
+border-radius:10px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+min-height:500px;
 }
