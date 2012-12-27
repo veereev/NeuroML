@@ -1634,7 +1634,10 @@ align:center;
     background-color:#dedede;
 }
 #copyrights{
-    
+font-size:14px;
+position:absolute;
+right:3%;
+top:15%;    
 
 }
 .small_box{
