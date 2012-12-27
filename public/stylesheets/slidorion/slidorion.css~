@@ -3,7 +3,7 @@
 	/*width: 1010px;	*/		/* Set to slidorion width. Is equal to #slider + #accordion width */
 	height: 547px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
 	position: absolute;
-        width:79%
+        width:79%;
 	left: 392px;
 	top:126px;
 	margin-left: -384px;
@@ -171,6 +171,6 @@ border-top-right-radius:5px;
         background-color:white;
         overflow:auto;
         color:black;
-        background-image:url("../images/back10.jpg");
-        font-size:1.1em;
+text-align:justify;
+
 }

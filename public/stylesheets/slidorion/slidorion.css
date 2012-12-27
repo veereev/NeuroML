@@ -165,12 +165,13 @@ border-top-right-radius:5px;
 }
 */
 .content_slide{
-	width:100%;
+	width:98.2%;
 	height:100%;
 	border:1px solid #ababab;
         background-color:white;
         overflow:auto;
         color:black;
-        background-image:url("../images/back10.jpg");
-   /*     font-size:1.1em;*/
+text-align:justify;
+padding-left:7px;
+padding-right:7px;
 }

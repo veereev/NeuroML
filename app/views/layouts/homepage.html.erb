@@ -69,7 +69,7 @@
         <%= render_menu :account_menu -%>
     </div>
     <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
-    <%= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
+    <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
 </div>
 <!-- start of Menu -->
 <div id="menu">
@@ -221,13 +221,8 @@
                           </ul>
                       
               </li>
-              <li><a href="/projects">Projects</a></li><!--
-              <li class="last"><span>Contacts<b></b></span>
-              <ul>
-                              <li><a href="/contacts">Contacts</a></li>
-                              <li><a href="/acknowledgements">Acknowledgements</a></li>							
-                          </ul>
-              </li>-->
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="#">Help</a></li>
           </ul>
       </div>
      <!-- End of Menu -->
