@@ -1,0 +1,253 @@
+       <!-- ============================== Slidorion Content ========================= -->
+        <div id="slidorion">
+		<div id="accordion">
+			<div class="link-header">Our Mission</div>
+			<div class="link-content">
+
+<p>
+Mission basic content
+</p>
+
+			</div>
+
+
+<div class="link-header">Introduction</div>
+			<div class="link-content">
+			Introduction Basic content
+
+			</div>
+
+
+			<div class="link-header">Featured Model</div>
+			<div class="link-content">
+			<p>Featured Model basic content.</p>
+			</div>
+<div class="link-header">Featured Tool</div>
+			<div class="link-content">
+			<p>Featured Tool basic content.</p>
+			</div>
+			<div class="link-header">News and Events</div>
+			<div class="link-content">
+				<p>Need Description about news and events ?????</p>
+
+			</div>
+		</div>
+		<div id="slider">
+			<div id="slide1" class="slide">
+				<div class="content_slide">
+<body>
+
+			<h1 class="text_center">Model Descriptions for Computational Neuroscience</h1>
+		
+
+
+			<p>
+			Computational models based on detailed neuroanatomical and electrophysiological data have been used for many years as an aid for understanding the function of the nervous system. NeuroML is an international, collaborative initiative to develop a language for describing detailed models of neural systems.
+</p>
+			The aims of the NeuroML initiative are:
+		<ul>
+			<li>
+				To create specifications for an XML-based language that describes the biophysics, anatomy and network architecture of neuronal systems at multiple scales,</li>
+		</ul>
+		
+		<ul>
+			<li>
+				To facilitate the exchange of complex neuronal models between researchers, allowing for greater transparency and accessibility of models,</li>
+		</ul>
+		
+		<ul>
+			<li>
+				To promote software tools which support NeuroML and support the development of new software and databases for neural modeling, and</li>
+		</ul>
+		
+		<ul>
+			<li>
+				To encourage researchers with models within the scope of NeuroML to exchange and publish their models in this format.</li>
+		</ul>
+		<p>
+			<br />
+			<br />
+			NeuroML is a free and open community effort that needs your support as the language and tools continue to evolve. Register here to be added to the NeuroML mailing list.</p>
+	
+			</div>
+			</div>
+<div id="slide2" class="slide">
+<div class="content_slide">
+			<h1 class="text_center">Introduction</h1>
+</div>
+</div>
+			<div id="slide3" class="slide">
+
+				<div class="content_slide">
+			<h1 class="text_center">Featured Model</h1><br />
+Developments towards NeuroML version 2.0 are well under way, but version 1.8.x should be considered the stable version for now, especially for application/model developers who want maximum compatibility with other tools.
+<br /><br />
+For details of the meetings which have taken place to date where NeuroML v2.0 has been discussed see here.
+<br /><br />
+<p class="featured_model">
+<img src="../images/mont.png" alt="mont" />
+</p>
+<br/><br />
+ A pyramidal cell model in NeuroML which has been loaded into and visualised by (from left): neuroConstruct, NEURON, PSICS, X3D via the NeuroML Validator and NeuronLand. More details on NeuroML compliant software can be found here.
+<br/><br />
+<p class="featured_model">
+<img src="../images/nets.png" alt="nets" />
+<p>
+<br /><br />
+ A network model of the cerebellar granule cell layer which can be fully expressed as a Level 3 NeuroML file. Visualised in the Whole Brain Catalog (left), and neuroConstruct (right). This and other detailed cell and network models are available for download here.
+
+
+</div>
+			</div>
+<div id="slide4" class="slide">
+<div class="content_slide">
+			<h1 class="text_center">Featured Tool</h1>
+</div>
+</div>
+			<div id="slide5" class="slide">
+				<div class="content_slide" id="content_slide">
+			<h1 class="text_center">News & Events</h1>
+
+
+
+<!-- ----------------------------------------- Begining of news -- -->
+<script type="text/javascript">
+var x=1;
+function togglenews()
+{
+ if(x==1){
+ new Effect.SlideUp('news_listing');
+ x=0;
+ document.getElementById("news_marker").innerHTML="[ show ]";
+ }
+ else{
+ new Effect.SlideDown('news_listing');
+ x=1;
+ document.getElementById("news_marker").innerHTML="[ collapse ]";
+ }
+ 
+
+}
+</script>
+<div id="news_header">
+<span id="news">News</span>
+<a id="news_marker" href="#"  onclick="togglenews();">[ collapse ]</a>
+
+</div>
+<div id="news_listing">
+<table class="news_table">
+<tr>
+  <th>Date(s)</th>
+  <th>Event</th>
+  <th>Location</th>
+  <th>Host</th>
+</tr>
+<tr>
+  <td>June 17, 2010</td>
+  <td> A paper describing the latest stable version of NeuroML has been published in PLoS Computational Biology: NeuroML: A Language for Describing Data Driven Models of Neurons and Networks with a High Degree of Biological Detail, P Gleeson, S Crook, RC Cannon, ML Hines, GO Billings, M Farinella, TM Morse, AP Davison, S Ray, US Bhalla, SR Barnes, YD Dimitrova, RA Silver.</td>
+  <td>??</td>
+  <td>host?</td>
+</tr>
+
+<tr class="alt">
+ <td>March 19,2012</td>
+ <td>Second joint NeuroML and SBML meeting</td>
+ <td>European Bioinformatics Institute, Hinxton, UK</td>
+ <td>??</td>
+</tr>
+
+<tr>
+ <td>October 7, 2009</td>
+ <td>First Joint NeuroML and SBML meeting</td>
+ <td>European Bioinformatics Institute, Hinxton, UK</td>
+ <td>??</td>
+</tr>
+
+<tr class="alt">
+ <td>September 7-9, 2008</td>
+ <td>Demo of NeuroML</td>
+ <td>At the 1st Congress of the International Neuroinformatics Coordinating Facility on Neuroinformatics in Stockholm, Sweden.</td>
+ <td>Padraig Gleeson and Sharon Crook</td>
+ </tr>
+
+
+
+</table>
+</div>
+<!-- ====================================== End of news ====================== -->
+<br />
+<!-- ============================= Begining of Events ================= -->
+<script type="text/javascript">
+var y=1;
+function toggleevents()
+{
+ if(y==1){
+ new Effect.SlideUp('events_listing');
+ y=0;
+ document.getElementById("events_marker").innerHTML="[ show ]";
+ }
+ else{
+ new Effect.SlideDown('events_listing');
+ y=1;
+ document.getElementById("events_marker").innerHTML="[ collapse ]";
+ }
+ 
+
+}
+</script>
+<div id="events_header">
+<span id="events">Events</span>
+<a id="events_marker" href="#"  onclick="toggleevents();">[ collapse ]</a>
+
+</div>
+<div id="events_listing">
+<table class="news_table">
+<tr>
+  <th>Date(s)</th>
+  <th>Event</th>
+  <th>Location</th>
+  <th>Host</th>
+</tr>
+<tr>
+  <td>March 12-16, 2012</td>
+  <td>March 12-16, 2012: The fourth annual <b>NeuroML Development Workshop</b>.</td>
+  <td>Edinburgh, UK</td>
+  <td>host?</td>
+</tr>
+
+<tr class="alt">
+ <td>March 31st & April 1st, 2011</td>
+ <td>March 31st & April 1st, 2011: The third annual <b>NeuroML Development Workshop</b>.</td>
+<td>London</td>
+<td>host?</td>
+</tr>
+
+<tr>
+ <td>March 4-5, 2010</td>
+ <td>Second NeuroML Development Workshop</td>
+ <td>Arizona State University</td>
+ <td>??</td>
+</tr>
+
+<tr class="alt">
+ <td>March 9-10, 2009</td>
+ <td>NeuroML Development Workshop</td>
+ <td>University College, London</td>
+ <td>??</td>
+</tr>
+</table>
+</div>
+<!--============================== End of events ======================== -->
+
+<br />
+
+</div>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+	
+        <!-- ============================ End of slidorion ============================= -->
+ 
