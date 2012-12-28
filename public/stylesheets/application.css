@@ -1755,6 +1755,11 @@ font-size:22px;
 position:absolute;
 right:2px;
 top:2px;
+color:yellow;
+font-weight:bold;
+}
+#news_header a:hover,#events_header a:hover{
+color:white;
 }
 .news_table{
 border-collapse:collapse;
