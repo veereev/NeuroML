@@ -21,7 +21,7 @@ class WelcomeController < ApplicationController
   def index
     @news = News.latest User.current
     @projects = Project.latest User.current
-   render :layout => 'other_pages'
+   render :layout => 'homepage'
      end
 
   def robots
@@ -32,7 +32,7 @@ class WelcomeController < ApplicationController
   #===================Home Menu=====================
   def welcome
     @projects = Project.latest User.current
-   render :layout => 'other_pages'
+   render :layout => 'homepage'
   end
   def  neuro_workshop
 

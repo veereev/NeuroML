@@ -52,10 +52,30 @@
     A discussion of how LEMS is being used to specify <a href="../neuroml2.php">NeuroML v2.0 ComponentTypes</a> is available <a href="../neuroml2.php">here</a>.
  </p>
   
+<script type="text/javascript">
+var x=0;
+function togglewhat()
+{
+ if(x==1){
+ new Effect.SlideUp('whatitdoes');
+ x=0;
+ document.getElementById("what_marker").innerHTML="[ show ]";
+ }
+ else{
+ new Effect.SlideDown('whatitdoes');
+ x=1;
+ document.getElementById("what_marker").innerHTML="[ collapse ]";
+ }
  
-<h2>What it does so far</h2>
- 
- 
+
+}
+</script>
+<div id="news_header">
+<span id="news">What it does so far</span>
+<a id="what_marker"   onclick="togglewhat();">[ show ]</a>
+
+</div> 
+<div id="whatitdoes" style="display:none;"> 
 <p>
     You can define <span class="xelt">ComponentType</span>s (e.g. a "HH channel" or "a bi-exponential synapse") which express the general
     properties of a particular type of thing that goes in a model. This includes saying what parameters they have, what 
@@ -90,8 +110,32 @@
  </p>
  
  
+</div> 
+
+<script type="text/javascript">
+var b=0;
+function togglebg()
+{
+ if(b==1){
+ new Effect.SlideUp('background');
+ b=0;
+ document.getElementById("bg_marker").innerHTML="[ show ]";
+ }
+ else{
+ new Effect.SlideDown('background');
+ b=1;
+ document.getElementById("bg_marker").innerHTML="[ collapse ]";
+ }
  
-<h2>Background</h2>
+
+}
+</script>
+<div id="news_header">
+<span id="news">Background</span>
+<a id="bg_marker"   onclick="togglebg();">[ show ]</a>
+
+</div> 
+<div id="background" style="display:none;">
  
 <p>
     The <a href="http://www.neuroml.org/files/NeuroMLWorkshop2010.pdf">March 2010 NeuroML meeting</a> identified a need to extend the capability within NeuroML for expressing a range
@@ -113,7 +157,7 @@
         reflects potential requirements for PSICS.
  </p>
  
- 
+</div> 
 <h2>Example</h2>
  
  

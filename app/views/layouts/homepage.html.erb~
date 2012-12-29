@@ -39,9 +39,9 @@ border:0px;
     <script src="javascripts/slidorion/jquery.slidorion.min.js"></script>
 	
     <script>
-var JQry = jQuery.noConflict();
-	$(function(){
-		$('#slidorion').slidorion({
+var j = jQuery.noConflict();
+	j(function(){
+		j('#slidorion').slidorion({
 			effect: 'slideRight',
 			hoverPause: true,
 			autoPlay:false,
@@ -50,12 +50,12 @@ var JQry = jQuery.noConflict();
                        slideCount:4
 		});
 		
-		$(window).scroll(function(){
-			$el = $('#download-box');
-			if ($(this).scrollTop() > 540 && $el.css('position') != 'fixed'){
-				$('#download-box').css({'position': 'fixed', 'top': '10px'});
+		j(window).scroll(function(){
+			$el = j('#download-box');
+			if (j(this).scrollTop() > 540 && $el.css('position') != 'fixed'){
+				j('#download-box').css({'position': 'fixed', 'top': '10px'});
 			}else if($(this).scrollTop() < 540 && $el.css('position') == 'fixed'){
-				$('#download-box').css({'position': 'absolute', 'top': '10px'});
+				j('#download-box').css({'position': 'absolute', 'top': '10px'});
 			}
 		});
 	});
@@ -63,8 +63,8 @@ var JQry = jQuery.noConflict();
 	</script>
 <!-- ================================ End of slidorion ===============-->
   <script type="text/javascript">
-      $(function() {
-          $('#menu > ul').dropotron({
+      j(function() {
+          j('#menu > ul').dropotron({
               mode: 'fade',
               globalOffsetY: 11,
               offsetY: -15
@@ -167,7 +167,18 @@ var JQry = jQuery.noConflict();
   
               </ul>
               </li>
-<li><a href="#">Workshops Reports</a></li>
+<li><span class="opener">Workshop Reports<b></b></span>
+
+<ul>
+                      <li><a href="/workshop2009">2009</a></li>
+                      <li><a href="/workshop2010">2010</a></li>
+                      <li><a href="/workshop2011">2011</a></li>
+                       <li><a href="/workshop2012">2012</a></li>
+                      
+  
+              </ul>
+</li>
+
               </ul>	
               </li>
 <!--

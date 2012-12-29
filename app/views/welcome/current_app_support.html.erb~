@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h1>Current application support for NeuroML</h1>
 
 <p>The following is a list of software applications which currently support NeuroML
@@ -23,6 +24,31 @@ this will make it further up long TODO lists.</p>
 
 </table>
 <br/>
+<script type="text/javascript">
+var x=0;
+function togglenews()
+{
+ if(x==1){
+ new Effect.SlideUp('softwareapps');
+ x=0;
+ document.getElementById("news_marker").innerHTML="[ show ]";
+ }
+ else{
+ new Effect.SlideDown('softwareapps');
+ x=1;
+ document.getElementById("news_marker").innerHTML="[ collapse ]";
+ }
+ 
+
+}
+</script>
+<div id="news_header">
+<span id="news">List of software applications that support NeuroML</span>
+<a id="news_marker" href="#"  onclick="togglenews();">[ show ]</a>
+
+</div>
+
+<div id="softwareapps" style="display:none;">
         <table id="longlist">
 
 
@@ -562,16 +588,9 @@ addition to this functionality, and this has now been added to the viewer.</td>
 </table>
 
 
-
+</div>
 
 <br>
 
-
-<div id="footer">
-<p align="right">
-Website & Images<br>
-Copyright &copy; 2012<br>
-All rights reserved.
-</p>
-</div>  
-
+ 
+</div>

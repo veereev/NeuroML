@@ -64,6 +64,10 @@ RedmineApp::Application.routes.draw do
   match 'login', :to => 'account#login', :as => 'signin'
   match 'logout', :to => 'account#logout', :as => 'signout'
    match 'register', :to => 'account#register', :via => [:get, :post], :as => 'register'
+   match 'workshop2009', :to => 'welcome#workshop2009', :as => 'workshop2009'
+   match 'workshop2009', :to => 'welcome#workshop2010', :as => 'workshop2010'
+   match 'workshop2009', :to => 'welcome#workshop2011', :as => 'workshop2011'
+   match 'workshop2009', :to => 'welcome#workshop2012', :as => 'workshop2012'
   #match 'account/register', :to => 'account#register', :via => [:get, :post], :as => 'register'
   match 'account/lost_password', :to => 'account#lost_password', :via => [:get, :post], :as => 'lost_password'
   match 'account/activate', :to => 'account#activate', :via => :get

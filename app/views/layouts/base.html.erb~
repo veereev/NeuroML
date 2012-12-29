@@ -16,7 +16,15 @@
   <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script>
   <script type="text/javascript" src="javascripts/jquery.slidertron-1.1.js"></script>
- 
+ <script type="text/javascript" src="javascripts/scriptaculous.js"></script>
+  <script type="text/javascript" src="javascripts/prototype.js"></script>
+ <script type="text/javascript" src="javascripts/builder.js"></script>
+<script type="text/javascript" src="javascripts/controls.js"></script>
+<script type="text/javascript" src="javascripts/dragdrop.js"></script>
+<script type="text/javascript" src="javascripts/effects.js"></script>
+<script type="text/javascript" src="javascripts/slider.js"></script>
+<script type="text/javascript" src="javascripts/sound.js"></script>
+<script type="text/javascript" src="javascripts/unittest.js"></script>
    <!-- ==================slidorion ===============-->
    <link rel="stylesheet" href="stylesheets/slidorion/slidorion.css" />
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
@@ -24,9 +32,10 @@
 	<!-- <script src="javascripts/slidorion/jquery.min.js"></script>-->
     <script src="javascripts/slidorion/jquery.slidorion.min.js"></script>
 	
-    <script>
-	$(function(){
-		$('#slidorion').slidorion({
+   <script>
+var j = jQuery.noConflict();
+	j(function(){
+		j('#slidorion').slidorion({
 			effect: 'slideRight',
 			hoverPause: true,
 			autoPlay:false,
@@ -35,12 +44,12 @@
                        slideCount:4
 		});
 		
-		$(window).scroll(function(){
-			$el = $('#download-box');
-			if ($(this).scrollTop() > 540 && $el.css('position') != 'fixed'){
-				$('#download-box').css({'position': 'fixed', 'top': '10px'});
+		j(window).scroll(function(){
+			$el = j('#download-box');
+			if (j(this).scrollTop() > 540 && $el.css('position') != 'fixed'){
+				j('#download-box').css({'position': 'fixed', 'top': '10px'});
 			}else if($(this).scrollTop() < 540 && $el.css('position') == 'fixed'){
-				$('#download-box').css({'position': 'absolute', 'top': '10px'});
+				j('#download-box').css({'position': 'absolute', 'top': '10px'});
 			}
 		});
 	});
@@ -48,8 +57,8 @@
 	</script>
 <!-- ================================ End of slidorion ===============-->
   <script type="text/javascript">
-      $(function() {
-          $('#menu > ul').dropotron({
+      j(function() {
+          j('#menu > ul').dropotron({
               mode: 'fade',
               globalOffsetY: 11,
               offsetY: -15
@@ -69,7 +78,7 @@
         <%= render_menu :account_menu -%>
     </div>
     <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
-    <%= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
+    <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
 </div>
 <!-- start of Menu -->
 <% if !@project %>
@@ -152,7 +161,17 @@
   
               </ul>
               </li>
-<li><a href="#">Workshops Reports</a></li>
+<li><span class="opener">Workshop Reports<b></b></span>
+
+<ul>
+                      <li><a href="/workshop2009">2009</a></li>
+                      <li><a href="/workshop2010">2010</a></li>
+                      <li><a href="/workshop2011">2011</a></li>
+                       <li><a href="/workshop2012">2012</a></li>
+                      
+  
+              </ul>
+</li>
               </ul>	
               </li>
 <!--
