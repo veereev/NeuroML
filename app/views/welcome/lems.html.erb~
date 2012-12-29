@@ -1,4 +1,24 @@
 <div class="overflowcontent">
+<div id='cssmenu'>
+<ul>
+   <li class='active '><a href='index.html'><span>About</span></a></li>
+   <li><a href='/lems_intro'><span>Introduction</span></a></li>
+   <li><a href='/lems_elements'><span>Elements</span></a></li>
+   <li><a href='/lems_download'><span>Download</span></a></li>
+   <li><a href='/lems_example1'><span>Example 1</span></a></li>
+   <li><a href='/lems_example2'><span>Example 2</span></a></li>
+   <li><a href='/lems_example3'><span>Example 3</span></a></li>
+   <li><a href='/lems_example4'><span>Example 4</span></a></li>
+   <li><a href='/lems_example5'><span>Example 5</span></a></li>
+   <li><a href='/lems_example6'><span>Example 6</span></a></li>
+   <li><a href='/lems_example7'><span>Example 7</span></a></li>
+   <li><a href='/lems_example_regimes'><span>Regimes Example</span></a></li>
+   <li><a href='/lems_example_n'><span>Example n</span></a></li>
+   <li><a href='/lems_canonical'><span>Canonical Form</span></a></li>
+   <li><a href='/lems_discussion'><span>Discussion</span></a></li>
+</ul>
+</div>
+<div class="lems_content">
 <h1>Compact model specification with user-defined types</h1>
  
 <h2 class="sub">A proposal for supporting models of synapses and other user-definable component types in NeuroML</h2>
@@ -119,12 +139,12 @@ function togglebg()
  if(b==1){
  new Effect.SlideUp('background');
  b=0;
- document.getElementById("news_marker").innerHTML="[ show ]";
+ document.getElementById("bg_marker").innerHTML="[ show ]";
  }
  else{
  new Effect.SlideDown('background');
  b=1;
- document.getElementById("news_marker").innerHTML="[ collapse ]";
+ document.getElementById("bg_marker").innerHTML="[ collapse ]";
  }
  
 
@@ -132,7 +152,7 @@ function togglebg()
 </script>
 <div id="news_header">
 <span id="news">Background</span>
-<a id="news_marker"   onclick="togglebg();">[ show ]</a>
+<a id="bg_marker"   onclick="togglebg();">[ show ]</a>
 
 </div> 
 <div id="background" style="display:none;">
@@ -158,9 +178,31 @@ function togglebg()
  </p>
  
 </div> 
-<h2>Example</h2>
+<script type="text/javascript">
+var eg=0;
+function toggleexample()
+{
+ if(eg==1){
+ new Effect.SlideUp('example');
+ eg=0;
+ document.getElementById("eg_marker").innerHTML="[ show ]";
+ }
+ else{
+ new Effect.SlideDown('example');
+ eg=1;
+ document.getElementById("eg_marker").innerHTML="[ collapse ]";
+ }
  
- 
+
+}
+</script>
+<div class="slide_header">
+<span class="slide">Example</span>
+<a id="eg_marker"   onclick="toggleexample();">[ show ]</a>
+
+</div> 
+
+ <div id="example" style="display:none;">
 <p>
  Here is the XML for a simple integrate-and-fire cell definition:
  <div class="xcode">
@@ -277,14 +319,10 @@ function togglebg()
 </p>
 
 
-<p>
-    
-
-</p>
-
+</div>
 
 </div>
 
-
+</div>
 </div>
 </div>

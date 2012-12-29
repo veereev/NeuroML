@@ -187,4 +187,33 @@ class WelcomeController < ApplicationController
 #============================ End of Contacts Menu =============
 
 end  
-
+#====================Lems==========================
+def lems_intro
+end
+def lems_elements
+end
+def lems_download
+end
+def lems_example1
+end
+def lems_example2
+end
+def lems_example3
+end
+def lems_example4
+end
+def lems_example5
+end
+def lems_example6
+end
+def lems_example7
+end
+def lems_example_regimes
+end
+def lems_example_n
+end
+def lems_canonical
+end
+def lems_discussion
+end
+#============== End of Lems ======================
