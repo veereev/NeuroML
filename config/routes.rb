@@ -48,6 +48,8 @@ RedmineApp::Application.routes.draw do
   match 'pynn', :to => 'welcome#pynn', :as => 'pynn'
   match 'x3dtools', :to => 'welcome#x3dtools', :as => 'pynn'
   match 'models', :to => 'welcome#models', :as => 'models'
+  match 'browse_models', :to => 'welcome#browse_models', :as => 'browse_models'
+  match 'model_submit', :to => 'welcome#model_submit', :as => 'model_submit'
   match 'validate', :to => 'welcome#validate', :as => 'validate'
   match 'latest_release_notes', :to => 'welcome#latest_release_notes', :as => 'latest_release_notes'
   match 'development', :to => 'welcome#development', :as => 'development'
