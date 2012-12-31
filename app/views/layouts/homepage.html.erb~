@@ -19,7 +19,7 @@ border:0px;
   <link rel="stylesheet" type="text/css" href="stylesheets/presentationCycle.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/tp.css" />
   <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script>
+  
   <script type="text/javascript" src="javascripts/jquery.slidertron-1.1.js"></script>
 
   <script type="text/javascript" src="javascripts/scriptaculous.js"></script>
@@ -31,6 +31,37 @@ border:0px;
 <script type="text/javascript" src="javascripts/slider.js"></script>
 <script type="text/javascript" src="javascripts/sound.js"></script>
 <script type="text/javascript" src="javascripts/unittest.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/reset/reset-min.css">
+		<link rel="stylesheet" href="stylesheets/orange/style.css" type="text/css" media="all" charset="utf-8" />
+		<link rel="stylesheet" href="stylesheets/orange/MenuMatic.css" type="text/css" media="screen" charset="utf-8" />
+		<!--[if lt IE 7]>
+			<link rel="stylesheet" href="stylesheets/orange/MenuMatic-ie6.css" type="text/css" media="screen" charset="utf-8" />
+		<![endif]-->
+<!-- Load the Mootools Framework -->
+	<script src="http://www.google.com/jsapi"></script><script>google.load("mootools", "1.2.1");</script>	
+	
+	<!-- Load the MenuMatic Class -->
+	<script src="javascripts/MenuMatic_0.68.3.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- Create a MenuMatic Instance -->
+	<script type="text/javascript" >
+		window.addEvent('domready', function() {			
+			var myMenu = new MenuMatic();
+		});		
+	</script>
+	
+
+
+
+
+
+
+
+
+
    <!-- ==================slidorion ===============-->
    <link rel="stylesheet" href="stylesheets/slidorion/slidorion.css" />
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
@@ -62,15 +93,7 @@ var j = jQuery.noConflict();
 	function trackDownload(){_gaq.push(['_trackPageview', '/downloads/slidorion']);}
 	</script>
 <!-- ================================ End of slidorion ===============-->
-  <script type="text/javascript">
-      j(function() {
-          j('#menu > ul').dropotron({
-              mode: 'fade',
-              globalOffsetY: 11,
-              offsetY: -15
-          });
-      });
-  </script>
+  
 <%= heads_for_theme %>
 <%= call_hook :view_layouts_base_html_head %>
 <!-- page specific tags -->
@@ -89,168 +112,128 @@ var j = jQuery.noConflict();
 <!-- start of Menu -->
 <% if !@project %>
 <div id="menu">
-          <ul>
-              <li class="first">
-                  <span class="opener">Home<b></b></span>
-                  <ul>
-                      <li><a href="/home">Welcome</a></li>
-                      <li>
-                          <span>Workshops<b></b></span>
-                          <ul>
-                              <li><a href="/neuro_workshop">NeuroML Development Workshops</a></li>
-                              <li><a href="/other_workshop">Other Workshops / Collaborations</a></li>
-                              
-                          </ul>
-                      </li>
-                      </ul>
-              </li>
-              <li><span class="opener">Documents<b></b></span>
-              <ul>
-                      <li><a href="/introduction">Introduction</a></li>
-                      <li>
-                          <span>Specifications<b></b></span>
-                          <ul>
-                              <li><span>NeuroML V1.X Schemas<b></b></span>
-<ul>
-                              <li><a href="/level1">Level 1</a></li>
-                              <li><a href="/level2">Level 2</a></li>
-                              <li><a href="/level3">Level 3</a></li>
-                                <li><a href="/latest_release_notes">General Release Notes</a></li>
-                          </ul>
+          <ul id="nav">
 
+			<li><a href="#">Percoidei</a>
+		
+				<ul>
 
-                              </li>
+					<li><a href="#">Remoras</a>
+						<ul>
+							<li><a href="#">Echeneis</a></li>
+							<li><a href="#">Phtheirichthys</a></li>
+							<li><a href="#">Remora</a></li>
+							<li><a href="#">Remorina</a></li>
 
-                              <li><a href="#">NeuroML 2.0</a></li>
+		
+							<li><a href="#">Rhombochirus</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Tilefishes</a>
+						<ul>
+							<li><a href="#">Caulolatilus</a></li>
+							<li><a href="#">Lopholatilus</a></li>
 
-   
-                          </ul>
-                      </li>
-  
-                      <li><a href="/extend_neuroml">Extending NeuroML</a></li>
-                      <li>
-                          <span>NeuroML V2.0<b></b></span>
-                          <ul>
-                              <li><a href="/alpha_schema">NeuroML V2alpha schema</a></li>
-                              <li><a href="/lems_dev">Development of LEMS & mapping to NeuroML2</a></li>
-                              <li><a href="/libnml">libNeuroML</a></li>
-                              <li><span>Compatibility with other MLs<b></b></span>
-                              <ul>
-                              <li><a href="/sbml">SBML</a></li>
-                              <li><a href="/cellml">Cell ML</a></li>
-                              <li><a href="/nineml">Nine ML</a></li>
-  
-                          </ul>
-                              </li>
-  
-   
-                          </ul>
-                      </li>
-                      <li><a href="/lems">LEMS</a></li>
-                      <li>
-                          <span>Publications<b></b></span>
-                          <ul>
-                              <li><a href="/relevant_publications">Relevant Publications</a></li>
-                              <li><a href="/abstracts">Abstracts</a></li>
-   
-                          </ul>
-                      </li>
-  
-                     <!-- <li><a href="/presentations">Presentations</a></li>-->
-  <li><span class="opener">Examples<b></b></span>
-              <ul>
-                      <li><a href="/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
-                      <li><a href="/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
-                      <li><a href="/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
-                      <li><a href="/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
-                      
-  
-              </ul>
-              </li>
-<li><span class="opener">Workshop Reports<b></b></span>
+		
+							<li><a href="#">Malacanthus</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Bluefishes</a>
+						<ul>
+							<li><a href="#">Pomatomus</a></li>
+							<li><a href="#">Scombrops</a></li>
 
-<ul>
-                      <li><a href="/workshop2009">2009</a></li>
-                      <li><a href="/workshop2010">2010</a></li>
-                      <li><a href="/workshop2011">2011</a></li>
-                       <li><a href="/workshop2012">2012</a></li>
-                      
-  
-              </ul>
-</li>
+		
+							<li><a href="#">Sphyraenops</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Tigerfishes</a>
+						<ul>
+							<li><a href="#">Amniataba</a></li>
+							<li><a href="#">Bidyanus</a></li>
 
-              </ul>	
-              </li>
-<!--
-              <li><span class="opener">Examples<b></b></span>
-              <ul>
-                      <li><a href="/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
-                      <li><a href="/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
-                      <li><a href="/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
-                      <li><a href="/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
-                      
-  
-              </ul>
-              </li> -->
-              <li>
-                  <span class="opener">Tools<b></b></span>
-                  <ul>
-                      <li><a href="/validate">Validator</a></li>
-                      <li><span>Tool Support<b></b></span>
-                      <ul>
-                              <li><a href="/current_app_support">Current Application Support for NeuroML</a></li>
-                              <li><a href="/planning_support">Planning support for NeuroML</a></li>
-                              
-                          </ul>
-                      </li>
-                      <li><a href="/neuron_tools">NML Validator</a></li>
-                      <li><a href="/neuron_tools">NEURON Tools</a></li>
-                      <li><a href="/pynn">PyNN</a></li>
-                      
-                      <li><a href="/x3dtools">X3D Tools</a></li>
-                  </ul>
-              </li>
-              <li><a href="/models">Models</a></li>
-<!--
-              <li><span>Validators<b></b></span>
-               <ul>
-                              <li><a href="/validate">Validate</a></li>
-                              <li><a href="/latest_release_notes">Latest Release Notes</a></li>
-                              
-                          </ul>
-                      
-              </li>
--->
-              <li><span>Community<b></b></span>
-              <ul>
-                              <li><a href="/history">History of NeuroML</a></li><!--
-                              <li><span>Contributors<b></b></span>
-                              <ul>
-                              <li><a href="/contributors">Contributors</a></li>
-                              <li><a href="/brief_history">Brief history of NeuroML</a></li>
-                              <li><span>Related Projects<b></b></span>
-                              <ul>
-                              <li><a href="/standard_proj_biosciences">Standard Project for Biosciences</a></li>
-                              <li><a href="/db_proj">Database projects relevant to Neurol Models</a></li>
-                              <li><a href="/general_info_xmltools">General Information on XML Tools & Technology</a></li>
-                              
+		
+							<li><a href="#">Hannia</a></li>
+							<li><a href="#">Hephaestus</a></li>
+							<li><a href="#">Lagusia</a></li>
+							<li><a href="#">Leiopotherapon</a></li>
+							<li><a href="#">Mesopristes</a></li>
+							<li><a href="#">Pelates</a></li>
 
-                          </ul>
-                              </li>
-  
-                          </ul>
-                      
-                              
-                              </li>
-                              -->
-<li><a href="/scientific_committee">Scientific Committee</a></li>
-<li><a href="/acknowledgements">Acknowledgements</a></li>
-                          </ul>
-                      
-              </li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="#">Help</a></li>
-          </ul>
+		
+							<li><a href="#">Pelsartia</a></li>
+							<li><a href="#">Pingalla</a></li>
+							<li><a href="#">Rhyncopelates</a></li>
+							<li><a href="#">Scortum</a></li>
+							<li><a href="#">Syncomistes</a></li>
+							<li><a href="#">Terapon</a></li>
+
+		
+						</ul>
+					</li>
+		
+				</ul>
+			</li>
+		
+			<li><a href="#">Anabantoidei</a>
+				<ul>
+					<li><a href="#">Climbing perches</a>
+		
+						<ul>
+
+							<li><a href="#">Anabas</a></li>
+							<li><a href="#">Ctenopoma</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Labyrinthfishes</a>
+						<ul>
+		
+							<li><a href="#">Belontia</a></li>
+
+							<li><a href="#">Betta</a></li>
+							<li><a href="#">Colisa</a></li>
+							<li><a href="#">Macropodus</a></li>
+							<li><a href="#">Malpulutta</a></li>
+							<li><a href="#">Parosphromenus</a></li>
+		
+							<li><a href="#">Pseudosphromenus</a></li>
+
+							<li><a href="#">Sphaerichthys</a></li>
+							<li><a href="#">Trichogaster</a></li>
+							<li><a href="#">Trichopsis</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Kissing gouramis</a></li>
+		
+					<li><a href="#">Pike-heads</a></li>
+
+					<li><a href="#">Giant gouramis</a></li>
+		
+				</ul>
+			</li>
+		
+			<li><a href="#">Gobioidei</a>
+				<ul>
+		
+					<li><a href="#">Burrowing gobies</a></li>
+					<li><a href="#">Dartfishes</a></li>
+
+					<li><a href="#">Eellike gobies</a></li>
+					<li><a href="#">Gobies</a></li>
+					<li><a href="#">Loach gobies</a></li>
+					<li><a href="#">Odontobutidae</a></li>
+		
+					<li><a href="#">Sandfishes</a></li>
+					<li><a href="#">Schindleriidae</a></li>
+
+					<li><a href="#">Sleepers</a></li>
+					<li><a href="#">Xenisthmidae</a></li>
+				</ul>
+			</li>
+		
+		</ul>
+	
+		<!-- END Menu -->
       </div>
      <!-- End of Menu -->
 <% end %>
@@ -269,7 +252,7 @@ var j = jQuery.noConflict();
     <% end %>
 
    <!-- <h1><%#= page_header_title %></h1>-->
-   <h1>NeuroML</h1>
+   <h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>
 
     <% if display_main_menu?(@project) %>
     <div id="main-menu">
