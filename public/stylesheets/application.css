@@ -1896,3 +1896,23 @@ border:2px solid white;
 width:85%;
 float:right;
 }
+.home{
+position:relative;
+}
+.home a img{
+position:absolute;
+top:-3px;
+left:-30px;
+}
+#documents{
+background-image:url("../images/documents.png");
+background-repeat:no-repeat;
+background-position:-1% 50%;
+padding-left:33px;
+}
+#tools{
+background-image:url("../images/tools.png");
+background-repeat:no-repeat;
+background-position:-1% 50%;
+padding-left:33px;
+}
