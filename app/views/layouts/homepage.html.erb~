@@ -167,8 +167,8 @@ var j = jQuery.noConflict();
   
               </ul>
               </li> -->
-              <li id="tools">
-                  <span class="opener">Tools<b></b></span>
+              <li>
+                  <span id="tools" class="opener">Tools<b></b></span>
                   <ul>
                       <li><a href="/validate">Validator</a></li>
 		      <li><a href="/current_app_support">Tool Support</a></li>
