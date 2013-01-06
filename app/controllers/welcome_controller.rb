@@ -50,6 +50,8 @@ class WelcomeController < ApplicationController
 
   
  end
+ def specifications
+end
  def level1
 
  end

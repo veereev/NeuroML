@@ -208,9 +208,9 @@ def lems_example6
 end
 def lems_example7
 end
-def lems_example-regimes
+def lems_example_regimes
 end
-def lems_example-n
+def lems_example_n
 end
 def lems_canonical
 end

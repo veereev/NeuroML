@@ -131,7 +131,7 @@ function togglenews()
 </script>
 <div id="news_header">
 <span id="news">News</span>
-<a id="news_marker"  onclick="togglenews();">[ collapse ]</a>
+<a id="news_marker" class="marker" onclick="togglenews();">[ collapse ]</a>
 
 </div>
 <div id="news_listing">
@@ -199,7 +199,7 @@ function toggleevents()
 </script>
 <div id="events_header">
 <span id="events">Events</span>
-<a id="events_marker"   onclick="toggleevents();">[ collapse ]</a>
+<a id="events_marker" class="marker"  onclick="toggleevents();">[ collapse ]</a>
 
 </div>
 <div id="events_listing">

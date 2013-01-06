@@ -73,6 +73,7 @@ RedmineApp::Application.routes.draw do
    match 'workshop2009', :to => 'welcome#workshop2012', :as => 'workshop2012'
   match 'lems_intro', :to => 'welcome#lems_intro', :as => 'lems_intro'
   match 'lems_elements', :to => 'welcome#lems_elements', :as => 'lems_elements'
+  match 'specifications', :to => 'welcome#specifications', :as => 'specifications'
   match 'lems_download', :to => 'welcome#lems_download', :as => 'lems_download'
   match 'lems_example1', :to => 'welcome#lems_example1', :as => 'lems_example1' 
   match 'lems_example2', :to => 'welcome#lems_example2', :as => 'lems_example2'

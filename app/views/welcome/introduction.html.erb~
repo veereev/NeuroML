@@ -26,18 +26,18 @@ For this reason, the NeuroML model description language is being developed in Le
 <table id="longlist" style="border:1px solid black;">
     <tr>
         <td style="border-bottom:1px solid black;"><a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level1">Level 1</a> focuses on the anatomical aspects of cells and consists of a schema for
-            <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Metadata">Metadata</a> and the main
+            <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Metadata">Metadata</a> and the main
 <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=MorphML">MorphML</a> schema.
 <br/>
 <br/>
 This Level is most suitable for tools (such as <a href="tool_support.php#NeuronLand">NeuronLand</a>) which focus solely on detailed neuronal morphologies.
-Note that the <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Metadata">Metadata</a> elements are used at this and higher Levels.
+Note that the <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Metadata">Metadata</a> elements are used at this and higher Levels.
         </td>
     </tr>
     <tr>
-        <td style="border-bottom:1px solid black;"><a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level2">Level 2</a> adds the ability to include information about the biophysical properties
-of cells using the <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Biophysics">Biophysics</a> schema and also includes the properties of channel and
-synaptic mechanisms using <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=ChannelML">ChannelML</a>.
+        <td style="border-bottom:1px solid black;"><a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Level2">Level 2</a> adds the ability to include information about the biophysical properties
+of cells using the <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Biophysics">Biophysics</a> schema and also includes the properties of channel and
+synaptic mechanisms using <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=ChannelML">ChannelML</a>.
 <br/>
 <br/>
 This Level of model description is useful for applications (such as <a href="tool_support.php#NEURON">NEURON</a> and <a href="tool_support.php#MOOSE">MOOSE</a>) which
@@ -46,14 +46,14 @@ can be used to simulate neuronal spiking behaviour.
         </td>
     </tr>
     <tr>
-        <td style="border-bottom:1px solid black;">
-            <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level3">Level 3</a> adds the ability to specify cell placement and network connectivity 
-            using <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=NetworkML">NetworkML</a>.
+        <td>
+            <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Level3">Level 3</a> adds the ability to specify cell placement and network connectivity 
+            using <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=NetworkML">NetworkML</a>.
             <br/>
             <br/>
-            Files containing positions and synaptic connections in <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=NetworkML">NetworkML</a> can be used
+            Files containing positions and synaptic connections in <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=NetworkML">NetworkML</a> can be used
             by applications (such as <a href="tool_support.php#CX3D">CX3D</a> and <a href="tool_support.php#PCSIM">PCSIM</a>) to exchange details on (generated) network structure. Full
-            <a href ="http://neuroml.org/NeuroMLValidator/Latest.jsp?spec=Level3">Level 3</a> files containing cell structure and 3D connectivity can be used by applications such as
+            <a href ="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Level3">Level 3</a> files containing cell structure and 3D connectivity can be used by applications such as
             <a href="tool_support.php#neuroConstruct">neuroConstruct</a> for building and analysing complex network of biophysically detailed neurons.
         </td>
     </tr>
@@ -72,7 +72,7 @@ seamlessly.</p>
 Current schemas and more readable formats for the schemas are available
 on the <a href="specifications.php">specifications</a> page. 
 One of the best ways to gain a better understanding of the structure of the standards is to view
-the XML source for <a href="http://www.neuroml.org/NeuroMLValidator/Samples.jsp">examples</a> of 
+the XML source for <a href="http://spike.la.asu.edu/NeuroMLValidator/Samples.jsp">examples</a> of 
 specific models.</p>
 
 <p>A paper describing the latest stable version of NeuroML has recently been
