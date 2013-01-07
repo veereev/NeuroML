@@ -1874,7 +1874,7 @@ position:relative;
 }
 #documents img{
 position:relative;
-
+top:-13px;
 }
 #tools{
 /*background-image:url("../images/tools.png");*/
@@ -1884,6 +1884,31 @@ padding-left:33px;
 position:relative;
 }
 #tools img{
+position:relative;
+top:-9px;
+}
+#community{
+background-repeat:no-repeat;
+background-position:-1% 50%;
+padding-left:33px;
+position:relative;
+}
+#community img{
+position:relative;
+top:-9px;
+}
+#help,#projects_menu{
+background-repeat:no-repeat;
+background-position:-1% 50%;
+padding-left:33px;
+position:relative;
+}
+#help img{
+position:relative;
+top:-9px;
+}
+#projects_menu img
+{
 position:relative;
 top:-9px;
 }

@@ -102,7 +102,7 @@ var j = jQuery.noConflict();
     <% end %>
 
    <!-- <h1><%#= page_header_title %></h1>-->
-  <!--<h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>-->
+  <h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>
 
 
 
@@ -223,7 +223,7 @@ var j = jQuery.noConflict();
                       
               </li>
 -->
-              <li><span>Community<b></b></span>
+              <li id="community"><img src="../images/community.png" style="float:left;" /><span>Community<b></b></span>
               <ul>
                               <li><a href="/history">History of NeuroML</a></li><!--
                               <li><span>Contributors<b></b></span>
@@ -250,8 +250,8 @@ var j = jQuery.noConflict();
                           </ul>
                       
               </li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="#">Help</a></li>
+              <li><img src="../images/projects_new.png" style="float:left;" /><a href="/projects">Projects</a></li>
+              <li id="help"><image src="../images/help_new.png" style="float:left;" /><a href="#">Help</a></li>
           </ul>
       </div>
      <!-- End of Menu -->

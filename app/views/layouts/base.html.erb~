@@ -73,12 +73,36 @@ var j = jQuery.noConflict();
 <body class="<%=h body_css_classes %>">
 <div id="wrapper">
 <div id="wrapper2">
+<div id="header">
 <div id="top-menu">
     <div id="account">
         <%= render_menu :account_menu -%>
     </div>
     <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
     <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
+</div>
+
+    <% if User.current.logged? || !Setting.login_required? %>
+    <div id="quick-search">
+        <%= form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
+        <%= hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope %>
+        <label for='q'>
+          <%= link_to l(:label_search), {:controller => 'search', :action => 'index', :id => @project}, :accesskey => accesskey(:search) %>:
+        </label>
+        <%= text_field_tag 'q', @question, :size => 20, :class => 'small round_5', :accesskey => accesskey(:quick_search) %>
+        <% end %>
+        <%= render_project_jump_box %>
+    </div>
+    <% end %>
+
+   <!-- <h1><%#= page_header_title %></h1>-->
+   <h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>
+
+    <% if display_main_menu?(@project) %>
+    <div id="main-menu">
+        <%= render_main_menu(@project) %>
+    </div>
+    <% end %>
 </div>
 <!-- start of Menu -->
 <% if !@project %>
@@ -220,29 +244,7 @@ var j = jQuery.noConflict();
       </div>
      <!-- End of Menu -->
 <% end %>
-<div id="header">
-    <% if User.current.logged? || !Setting.login_required? %>
-    <div id="quick-search">
-        <%= form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
-        <%= hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope %>
-        <label for='q'>
-          <%= link_to l(:label_search), {:controller => 'search', :action => 'index', :id => @project}, :accesskey => accesskey(:search) %>:
-        </label>
-        <%= text_field_tag 'q', @question, :size => 20, :class => 'small round_5', :accesskey => accesskey(:quick_search) %>
-        <% end %>
-        <%= render_project_jump_box %>
-    </div>
-    <% end %>
 
-   <!-- <h1><%#= page_header_title %></h1>-->
-   <h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>
-
-    <% if display_main_menu?(@project) %>
-    <div id="main-menu">
-        <%= render_main_menu(@project) %>
-    </div>
-    <% end %>
-</div>
 <!--
 <div id="main" class="<%#= sidebar_content? ? '' : 'nosidebar' %>">
     <div id="sidebar">
