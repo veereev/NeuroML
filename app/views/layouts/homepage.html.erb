@@ -79,6 +79,7 @@ var j = jQuery.noConflict();
 <body class="<%=h body_css_classes %>">
 <div id="wrapper">
 <div id="wrapper2">
+<div id="header">
 <div id="top-menu">
     <div id="account">
         <%= render_menu :account_menu -%>
@@ -86,7 +87,7 @@ var j = jQuery.noConflict();
     <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
     <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
 </div>
-<div id="header">
+ <!-- Testing header -->
     <% if User.current.logged? || !Setting.login_required? %>
     <div id="quick-search">
         <%= form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
@@ -104,12 +105,14 @@ var j = jQuery.noConflict();
   <h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>
 
 
+
     <% if display_main_menu?(@project) %>
     <div id="main-menu">
         <%= render_main_menu(@project) %>
     </div>
     <% end %>
 </div>
+
 <!-- start of Menu -->
 <% if !@project %>
 <div id="menu">
@@ -117,7 +120,7 @@ var j = jQuery.noConflict();
               <li class="first home">
                   <a href="/home"><img src="../images/home.png" style="float:left;" />Home</a>
               </li>
-              <li><span id="documents" class="opener">Documents<b></b></span>
+              <li id="documents"><img src="../images/documents.png" style ="float:left;"/><span  class="opener">Documents<b></b></span>
               <ul>
                       <li><a href="/introduction">Introduction</a></li>
                       <li>
@@ -191,8 +194,8 @@ var j = jQuery.noConflict();
   
               </ul>
               </li> -->
-              <li>
-                  <span id="tools" class="opener">Tools<b></b></span>
+              <li id="tools"><img src="../images/tools.png" style="float:left;" />
+                  <span  class="opener">Tools<b></b></span>
                   <ul>
                       <li><a href="/validate">Validator</a></li>
 		      <li><a href="/current_app_support">Tool Support</a></li>
