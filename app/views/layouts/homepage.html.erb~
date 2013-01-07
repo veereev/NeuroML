@@ -250,7 +250,7 @@ var j = jQuery.noConflict();
                           </ul>
                       
               </li>
-              <li><img src="../images/projects_new.png" style="float:left;" /><a href="/projects">Projects</a></li>
+              <li id="projects_menu"><img src="../images/projects_new.png" style="float:left;" /><a href="/projects">Projects</a></li>
               <li id="help"><image src="../images/help_new.png" style="float:left;" /><a href="#">Help</a></li>
           </ul>
       </div>
