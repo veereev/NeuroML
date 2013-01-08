@@ -1,5 +1,5 @@
 html {overflow-y:scroll;}
-body { font-family: arial,'trajan_proregular',Georgia,Verdana,serif, sans-serif; font-size: 12px; color:black; margin: 0;padding: 0;
+body { font-family: arial,Georgia,Verdana,serif, sans-serif; font-size: 12px; color:black; margin: 0;padding: 0;
 
 background:url("../images/neuron_texture1.jpg");
 
@@ -7,7 +7,7 @@ padding-top:40px;
 padding-bottom:40px;
  }
 
-h1, h2, h3, h4 {font-family:arial,'trajan_proregular', "Trebuchet MS", Verdana, sans-serif;padding: 2px 10px 1px 0px;margin: 0 0 10px 0;
+h1, h2, h3, h4 {font-family:arial,"Trebuchet MS", Verdana, sans-serif;padding: 2px 10px 1px 0px;margin: 0 0 10px 0;
 font-variant:small-caps;}
 #content h1, h2, h3, h4 {color: #37ABC8;}
 #content_others h1, h2, h3, h4 {color: #37ABC8;}
@@ -790,7 +790,7 @@ ul.projects li {list-style-type:none;}
 #projects-index ul.projects ul.projects { border-left: 3px solid #e0e0e0; padding-left:1em;}
 #projects-index ul.projects li.root {margin-bottom: 1em;}
 #projects-index ul.projects li.child {margin-top: 1em;}
-#projects-index ul.projects div.root a.project { font-family: Arial,'trajan_proregular',"Trebuchet MS", Verdana, sans-serif; font-weight: bold; font-size: 16px; margin: 0 0 10px 0; }
+#projects-index ul.projects div.root a.project { font-family: Arial,"Trebuchet MS", Verdana, sans-serif; font-weight: bold; font-size: 16px; margin: 0 0 10px 0; }
 .my-project { padding-left: 18px; background: url("../images/fav.png") no-repeat 0 50%; }
 
 #notified-projects ul, #tracker_project_ids ul {max-height:250px; overflow-y:auto;}

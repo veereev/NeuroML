@@ -12,25 +12,25 @@
 <%= javascript_heads %>
 <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
 
-  <link rel="stylesheet" type="text/css" href="stylesheets/tp.css" />
-  <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.slidertron-1.1.js"></script>
- <script type="text/javascript" src="javascripts/scriptaculous.js"></script>
-  <script type="text/javascript" src="javascripts/prototype.js"></script>
- <script type="text/javascript" src="javascripts/builder.js"></script>
-<script type="text/javascript" src="javascripts/controls.js"></script>
-<script type="text/javascript" src="javascripts/dragdrop.js"></script>
-<script type="text/javascript" src="javascripts/effects.js"></script>
-<script type="text/javascript" src="javascripts/slider.js"></script>
-<script type="text/javascript" src="javascripts/sound.js"></script>
-<script type="text/javascript" src="javascripts/unittest.js"></script>
+
+  <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.dropotron-1.0.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.slidertron-1.1.js"></script>
+ <script type="text/javascript" src="/javascripts/scriptaculous.js"></script>
+  <script type="text/javascript" src="/javascripts/prototype.js"></script>
+ <script type="text/javascript" src="/javascripts/builder.js"></script>
+<script type="text/javascript" src="/javascripts/controls.js"></script>
+<script type="text/javascript" src="/javascripts/dragdrop.js"></script>
+<script type="text/javascript" src="/javascripts/effects.js"></script>
+<script type="text/javascript" src="/javascripts/slider.js"></script>
+<script type="text/javascript" src="/javascripts/sound.js"></script>
+<script type="text/javascript" src="/javascripts/unittest.js"></script>
    <!-- ==================slidorion ===============-->
-   <link rel="stylesheet" href="stylesheets/slidorion/slidorion.css" />
+   <link rel="stylesheet" href="/stylesheets/slidorion/slidorion.css" />
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	
 	<!-- <script src="javascripts/slidorion/jquery.min.js"></script>-->
-    <script src="javascripts/slidorion/jquery.slidorion.min.js"></script>
+    <script src="/javascripts/slidorion/jquery.slidorion.min.js"></script>
 	
    <script>
 var j = jQuery.noConflict();
@@ -112,9 +112,9 @@ var j = jQuery.noConflict();
 <div id="menu">
           <ul>
               <li class="first home">
-                  <a href="/home"><img src="../images/home.png" style="float:left;" />Home</a>
+                  <a href="/home"><%= image_tag "home.png",:style=>"float:left;" %>Home</a>
               </li>
-              <li id="documents"><img src="../images/documents.png" style ="float:left;"/><span  class="opener">Documents<b></b></span>
+              <li id="documents"><%= image_tag "documents.png",:style=>"float:left;" %><span  class="opener">Documents<b></b></span>
               <ul>
                       <li><a href="/introduction">Introduction</a></li>
                       <li>
@@ -188,7 +188,7 @@ var j = jQuery.noConflict();
   
               </ul>
               </li> -->
-              <li id="tools"><img src="../images/tools.png" style="float:left;" />
+              <li id="tools"><%= image_tag "tools.png",:style=>"float:left;" %>
                   <span  class="opener">Tools<b></b></span>
                   <ul>
                       <li><a href="/validate">Validator</a></li>
@@ -200,7 +200,7 @@ var j = jQuery.noConflict();
                       <li><a href="/x3dtools">X3D Tools</a></li>
                   </ul>
               </li>
-              <li id="models_menu"><img src="../images/models_menu.png" style="float:left;" /><span class="opener">Models<b></b></span>
+              <li id="models_menu"><%= image_tag "models_menu.png",:style=>"float:left;" %><span class="opener">Models<b></b></span>
 		<ul>
                       <li><a href="/browse_models">Browse Models</a></li>
                       <li><a href="/model_submit">Submit Models</a></li>
@@ -217,7 +217,7 @@ var j = jQuery.noConflict();
                       
               </li>
 -->
-              <li id="community"><img src="../images/community.png" style="float:left;" /><span>Community<b></b></span>
+              <li id="community"><%= image_tag "community.png",:style=>"float:left;" %><span>Community<b></b></span>
               <ul>
                               <li><a href="/history">History of NeuroML</a></li><!--
                               <li><span>Contributors<b></b></span>
@@ -244,12 +244,11 @@ var j = jQuery.noConflict();
                           </ul>
                       
               </li>
-              <li id="projects_menu"><img src="../images/projects_new.png" style="float:left;" /><a href="/projects">Projects</a></li>
-              <li id="help"><image src="../images/help_new.png" style="float:left;" /><a href="#">Help</a></li>
+              <li id="projects_menu"><%= image_tag "projects_new.png",:style=>"float:left;" %><a href="/projects">Projects</a></li>
+              <li id="help"><%= image_tag "help_new.png",:style=>"float:left;" %><a href="#">Help</a></li>
           </ul>
       </div>
      <!-- End of Menu -->
-
 
 <!--
 <div id="main" class="<%#= sidebar_content? ? '' : 'nosidebar' %>">
