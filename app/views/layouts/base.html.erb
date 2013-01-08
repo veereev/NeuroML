@@ -251,13 +251,13 @@ var j = jQuery.noConflict();
      <!-- End of Menu -->
 
 
-<!--
-<div id="main" class="<%#= sidebar_content? ? '' : 'nosidebar' %>">
+
+<div id="main" class="<%= sidebar_content? ? '' : 'nosidebar' %>">
     <div id="sidebar">
-        <%#= yield :sidebar %>
-        <%#= view_layouts_base_sidebar_hook_response %>
+        <%= yield :sidebar %>
+        <%= view_layouts_base_sidebar_hook_response %>
     </div>
--->
+
     <div id="content_others">
         <%= render_flash_messages %>
         <%= yield %>
