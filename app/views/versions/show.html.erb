@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to(l(:button_edit), edit_version_path(@version), :class => 'icon icon-edit') if User.current.allowed_to?(:manage_versions, @version.project) %>
 <%= link_to_if_authorized(l(:button_edit_associated_wikipage, :page_title => @version.wiki_page_title), {:controller => 'wiki', :action => 'edit', :project_id => @version.project, :id => Wiki.titleize(@version.wiki_page_title)}, :class => 'icon icon-edit') unless @version.wiki_page_title.blank? || @version.project.wiki.nil? %>
@@ -52,4 +53,4 @@
 
 <%= call_hook :view_versions_show_bottom, :version => @version %>
 
-<% html_title @version.name %>
+<% html_title @version.name %></div>

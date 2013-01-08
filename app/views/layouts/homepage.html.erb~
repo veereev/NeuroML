@@ -19,7 +19,7 @@ border:0px;
   <link rel="stylesheet" type="text/css" href="stylesheets/presentationCycle.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/tp.css" />
   <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script> 
+   <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script> 
   <script type="text/javascript" src="javascripts/jquery.slidertron-1.1.js"></script>
 
   <script type="text/javascript" src="javascripts/scriptaculous.js"></script>
@@ -137,7 +137,7 @@ var j = jQuery.noConflict();
 
                               </li>
 
-                              <li><a href="#">NeuroML 2.0</a></li>
+                              <!--<li><a href="#">NeuroML 2.0</a></li> -->
 
    
                           </ul>
@@ -206,7 +206,7 @@ var j = jQuery.noConflict();
                       <li><a href="/x3dtools">X3D Tools</a></li>
                   </ul>
               </li>
-              <li><span class="opener">Models<b></b></span>
+              <li id="models_menu"><img src="../images/models_menu.png" style="float:left;" /><span class="opener">Models<b></b></span>
 		<ul>
                       <li><a href="/browse_models">Browse Models</a></li>
                       <li><a href="/model_submit">Submit Models</a></li>

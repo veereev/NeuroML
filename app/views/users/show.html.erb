@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to(l(:button_edit), edit_user_path(@user), :class => 'icon icon-edit') if User.current.admin? %>
 </div>
@@ -69,4 +70,4 @@
 <%= call_hook :view_account_right_bottom, :user => @user %>
 </div>
 
-<% html_title @user.name %>
+<% html_title @user.name %></div>

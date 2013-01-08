@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <% if User.current.allowed_to?(:manage_documents, @project) %>
 <%= link_to l(:button_edit), edit_document_path(@document), :class => 'icon icon-edit', :accesskey => accesskey(:edit) %>
@@ -28,3 +29,4 @@
 <% end %>
 
 <% html_title @document.title -%>
+</div>

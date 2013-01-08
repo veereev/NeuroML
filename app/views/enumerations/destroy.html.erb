@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h2><%= l(@enumeration.option_name) %>: <%=h @enumeration %></h2>
 
 <%= form_tag({}, :method => :delete) do %>
@@ -10,3 +11,4 @@
 <%= submit_tag l(:button_apply) %>
 <%= link_to l(:button_cancel), enumerations_path %>
 <% end %>
+</div>

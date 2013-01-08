@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h2><%= link_to h(@board.name), :controller => 'boards', :action => 'show', :project_id => @project, :id => @board %> &#187; <%= l(:label_message_new) %></h2>
 
 <%= form_for @message, :url => {:action => 'new'}, :html => {:multipart => true, :id => 'message-form'} do |f| %>
@@ -6,4 +7,4 @@
   <%= preview_link({:controller => 'messages', :action => 'preview', :board_id => @board}, 'message-form') %>
 <% end %>
 
-<div id="preview" class="wiki"></div>
+<div id="preview" class="wiki"></div></div>

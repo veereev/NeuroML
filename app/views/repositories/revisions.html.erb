@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= form_tag(
        {:controller => 'repositories', :action => 'revision', :id => @project,
@@ -30,4 +31,4 @@
   <%= f.link_to 'Atom', :url => {:key => User.current.rss_key} %>
 <% end %>
 
-<% html_title(l(:label_revision_plural)) -%>
+<% html_title(l(:label_revision_plural)) -%></div>

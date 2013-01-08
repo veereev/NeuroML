@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <% if @editable %>
 <%= link_to_if_authorized(l(:button_edit), {:action => 'edit', :id => @page.title}, :class => 'icon icon-edit', :accesskey => accesskey(:edit)) if @content.current_version? %>
@@ -65,4 +66,4 @@
   <%= render :partial => 'sidebar' %>
 <% end %>
 
-<% html_title @page.pretty_title %>
+<% html_title @page.pretty_title %></div>

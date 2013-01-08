@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h2><%=l(:label_issue_category)%>: <%=h @category.name %></h2>
 
 <%= form_tag(issue_category_path(@category), :method => :delete) do %>
@@ -14,3 +15,4 @@
 <%= submit_tag l(:button_apply) %>
 <%= link_to l(:button_cancel), :controller => 'projects', :action => 'settings', :id => @project, :tab => 'categories' %>
 <% end %>
+</div>

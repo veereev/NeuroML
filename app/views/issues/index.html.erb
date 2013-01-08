@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <% if !@query.new_record? && @query.editable_by?(User.current) %>
   <%= link_to l(:button_edit), edit_query_path(@query), :class => 'icon icon-edit' %>
@@ -102,3 +103,4 @@
 <% end %>
 
 <%= context_menu issues_context_menu_path %>
+</div>

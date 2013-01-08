@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <%= wiki_page_breadcrumb(@page) %>
 
 <h2><%=h @page.pretty_title %></h2>
@@ -19,4 +20,4 @@
 
 <%= submit_tag l(:button_apply) %>
 <%= link_to l(:button_cancel), :controller => 'wiki', :action => 'show', :project_id => @project, :id => @page.title %>
-<% end %>
+<% end %></div>

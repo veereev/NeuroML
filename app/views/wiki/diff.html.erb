@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to(l(:label_history), {:action => 'history', :id => @page.title},
             :class => 'icon icon-history') %>
@@ -24,4 +25,4 @@
 
 <div class="text-diff">
 <%= simple_format_without_paragraph @diff.to_html %>
-</div>
+</div></div>

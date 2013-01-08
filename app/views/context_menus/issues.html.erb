@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <ul>
   <%= call_hook(:view_issues_context_menu_start, {:issues => @issues, :can => @can, :back => @back }) %>
 
@@ -139,3 +140,4 @@
 
   <%= call_hook(:view_issues_context_menu_end, {:issues => @issues, :can => @can, :back => @back }) %>
 </ul>
+</div>

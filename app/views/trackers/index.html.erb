@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to l(:label_tracker_new), new_tracker_path, :class => 'icon icon-add' %>
 <%= link_to l(:field_summary), {:action => 'fields'}, :class => 'icon icon-summary' %>
@@ -28,4 +29,4 @@
 
 <p class="pagination"><%= pagination_links_full @tracker_pages %></p>
 
-<% html_title(l(:label_tracker_plural)) -%>
+<% html_title(l(:label_tracker_plural)) -%></div>

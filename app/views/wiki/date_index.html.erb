@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= watcher_tag(@wiki, User.current) %>
 </div>
@@ -33,4 +34,4 @@
 
 <% content_for :header_tags do %>
 <%= auto_discovery_link_tag(:atom, :controller => 'activities', :action => 'index', :id => @project, :show_wiki_edits => 1, :format => 'atom', :key => User.current.rss_key) %>
-<% end %>
+<% end %></div>

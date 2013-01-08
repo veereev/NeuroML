@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>NeuroML</title>
+<meta name="description" content="<%= Redmine::Info.app_name %>" />
+<meta name="keywords" content="issue,bug,tracker" />
+<%= csrf_meta_tag %>
+<%= favicon %>
+<%= stylesheet_link_tag 'jquery/jquery-ui-1.8.21', 'application', :media => 'all' %>
+<%= stylesheet_link_tag 'rtl', :media => 'all' if l(:direction) == 'rtl' %>
+<%= javascript_heads %>
+<link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/tp.css" />
+  <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.dropotron-1.0.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.slidertron-1.1.js"></script>
+ <script type="text/javascript" src="javascripts/scriptaculous.js"></script>
+  <script type="text/javascript" src="javascripts/prototype.js"></script>
+ <script type="text/javascript" src="javascripts/builder.js"></script>
+<script type="text/javascript" src="javascripts/controls.js"></script>
+<script type="text/javascript" src="javascripts/dragdrop.js"></script>
+<script type="text/javascript" src="javascripts/effects.js"></script>
+<script type="text/javascript" src="javascripts/slider.js"></script>
+<script type="text/javascript" src="javascripts/sound.js"></script>
+<script type="text/javascript" src="javascripts/unittest.js"></script>
+   <!-- ==================slidorion ===============-->
+   <link rel="stylesheet" href="stylesheets/slidorion/slidorion.css" />
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
+	
+	<!-- <script src="javascripts/slidorion/jquery.min.js"></script>-->
+    <script src="javascripts/slidorion/jquery.slidorion.min.js"></script>
+	
+   <script>
+var j = jQuery.noConflict();
+	j(function(){
+		j('#slidorion').slidorion({
+			effect: 'slideRight',
+			hoverPause: true,
+			autoPlay:false,
+			//interval: 200000000000000000000000000000000000000000000000000000000000000000000000,
+			speed: 800,
+                       slideCount:4
+		});
+		
+		j(window).scroll(function(){
+			$el = j('#download-box');
+			if (j(this).scrollTop() > 540 && $el.css('position') != 'fixed'){
+				j('#download-box').css({'position': 'fixed', 'top': '10px'});
+			}else if($(this).scrollTop() < 540 && $el.css('position') == 'fixed'){
+				j('#download-box').css({'position': 'absolute', 'top': '10px'});
+			}
+		});
+	});
+	function trackDownload(){_gaq.push(['_trackPageview', '/downloads/slidorion']);}
+	</script>
+<!-- ================================ End of slidorion ===============-->
+  <script type="text/javascript">
+      j(function() {
+          j('#menu > ul').dropotron({
+              mode: 'fade',
+              globalOffsetY: 11,
+              offsetY: -15
+          });
+      });
+  </script>
+<%= heads_for_theme %>
+<%= call_hook :view_layouts_base_html_head %>
+<!-- page specific tags -->
+<%= yield :header_tags -%>
+</head>
+<body class="<%=h body_css_classes %>">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="header">
+<div id="top-menu">
+    <div id="account">
+        <%= render_menu :account_menu -%>
+    </div>
+    <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
+    <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
+</div>
+ <!-- Testing header -->
+    <% if User.current.logged? || !Setting.login_required? %>
+    <div id="quick-search">
+        <%= form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
+        <%= hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope %>
+        <label for='q'>
+          <%= link_to l(:label_search), {:controller => 'search', :action => 'index', :id => @project}, :accesskey => accesskey(:search) %>:
+        </label>
+        <%= text_field_tag 'q', @question, :size => 20, :class => 'small round_5', :accesskey => accesskey(:quick_search) %>
+        <% end %>
+        <%= render_project_jump_box %>
+    </div>
+    <% end %>
+
+   <!-- <h1><%#= page_header_title %></h1>-->
+  <h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>
+
+
+
+    <% if display_main_menu?(@project) %>
+    <div id="main-menu">
+        <%= render_main_menu(@project) %>
+    </div>
+    <% end %>
+</div>
+
+<!-- start of Menu -->
+
+<div id="menu">
+          <ul>
+              <li class="first home">
+                  <a href="/home"><img src="../images/home.png" style="float:left;" />Home</a>
+              </li>
+              <li id="documents"><img src="../images/documents.png" style ="float:left;"/><span  class="opener">Documents<b></b></span>
+              <ul>
+                      <li><a href="/introduction">Introduction</a></li>
+                      <li>
+                          <span>Specifications<b></b></span>
+                          <ul>
+                              <li><span>NeuroML V1.X Schemas<b></b></span>
+<ul>
+                              <li><a href="/level1">Level 1</a></li>
+                              <li><a href="/level2">Level 2</a></li>
+                              <li><a href="/level3">Level 3</a></li>
+                                <li><a href="http://spike.la.asu.edu/NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Schemata/v1.8.1/RELEASE_NOTES&viewFormat=plaintext">General Release Notes</a></li>
+                          </ul>
+
+
+                              </li>
+
+                             <!-- <li><a href="#">NeuroML 2.0</a></li>-->
+
+   
+                          </ul>
+                      </li>
+  
+                      <li><a href="/extend_neuroml">Extending NeuroML</a></li>
+                      <li>
+                          <span>NeuroML V2.0<b></b></span>
+                          <ul>
+                              <li><a href="/alpha_schema">NeuroML V2alpha schema</a></li>
+                              <li><a href="/lems_dev">Development of LEMS & mapping to NeuroML2</a></li>
+                              <li><a href="/libnml">libNeuroML</a></li>
+                              <li><a href="/compatibility">Compatibility with other MLs</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="/lems">LEMS</a></li>
+                      <li><a href="/relevant_publications">Publications</a></li>
+  
+                     <!-- <li><a href="/presentations">Presentations</a></li>-->
+  <li><span class="opener">Examples<b></b></span>
+              <ul>
+                      <li><a href="/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
+                      <li><a href="/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
+                      <li><a href="/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
+                      <li><a href="/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
+                      
+  
+              </ul>
+              </li>
+<li><span class="opener">Workshop Reports<b></b></span>
+
+<ul>
+                       <li><a href="/workshop2012">2012</a></li>
+ 			<li><a href="/workshop2011">2011</a></li>
+			<li><a href="/workshop2010">2010</a></li>
+			<li><a href="/workshop2009">2009</a></li>
+			<li><a href="CNS_workshop">2008</a></li>
+
+                      
+  
+              </ul>
+</li>
+
+              </ul>	
+              </li>
+<!--
+              <li><span class="opener">Examples<b></b></span>
+              <ul>
+                      <li><a href="/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
+                      <li><a href="/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
+                      <li><a href="/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
+                      <li><a href="/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
+                      
+  
+              </ul>
+              </li> -->
+              <li id="tools"><img src="../images/tools.png" style="float:left;" />
+                  <span  class="opener">Tools<b></b></span>
+                  <ul>
+                      <li><a href="/validate">Validator</a></li>
+		      <li><a href="/current_app_support">Tool Support</a></li>
+                      <li><a href="/neuron_tools">NML Validator</a></li>
+                      <li><a href="/neuron_tools">NEURON Tools</a></li>
+                      <li><a href="/pynn">PyNN</a></li>
+                      
+                      <li><a href="/x3dtools">X3D Tools</a></li>
+                  </ul>
+              </li>
+              <li id="models_menu"><img src="../images/models_menu.png" style="float:left;" /><span class="opener">Models<b></b></span>
+		<ul>
+                      <li><a href="/browse_models">Browse Models</a></li>
+                      <li><a href="/model_submit">Submit Models</a></li>
+                  </ul>
+              </li>
+
+<!--
+              <li><span>Validators<b></b></span>
+               <ul>
+                              <li><a href="/validate">Validate</a></li>
+                              <li><a href="/latest_release_notes">Latest Release Notes</a></li>
+                              
+                          </ul>
+                      
+              </li>
+-->
+              <li id="community"><img src="../images/community.png" style="float:left;" /><span>Community<b></b></span>
+              <ul>
+                              <li><a href="/history">History of NeuroML</a></li><!--
+                              <li><span>Contributors<b></b></span>
+                              <ul>
+                              <li><a href="/contributors">Contributors</a></li>
+                              <li><a href="/brief_history">Brief history of NeuroML</a></li>
+                              <li><span>Related Projects<b></b></span>
+                              <ul>
+                              <li><a href="/standard_proj_biosciences">Standard Project for Biosciences</a></li>
+                              <li><a href="/db_proj">Database projects relevant to Neurol Models</a></li>
+                              <li><a href="/general_info_xmltools">General Information on XML Tools & Technology</a></li>
+                              
+
+                          </ul>
+                              </li>
+  
+                          </ul>
+                      
+                              
+                              </li>
+                              -->
+<li><a href="/scientific_committee">Scientific Committee</a></li>
+<li><a href="/acknowledgements">Acknowledgements</a></li>
+                          </ul>
+                      
+              </li>
+              <li id="projects_menu"><img src="../images/projects_new.png" style="float:left;" /><a href="/projects">Projects</a></li>
+              <li id="help"><image src="../images/help_new.png" style="float:left;" /><a href="#">Help</a></li>
+          </ul>
+      </div>
+     <!-- End of Menu -->
+
+
+<!--
+<div id="main" class="<%#= sidebar_content? ? '' : 'nosidebar' %>">
+    <div id="sidebar">
+        <%#= yield :sidebar %>
+        <%#= view_layouts_base_sidebar_hook_response %>
+    </div>
+-->
+    <div id="content_others">
+        <%= render_flash_messages %>
+        <%= yield %>
+        
+        
+        <%= call_hook :view_layouts_base_content %>
+        <div style="clear:both;"></div>
+    </div>
+
+<div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
+<div id="ajax-modal" style="display:none;"></div>
+
+<div id="footer">
+	<div id="page-bottom">
+              
+<ul>
+<li><a><span>QuickLinks</span></a></li>
+<li><a href="#" target="_blank">QuickLink1</a></li>
+<li><a href="#" target="_blank">QuickLink2</a></li>
+<li><a href="#" target="_blank">QuickLink3</a></li>
+<li><a href="#" target="_blank">QuickLink4</a></li>
+</ul>
+<br /><br />
+
+
+<ul>
+<li><a><span>QuickLinks</span></a></li>
+<li><a href="#" target="_blank">QuickLink1</a></li>
+<li><a href="#" target="_blank">QuickLink2</a></li>
+<li><a href="#" target="_blank">QuickLink3</a></li>
+<li><a href="#" target="_blank">QuickLink4</a></li>
+</ul>
+<div id="contactus">
+<span id="message">For Queries or Assistance</span>
+<div id="email">abc@neuroml.org</div>
+</div>
+<div id="copyrights">
+Website & Images<br />
+Copyright &copy; 2013<br />
+All rights reserved
+</div>
+
+   
+          <br class="clearfix" />
+      </div>
+      
+  </div>
+	<!--
+  <div class="bgl"><div class="bgr">
+    Powered by <%= link_to Redmine::Info.app_name, Redmine::Info.url %> &copy; 2006-2012 Jean-Philippe Lang
+  </div>
+ -->
+  </div>
+</div>
+</div>
+</div>
+<%= call_hook :view_layouts_base_body_bottom %>
+</body>
+</html>

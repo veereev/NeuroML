@@ -1,3 +1,5 @@
+<div class="overflowcontent">
 <%= link_to(h(@document.title), @document_url) %> (<%=h @document.category.name %>)<br />
 <br />
 <%= textilizable(@document, :description, :only_path => false) %>
+</div>

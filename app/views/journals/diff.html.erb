@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h2><%=h @issue.tracker %> #<%= @issue.id %></h2>
 <p><%= authoring @journal.created_on, @journal.user, :label => :label_updated_time_by %></p>
 
@@ -8,3 +9,4 @@
 <p><%= link_to l(:button_back), issue_path(@issue), :onclick => 'history.back(); return false;' %></p>
 
 <% html_title "#{@issue.tracker.name} ##{@issue.id}: #{@issue.subject}" %>
+</div>

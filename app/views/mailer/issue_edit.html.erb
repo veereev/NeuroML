@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <%= l(:text_issue_updated, :id => "##{@issue.id}", :author => h(@journal.user)) %>
 
 <ul>
@@ -9,3 +10,4 @@
 <%= textilizable(@journal, :notes, :only_path => false) %>
 <hr />
 <%= render :partial => 'issue', :formats => [:html], :locals => { :issue => @issue, :issue_url => @issue_url } %>
+</div>

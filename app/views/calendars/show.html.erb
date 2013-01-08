@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h2><%= @query.new_record? ? l(:label_calendar) : h(@query.name) %></h2>
 
 <%= form_tag({:controller => 'calendars', :action => 'show', :project_id => @project},
@@ -41,3 +42,4 @@
 <% end %>
 
 <% html_title(l(:label_calendar)) -%>
+</div>

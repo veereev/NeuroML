@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to_if_authorized l(:button_log_time), {:controller => 'timelog', :action => 'new', :project_id => @project, :issue_id => @issue}, :class => 'icon icon-time-add' %>
 </div>
@@ -71,4 +72,4 @@
 <% end %>
 
 <% html_title l(:label_spent_time), l(:label_report) %>
-
+</div>

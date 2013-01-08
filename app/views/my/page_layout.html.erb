@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <% if @block_options.present? %>
   <%= form_tag({:action => "add_block"}, :id => "block-form") do %>
@@ -38,4 +39,4 @@
 <%= javascript_tag "initMyPageSortable('left', '#{ escape_javascript url_for(:action => "order_blocks", :group => "left") }');" %>
 <%= javascript_tag "initMyPageSortable('right', '#{ escape_javascript url_for(:action => "order_blocks", :group => "right") }');" %>
 
-<% html_title(l(:label_my_page)) -%>
+<% html_title(l(:label_my_page)) -%></div>

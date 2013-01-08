@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h2><%=l(:label_news_new)%></h2>
 
 <%= labelled_form_for @news, :url => project_news_index_path(@project),
@@ -6,4 +7,4 @@
   <%= submit_tag l(:button_create) %>
   <%= preview_link preview_news_path(:project_id => @project), 'news-form' %>
 <% end %>
-<div id="preview" class="wiki"></div>
+<div id="preview" class="wiki"></div></div>

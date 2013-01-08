@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h2><%=l(:label_member_plural)%></h2>
 
 <% if @members.empty? %><p><i><%= l(:label_no_data) %></i></p><% end %>
@@ -10,4 +11,4 @@
 <li><%= link_to_user m.user %> (<%= format_date m.created_on %>)</li>
 <% end %>
 </ul>
-<% end %>
+<% end %></div>

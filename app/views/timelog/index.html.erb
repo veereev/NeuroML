@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to l(:button_log_time), 
             {:controller => 'timelog', :action => 'new', :project_id => @project, :issue_id => @issue},
@@ -30,4 +31,4 @@
 
 <% content_for :header_tags do %>
     <%= auto_discovery_link_tag(:atom, {:issue_id => @issue, :format => 'atom', :key => User.current.rss_key}, :title => l(:label_spent_time)) %>
-<% end %>
+<% end %></div>

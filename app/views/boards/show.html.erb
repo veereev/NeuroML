@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <%= board_breadcrumb(@board) %>
 
 <div class="contextual">
@@ -64,3 +65,4 @@
 <% content_for :header_tags do %>
     <%= auto_discovery_link_tag(:atom, {:format => 'atom', :key => User.current.rss_key}, :title => "#{@project}: #{@board}") %>
 <% end %>
+</div>

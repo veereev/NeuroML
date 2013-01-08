@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to(l(:label_attachment_new), new_project_file_path(@project), :class => 'icon icon-add') if User.current.allowed_to?(:manage_files, @project) %>
 </div>
@@ -44,3 +45,4 @@
 </table>
 
 <% html_title(l(:label_attachment_plural)) -%>
+</div>

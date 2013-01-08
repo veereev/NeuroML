@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to l(:label_issue_status_new), new_issue_status_path, :class => 'icon icon-add' %>
 <%= link_to(l(:label_update_issue_done_ratios), update_issue_done_ratio_issue_statuses_path, :class => 'icon icon-multiple', :method => 'post', :data => {:confirm => l(:text_are_you_sure)}) if Issue.use_status_for_done_ratio? %>
@@ -37,3 +38,4 @@
 <p class="pagination"><%= pagination_links_full @issue_status_pages %></p>
 
 <% html_title(l(:label_issue_status_plural)) -%>
+</div>

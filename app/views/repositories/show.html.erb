@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <%= call_hook(:view_repositories_show_contextual, { :repository => @repository, :project => @project }) %>
 
 <div class="contextual">
@@ -74,4 +75,4 @@
   <%= stylesheet_link_tag "scm" %>
 <% end %>
 
-<% html_title(l(:label_repository)) -%>
+<% html_title(l(:label_repository)) -%></div>

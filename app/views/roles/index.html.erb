@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <div class="contextual">
 <%= link_to l(:label_role_new), new_role_path, :class => 'icon icon-add' %>
 <%= link_to l(:label_permissions_report), {:action => 'permissions'}, :class => 'icon icon-summary' %>
@@ -32,3 +33,4 @@
 <p class="pagination"><%= pagination_links_full @role_pages %></p>
 
 <% html_title(l(:label_role_plural)) -%>
+</div>
