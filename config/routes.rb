@@ -84,8 +84,10 @@ RedmineApp::Application.routes.draw do
   match 'lems_example7', :to => 'welcome#lems_example7', :as => 'lems_example7'
   match 'lems_example_regimes', :to => 'welcome#lems_example_regimes', :as => 'lems_example_regimes'
   match 'lems_example_n', :to => 'welcome#lems_example_n', :as => 'lems_example_n'
+  match 'lems_neuroml2', :to => 'welcome#lems_neuroml2', :as => 'lems_neuroml2'
   match 'lems_canonical', :to => 'welcome#lems_canonical', :as => 'lems_canonical'
   match 'lems_discussion', :to => 'welcome#lems_discussion', :as => 'lems_discussion'
+  match 'lems_interpreter', :to => 'welcome#lems_interpreter', :as => 'lems_interpreter'
  #match 'account/register', :to => 'account#register', :via => [:get, :post], :as => 'register'
   match 'account/lost_password', :to => 'account#lost_password', :via => [:get, :post], :as => 'lost_password'
   match 'account/activate', :to => 'account#activate', :via => :get
