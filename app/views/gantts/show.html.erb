@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <% @gantt.view = self %>
 <h2><%= @query.new_record? ? l(:label_gantt) : h(@query.name) %></h2>
 
@@ -260,3 +261,4 @@
 <% end %>
 
 <% html_title(l(:label_gantt)) -%>
+</div>
