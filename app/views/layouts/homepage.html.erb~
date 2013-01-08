@@ -17,7 +17,7 @@ border:0px;
 </style>
 <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
   <link rel="stylesheet" type="text/css" href="/stylesheets/presentationCycle.css" />
-  <link rel="stylesheet" type="text/css" href="/stylesheets/tp.css" />
+
   <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
    <script type="text/javascript" src="/javascripts/jquery.dropotron-1.0.js"></script> 
   <script type="text/javascript" src="/javascripts/jquery.slidertron-1.1.js"></script>
