@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/NeuroMLValidator">
+  <Logger className="org.apache.catalina.logger.FileLogger" prefix="NeuroMLValidator." suffix=".log" timestamp="true"/>
+</Context>

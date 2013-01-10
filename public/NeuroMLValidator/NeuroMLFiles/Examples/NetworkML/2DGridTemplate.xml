@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<networkml xmlns="http://morphml.org/networkml/schema"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:meta="http://morphml.org/metadata/schema" 
+    xsi:schemaLocation="http://morphml.org/networkml/schema http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level3/NetworkML_v1.8.1.xsd"
+    length_units="micrometer">
+                        
+
+    <meta:notes>A simple network template describing 2 cell groups in 2D grids, and various ways of connecting them up. 
+    Based on suggestions from the Facets project.</meta:notes>
+
+
+    <populations>
+        
+        <population name="LowerCellGroup" cell_type="CellA">
+            
+            <pop_location>
+                <grid_arrangement>
+                    <rectangular_location>
+                        <meta:corner x="0" y="0" z="0"/>
+                        <meta:size width="100" height="0" depth="100"/>
+                    </rectangular_location>
+                    <spacing x="10" z="20"/>
+                </grid_arrangement>
+            </pop_location>
+        </population>
+        
+        <population name="UpperCellGroup" cell_type="CellB">
+            
+            <pop_location>
+                <grid_arrangement>
+                    <rectangular_location>
+                        <meta:corner x="0" y="50" z="0"/>
+                        <meta:size width="100" height="0" depth="100"/>
+                    </rectangular_location>
+                    <spacing x="10" z="20"/>
+                </grid_arrangement>
+            </pop_location>
+        </population>
+        
+    </populations>
+    
+
+    <projections units="Physiological Units">
+        
+        <!-- Every pre cell connected to every post cell-->
+        
+        <projection name="NetworkConnection1" source="LowerCellGroup" target="UpperCellGroup">
+            
+            <synapse_props synapse_type="DoubExpSynA" internal_delay="5" weight="1" threshold="-20"/>
+            
+            <connectivity_pattern>
+                <all_to_all/>
+            </connectivity_pattern>
+        </projection>
+        
+        
+        <!-- Fixed prob of pre cell connected to post cell-->
+        
+        <projection name="NetworkConnection2" source="LowerCellGroup" target="UpperCellGroup">
+            
+            <synapse_props synapse_type="DoubExpSynA" internal_delay="5" weight="1" threshold="-20"/>
+            
+            <connectivity_pattern>
+                <fixed_probability probability="0.5"/>
+            </connectivity_pattern>
+        </projection>
+        
+        
+        <!-- Fixed number of connections per postsynaptic cell-->
+
+        <projection name="NetworkConnection3" source="LowerCellGroup" target="UpperCellGroup">
+
+            <synapse_props synapse_type="DoubExpSynA" internal_delay="5" weight="1" threshold="-20"/>
+
+            <connectivity_pattern>
+                <per_cell_connection direction = "PostToPre" num_per_source= "2"/>
+            </connectivity_pattern>
+        </projection>
+        
+    </projections>
+    
+    
+
+
+</networkml>

@@ -1,0 +1,6 @@
+This folder contains some of the main NeuroML files
+
+Examples:   contains a list of example NeuroML/MorphML files
+Schemata:   contains the XML Schema documents
+
+See the README files in each of those folders for more details

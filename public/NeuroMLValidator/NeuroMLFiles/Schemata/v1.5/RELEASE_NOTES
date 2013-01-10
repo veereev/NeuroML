@@ -1,0 +1,31 @@
+The changes in version 1.5 over version 1.4: 
+
+General: 
+- Introduced Release notes link for versions in ValidationResults.jsp with changes since last
+
+MorphML:  
+- Updated mapping from MorphML to NEURON, now uses same function calls as Cell Builder, e.g. topol()
+
+Biophysics: 
+Some extra unit definitions added, e.g. CurrentValue
+
+ChannelML:
+- Allowed different Q10 rate adjustments for different gates, as in GateDepQ10.xml, and supported this in the
+NEURON/GENESIS mappings
+
+- Added specification of basic I&F mechanism, see IntFireMechanism.xml. Based on the COBA based I and F model 
+as used in Brette et al (2006) http://arxiv.org/abs/q-bio.NC/0611089. The NEURON mapping is based on the script 
+files from http://senselab.med.yale.edu/SenseLab/ModelDB/ShowModel.asp?model=83319. Note: there is no GENESIS 
+mapping for this mechanism, as none was created for the paper
+
+NetworkML:
+- In SynapticLocation, some defaults added. 
+
+- Added an optional attribute node_id in instance element in population. This allows specification of the 
+computational node on which the cell instance should run. This can be calculated by various means when 
+generating the network and stored along with the 3D structure. No description is yet included in the 
+template specification for the rules for how the cells might be distributed.
+
+- Electrical inputs to the network can be specified. 2 types are possible, current pulse based and random stimulation.
+these should be further developed to allow easier specification of input protocols, a series of pulses, time dependent 
+input rate, etc.

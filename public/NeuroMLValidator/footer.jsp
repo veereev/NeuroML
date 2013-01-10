@@ -1,0 +1,37 @@
+<div id="footer">
+	<div id="page-bottom">
+              
+<ul>
+<li><a><span>QuickLinks</span></a></li>
+<li><a href="#" target="_blank">QuickLink1</a></li>
+<li><a href="#" target="_blank">QuickLink2</a></li>
+<li><a href="#" target="_blank">QuickLink3</a></li>
+<li><a href="#" target="_blank">QuickLink4</a></li>
+</ul>
+<br /><br />
+
+
+<ul>
+<li><a><span>QuickLinks</span></a></li>
+<li><a href="#" target="_blank">QuickLink1</a></li>
+<li><a href="#" target="_blank">QuickLink2</a></li>
+<li><a href="#" target="_blank">QuickLink3</a></li>
+<li><a href="#" target="_blank">QuickLink4</a></li>
+</ul>
+<div id="contactus">
+<span id="message">For Queries or Assistance</span>
+<div id="email">abc@neuroml.org</div>
+</div>
+<div id="copyrights">
+Website & Images<br />
+Copyright &copy; 2013<br />
+All rights reserved
+</div>
+
+   
+          <br class="clearfix" />
+      </div>
+      
+  </div>
+
+

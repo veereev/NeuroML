@@ -1,0 +1,88 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+
+
+<%@page import="org.neuroml.validator.utils.*"%>
+<%@page import="java.util.*"%>
+
+<!--------
+
+File:      Error.jsp
+Author:    Padraig Gleeson
+
+           This file has been developed as part of the neuroConstruct project
+           This work has been funded by the Medical Research Council
+
+---------->
+
+<html>
+
+        <link rel="stylesheet" type="text/css" href="application.css" />    
+<script type="text/javascript" src="http://spike.la.asu.edu/NeuroMLValidator/public/javascripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="http://spike.la.asu.edu/NeuroMLValidator/public/javascripts/jquery.dropotron-1.0.js"></script>
+<script type="text/javascript">
+var j = jQuery.noConflict();
+      j(function() {
+          j('#menu > ul').dropotron({
+              mode: 'fade',
+              globalOffsetY: 11,
+              offsetY: -15
+          });
+      });
+  </script>
+
+    <head><title>Error information</title></head>
+    <body>
+    
+
+    <div id="wrapper">
+        <%@ include file="header.jsp" %>
+
+<div class="overflowcontent">
+        <h2>Error information</h2>
+
+<%
+    Enumeration names = request.getParameterNames();
+      
+    while (names.hasMoreElements())
+    {
+       String nextName = (String)names.nextElement();
+       
+       
+       if (nextName.equals(Parameters.ERROR_STRING))
+       {
+           String error = request.getParameterValues(nextName)[0];
+           
+           out.print("<span style=\"color:red\"><b>"+HTMLUtils.formatPlainText(error)+"</b></span>");
+           
+           if (error.indexOf("\';\' delimiter")>0)
+           {
+               out.print("<p>Have you entered a URL into an element? Note: ampersands must be replaced by &amp;amp;</p>");
+               out.print("<p>e.g. &lt;url&gt;http://www.google.co.uk/search?hl=en<b>&amp;amp;</b>q=neuroml&lt;/url&gt;</p>");
+           };
+           if (error.indexOf("contain the \'<\' character")>=0)
+           {
+               out.print("<p>Try replacing the &lt; character with <b>&amp;lt;</b></p>");
+           }
+           String unkEle = "Cannot find the declaration of element ";
+           if (error.indexOf(unkEle)>=0)
+           {
+               int index = error.indexOf(unkEle) + unkEle.length();
+               String unknownElement = error.substring(index);
+               if (unknownElement.endsWith("."))
+                    unknownElement = unknownElement.substring(0, unknownElement.length()-1);
+               
+               out.print("<p>An element called <b>"+unknownElement+"</b> was found in the file which was not recognised. "
+                   +"Check that this element is defined in the version of the specification against which you are trying to validate.</p>");
+           }
+       }
+             
+    }
+
+%>
+      <%@ include file="footer.jsp" %>
+      </div></div>
+        
+        </div></div>
+    </body>
+</html>

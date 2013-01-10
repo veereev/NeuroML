@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<neuroml xmlns="http://morphml.org/neuroml/schema" 
+        xmlns:nml="http://morphml.org/neuroml/schema"
+        xmlns:meta="http://morphml.org/metadata/schema" 
+        xmlns:mml="http://morphml.org/morphml/schema" 
+        xmlns:bio="http://morphml.org/biophysics/schema" 
+        xmlns:cml="http://morphml.org/channelml/schema" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://morphml.org/neuroml/schema  http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level2/NeuroML_Level2_v1.8.1.xsd"
+        length_units="micrometer">
+        
+    <cells>
+        <cell name="InhomogenousBiophys">
+            <meta:notes>A cell with some inhomogenous biophysical parameters. </meta:notes>
+            
+            <segments xmlns="http://morphml.org/morphml/schema">
+                
+                <segment id="0" name="Soma" cable="0">
+                    <proximal x="0.0" y="0.0" z="0.0" diameter="10.0"/>
+                    <distal x="0.0" y="0.0" z="0.0" diameter="10.0"/>
+                </segment>
+                <segment id= "1" name = "DendSeg1" parent = "0" cable = "1">
+                    <proximal x="0" y="0" z="0" diameter="5"/>
+                    <distal x="0" y="10" z="0" diameter="5"/>
+                </segment>     
+                <segment id= "2" name = "DendSeg2" parent = "1" cable = "1">
+                    <distal x="0" y="20" z="0" diameter="5"/>
+                </segment>  
+                <segment id= "3" name = "DendSeg3" parent = "2" cable = "2">
+                    <proximal x="0" y="20" z="0" diameter="5"/>
+                    <distal x="0" y="100" z="0" diameter="5"/>
+                </segment> 
+                <segment id= "4" name = "DendSeg4" parent = "3" cable = "2">
+                    <distal x="0" y="200" z="0" diameter="5"/>
+                </segment>  
+                
+            </segments>
+            <cables xmlns="http://morphml.org/morphml/schema">
+                
+                <cable id="0" name="Soma"/>
+                <cable id= "1" name = "DendSection1"/>
+                <cable id= "2" name = "DendSection2">
+                    <meta:properties>
+                        <meta:property>
+                            <meta:tag>numberInternalDivisions</meta:tag>
+                            <meta:value>4</meta:value>
+                        </meta:property>
+                    </meta:properties>
+                </cable>
+            
+                <cablegroup name="all">
+                    <cable id="0"/>
+                    <cable id="1"/>
+                    <cable id="2"/>
+                </cablegroup>
+                <cablegroup name="soma_group">
+                    <cable id="0"/>
+                </cablegroup>
+                <cablegroup name="dendrite_group">
+                    <cable id="1"/>
+                    <cable id="2"/>
+                    
+                    <!-- A parameter whose value varies from 0 at the start of the group closest to the soma
+                         to 1 at the most distal point of the segments in the group.-->
+                    
+                    <inhomogeneous_param name="dendrite_group_x1" variable="p">
+                        <metric>Path Length from root</metric>
+                        <proximal translationStart="0"/>
+                        <distal normalizationEnd="1"/>
+                    </inhomogeneous_param>
+                    
+                    <!-- A parameter whose value varies from 0 at the start of the group closest to the soma (as its attached to the soma)
+                         to 200 at the most distal point of the segments in the group.-->                    
+                    
+                    <inhomogeneous_param name="dendrite_group_x2" variable="p">
+                        <metric>Path Length from root</metric>
+                    </inhomogeneous_param>
+                </cablegroup>
+                
+            </cables>
+            
+            <!--Adding the biophysical parameters. Note element biophysics is in nml namespace, but the elements inside
+                are in http://morphml.org/biophysics/schema namespace (in Biophysics_v*.*.xsd)-->
+            
+            <nml:biophysics units="Physiological Units" xmlns="http://morphml.org/biophysics/schema">
+                
+                <mechanism name="PassiveCond" type="Channel Mechanism">
+                    <parameter name="gmax" value="0.03">
+                        <group>soma_group</group>
+                    </parameter>
+                    <variable_parameter name="gmax">
+                        <!-- Will result in a gmax of 0.2 at soma end, 0.1 at other end-->
+                        <group>dendrite_group</group>
+                        <inhomogeneous_value param_name="dendrite_group_x2" value="0.2 - 0.1(p/200)"/>
+                    </variable_parameter>
+                </mechanism>
+
+
+                <mechanism name="NaConductance" type="Channel Mechanism">
+                    <variable_parameter name = "gmax">
+                        <group>dendrite_group</group>
+                        <inhomogeneous_value param_name="dendrite_group_x1" value="50 * (1-(p/2))"/>
+                    </variable_parameter>
+                </mechanism>
+                
+                <spec_capacitance>
+                    <parameter value="1">
+                        <group>all</group>
+                    </parameter>
+                </spec_capacitance>
+                
+                <spec_axial_resistance>
+                    <parameter value="0.11">
+                        <group>all</group>
+                    </parameter>
+                </spec_axial_resistance>
+                
+            </nml:biophysics>
+                
+
+        </cell>
+    </cells>
+</neuroml>

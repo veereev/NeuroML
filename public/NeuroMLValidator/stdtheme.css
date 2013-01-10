@@ -1,0 +1,114 @@
+
+
+h1 { font-family: arial;}
+h2 { font-family: arial;}
+h3 { font-family: arial; font-size: 16px}
+
+
+p { font-family: arial; color: black; font-size: 14px}
+
+
+p.warning {font-family: arial; color: red}
+
+
+p.comment {font-family: arial; color: gray; font-weight: bold; font-size: 90%}
+p.small {font-family: arial; font-size: 90%}
+
+table { font-family: arial; color: black; font-size: 14px}
+table.bold { font-family: arial; color: black; font-size: 14px; border: 3}
+
+
+
+table.small { font-family: arial; font-size: 14px}
+table.comment { font-family: arial; font-size: 90%}
+
+td {font-family: arial}
+
+
+tr.shaded {background-color: #B0C4DE}
+td.shaded {background-color: #B0C4DE}
+
+td.small {font-family: arial; font-size: 90%}
+
+
+tr.header {background-color: blue}
+
+
+
+.subHeader {
+  color: #0000CC;
+  background-color: #999999;
+  margin: 0;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:small;
+  padding: 1ex 1ex 1ex 1ex;
+  text-align: center;}
+
+.subHeader a {
+  color: #0000CC;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:small;
+  margin: 0;
+  padding: 0 0.75ex 0 0.5ex;}  
+
+.subHeader a:hover {
+  text-decoration: underline;}
+
+
+td.nav {background-color:#000033; 
+         cellpadding="3"; 
+         color: white;
+         font-family: Helvetica, Arial, sans-serif;
+         vertical-align: top;
+         text-align: center;
+         font-size:small;
+         width: 100;}
+
+td.nav a {color: white;
+        background-color: transparent;
+        text-decoration: none;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size:small;
+        margin: 0;}  
+
+td.nav a:hover {
+  text-decoration: underline;}
+
+
+.h1 {
+  color: white;
+  background-color: #0000CC;
+  font-weight: bold;
+  font-size: 120%;
+  margin: 2em 0 0 0;
+  padding: 0.5ex 0 0.5ex 1ex;
+  font-family: Helvetica, Arial, sans-serif; 
+  text-align: left;}
+
+td.footer1 {
+  color: white;
+  background-color: #999999;
+  font-weight: bold;
+  margin: 0 0 0 0;
+  font-family: Helvetica, Arial, sans-serif; 
+  text-align: center;
+  font-size:small;
+  vertical-align: middle;
+  width: 100;}
+
+.footer2 {
+  color: white;
+  background-color: #999999;
+  font-weight: bold;
+  margin: 7 7 7 7;
+  font-family: Helvetica, Arial, sans-serif; 
+  font-weight: bold;
+  font-size:small;
+  text-align: center;
+  vertical-align: middle;}
+
+

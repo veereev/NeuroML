@@ -158,7 +158,7 @@ function togglebg()
 <div id="background" style="display:none;">
  
 <p>
-    The <a href="http://www.neuroml.org/files/NeuroMLWorkshop2010.pdf">March 2010 NeuroML meeting</a> identified a need to extend the capability within NeuroML for expressing a range
+    The <a href="http:///files/NeuroMLWorkshop2010.pdf">March 2010 NeuroML meeting</a> identified a need to extend the capability within NeuroML for expressing a range
     of models of synapses. It was decided that the hitherto adopted approach of defining parameterized building blocks to 
     construct models by combining blocks and setting parameters was unlikely to be flexible enough to cope with the needs 
     for synapse models. This is not obvious a-priori, since, for example, the pre NeuroML 2.0 ion channel
@@ -172,7 +172,7 @@ function togglebg()
 <p>
         This work also has antecedents in Catacomb 3, which was essentially a GUI for a component definition system and 
         model builder using a type system similar to that proposed here. Much of the XML processing code used in the interpreter
-        was taken from <a href="http://www.neuroml.org/tool_support.php#PSICS">PSICS</a> which itself currently uses the "building block" approach to model specification.
+        was taken from <a href="http:///tool_support#PSICS">PSICS</a> which itself currently uses the "building block" approach to model specification.
         The need for user-defined types has been considered with respect to future PSICS development, and this proposal also
         reflects potential requirements for PSICS.
  </p>

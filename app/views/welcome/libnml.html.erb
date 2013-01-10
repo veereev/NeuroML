@@ -23,7 +23,7 @@
 
     <p>An integrated package for building, testing and executing NeuroML v2.0 models is essential at this stage of its development. Over time, as the core class names become
     stabilised, libNeuroML will develop into a true multi language API for manipulating the model classes (most likely using code developed for the 
-    <a href="tool_support.php#NeuroML Java API">NeuroML Java API</a>), while also allowing access to the underlying definitions in LEMS.</p>-->
+    <a href="tool_support#NeuroML Java API">NeuroML Java API</a>), while also allowing access to the underlying definitions in LEMS.</p>-->
 
     <p align="center"><img alt="libNeuroML" src="images/libNeuroML.png"/></p>
     <p align="center"><i>Java implementation of libNeuroML and its relationship to the <a href="lems/interpreter.html">LEMS Reference Implementation</a>, the 
@@ -132,7 +132,7 @@ writeLemsAndRun(lemsDocument, <b>"AdEx.xml"</b>)<br/>
 
 
 
-    <p>There is clearly a great deal of overlap with <a href="tool_support.php/#PyNN">PyNN</a> and this Python package will be updated for greater compatibility with that initiative.
+    <p>There is clearly a great deal of overlap with <a href="tool_support/#PyNN">PyNN</a> and this Python package will be updated for greater compatibility with that initiative.
     A Python API for handling v1.x NeuroML will also be produced, to facilitate interaction with that version, and to enable automatic conversion between versions.</p>
 
 
@@ -144,12 +144,12 @@ writeLemsAndRun(lemsDocument, <b>"AdEx.xml"</b>)<br/>
         <tr><td>Read LEMS XML files</td><td>Yes</td><td>Yes</td></tr>
         <tr><td>Write LEMS XML files</td><td>Yes</td><td>Yes</td></tr>
         <tr><td>Execute models specified in LEMS*</td><td>Yes</td><td>Not planned. Converting models to Brian (or NEST) and executing there is more likely</td></tr>
-        <tr><td>Read NeuroML v1.x files</td><td>Not yet. Will be possible on integration of <a href="tool_support.php#NeuroML Java API">NeuroML Java API</a></td><td>Yes, though
+        <tr><td>Read NeuroML v1.x files</td><td>Not yet. Will be possible on integration of <a href="tool_support#NeuroML Java API">NeuroML Java API</a></td><td>Yes, though
                 <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/python/libneuroml/neuroml1x">current implementation</a> is complicated by multiple namespaces in NeuroML v1.x schemas. Needs work.</td></tr>
-        <tr><td>Write NeuroML v1.x files</td><td>Not yet. Will be possible on integration of <a href="tool_support.php#NeuroML Java API">NeuroML Java API</a>. May also support export of NeuroML v2.0 channels, synapses to ChannelML</td><td>Yes, though
+        <tr><td>Write NeuroML v1.x files</td><td>Not yet. Will be possible on integration of <a href="tool_support#NeuroML Java API">NeuroML Java API</a>. May also support export of NeuroML v2.0 channels, synapses to ChannelML</td><td>Yes, though
                 <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/python/libneuroml/neuroml1x">current implementation</a> is complicated by multiple namespaces in NeuroML v1.x schemas. Needs work.</td></tr>
-        <tr><td>Read NeuroML v2.0 files</td><td>Not yet. Will be possible on integration of <a href="tool_support.php#NeuroML Java API">NeuroML Java API</a></td><td>Yes</td></tr>
-        <tr><td>Write NeuroML v2.0 files</td><td>Not yet. Will be possible on integration of <a href="tool_support.php#NeuroML Java API">NeuroML Java API</a></td><td>Yes</td></tr>
+        <tr><td>Read NeuroML v2.0 files</td><td>Not yet. Will be possible on integration of <a href="tool_support#NeuroML Java API">NeuroML Java API</a></td><td>Yes</td></tr>
+        <tr><td>Write NeuroML v2.0 files</td><td>Not yet. Will be possible on integration of <a href="tool_support#NeuroML Java API">NeuroML Java API</a></td><td>Yes</td></tr>
         <tr><td>Import of other formats to NeuroML v2.0*</td><td>Some support for SBML import. CellML import planned.</td><td>Partial support for import of NineML</td></tr>
         <tr><td>Export of LEMS/NeuroML v2.0 models to other formats*</td><td>Conversion of channel models to NEURON mod files. Some support for SBML export, NineML export. CellML export planned.</td><td>Initial work started for automated conversion of LEMS models to Brian</td></tr>
     </table>

@@ -1,0 +1,3 @@
+NeuroML v1.3. A new version of the specification including:<br/>
+- Updated Biophysics.xsd, to allow more logical specification of Ra, cm, etc.<br/>
+- A very preliminary Level 3 NetworkML specification 

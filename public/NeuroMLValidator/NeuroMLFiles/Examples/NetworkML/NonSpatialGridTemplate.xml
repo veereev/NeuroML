@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<networkml xmlns="http://morphml.org/networkml/schema"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:meta="http://morphml.org/metadata/schema" 
+    xsi:schemaLocation="http://morphml.org/networkml/schema http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level3/NetworkML_v1.8.1.xsd"
+    length_units="micrometer">
+                        
+
+    <meta:notes>A simple template describing 2 cell groups in non spatial grids.</meta:notes>
+
+
+    <populations>
+        
+        <population name="SmallCellGroup" cell_type="CellA">
+            
+            <pop_location>
+                <grid_arrangement>
+                    <!-- A 2D 3x3 grid -->
+                    
+                    <non_spatial_grid x="3" y="3" />
+                </grid_arrangement>
+            </pop_location>
+            
+        </population>
+        
+        <population name="LargeCellGroup" cell_type="CellB">
+            
+            <pop_location>
+                <grid_arrangement>
+                    <!-- A 3D 100x100x100 grid -->
+                    
+                    <non_spatial_grid x="100" y="100" z="100"/>
+                </grid_arrangement>
+            </pop_location>
+        </population>
+        
+    </populations>
+    
+
+</networkml>

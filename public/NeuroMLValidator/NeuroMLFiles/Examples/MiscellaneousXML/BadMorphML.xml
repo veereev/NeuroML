@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:morphml xmlns:n="http://morphml.org/morphml/schema/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://morphml.org/morphml/schema/1.0.0 
+                        ../../Schemata/MorphML/MorphML.xsd">
+                        
+                        
+<n:name>An Invalid MorphML file, but a well formed XML file</n:name>
+
+
+</n:morphml>

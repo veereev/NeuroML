@@ -1,0 +1,169 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+<%@page import="org.neuroml.validator.utils.*"%>
+<%@page import="org.neuroml.validator.validation.*"%>
+
+<!-- begin header, for common start of all pages  -->
+<div id="wrapper2">
+    
+<%
+        String currVersion = GeneralProperties.getCurrentSchemaVersion();
+
+        boolean docsMenu = GeneralUtils.getCurrentPageRef().equals("extend") ||
+                           GeneralUtils.getCurrentPageRef().equals("v2");
+
+
+        boolean validateMenu = GeneralUtils.getCurrentPageRef().equals("validation") ||
+                               (GeneralUtils.getCurrentPageRef().startsWith("viewfile") &&
+                               GeneralUtils.getCurrentPageRef().indexOf("RELEASE_NOTES")>=0);
+
+        boolean exampleMenu = !(docsMenu || validateMenu);
+%>
+<div id="header">
+<div id="top-menu"></div>
+
+	<h1>NeuroML</h1>
+</div>
+<div id="menu">
+          <ul>
+              <li class="first home">
+                                   <a href="http://spike.la.asu.edu:5000/home"><img src="public/images/home.png" style="float:left;" />Home</a>
+              </li>
+              <li id="documents"><img src="public/images/documents.png"  style="float:left;" /><span class="opener">Documents<b></b></span>
+              <ul>
+                      <li><a href="http://spike.la.asu.edu:5000/introduction">Introduction</a></li>
+                      <li>
+                          <span>Specifications<b></b></span>
+                          <ul>
+                              <li><span>NeuroML V1.X Schemas<b></b></span>
+<ul>
+                              <li><a href="http://spike.la.asu.edu:5000/level1">Level 1</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/level2">Level 2</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/level3">Level 3</a></li>
+                                <li><a href="http://spike.la.asu.edu/NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Schemata/v1.8.1/RELEASE_NOTES&viewFormat=plaintext">General Release Notes</a></li>
+                          </ul>
+
+
+                              </li>
+
+                              <li><a href="#">NeuroML 2.0</a></li>
+
+   
+                          </ul>
+                      </li>
+  
+                      <li><a href="http://spike.la.asu.edu:5000/extend_neuroml">Extending NeuroML</a></li>
+                      <li>
+                          <span>NeuroML V2.0<b></b></span>
+                          <ul>
+                              <li><a href="http://spike.la.asu.edu:5000/alpha_schema">NeuroML V2alpha schema</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/lems_dev">Development of LEMS & mapping to NeuroML2</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/libnml">libNeuroML</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/compatibility">Compatibility with other MLs</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="http://spike.la.asu.edu:5000/lems">LEMS</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/relevant_publications">Publications</a></li>
+
+  
+                     <!-- <li><a href="/presentations">Presentations</a></li>-->
+  <li><span class="opener">Examples<b></b></span>
+              <ul>
+                      <li><a href="http://spike.la.asu.edu:5000/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
+                      
+  
+              </ul>
+              </li>
+<li><span class="opener">Workshop Reports<b></b></span>
+
+<ul>
+			<li><a href="http://spike.la.asu.edu:5000/workshop2012">2012</a></li>
+                        <li><a href="http://spike.la.asu.edu:5000/workshop2011">2011</a></li>
+                        <li><a href="http://spike.la.asu.edu:5000/workshop2010">2010</a></li>
+                        <li><a href="http://spike.la.asu.edu:5000/workshop2009">2009</a></li>
+                        <li><a href="http://spike.la.asu.edu:5000/CNS_workshop">2008</a></li>
+  
+              </ul>
+</li>
+              </ul>	
+              </li>
+<!--
+              <li><span class="opener">Examples<b></b></span>
+              <ul>
+                      <li><a href="http://spike.la.asu.edu:5000/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
+                      
+  
+              </ul>
+              </li> -->
+              <li id="tools"><img src="public/images/tools.png" style="float:left;" />
+                  <span class="opener">Tools<b></b></span>
+                  <ul>
+                      <li><a href="http://spike.la.asu.edu:5000/validate">Validator</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/current_app_support">Tool Support</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/neuron_tools">NML Validator</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/neuron_tools">NEURON Tools</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/pynn">PyNN</a></li>
+                      
+                      <li><a href="http://spike.la.asu.edu:5000/x3dtools">X3D Tools</a></li>
+                  </ul>
+              </li>
+		 <li id="models_menu"><img src="public/images/models_menu.png" style="float:left;"/><span class="opener">Models<b></b></span>
+                <ul>
+                      <li><a href="http://spike.la.asu.edu:5000/browse_models">Browse Models</a></li>
+                      <li><a href="http://spike.la.asu.edu:5000/model_submit">Submit Models</a></li>
+                  </ul>
+              </li>
+<!--
+              <li><span>Validators<b></b></span>
+               <ul>
+                              <li><a href="http://spike.la.asu.edu:5000/validate">Validate</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/latest_release_notes">Latest Release Notes</a></li>
+                              
+                          </ul>
+                      
+              </li>
+-->
+              <li id="community"><img src="public/images/community.png" style="float:left;" /><span>Community<b></b></span>
+              <ul>
+                              <li><a href="http://spike.la.asu.edu:5000/history">History of NeuroML</a></li><!--
+                              <li><span>Contributors<b></b></span>
+                              <ul>
+                              <li><a href="http://spike.la.asu.edu:5000/contributors">Contributors</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/brief_history">Brief history of NeuroML</a></li>
+                              <li><span>Related Projects<b></b></span>
+                              <ul>
+                              <li><a href="http://spike.la.asu.edu:5000/standard_proj_biosciences">Standard Project for Biosciences</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/db_proj">Database projects relevant to Neurol Models</a></li>
+                              <li><a href="http://spike.la.asu.edu:5000/general_info_xmltools">General Information on XML Tools & Technology</a></li>
+                              
+
+                          </ul>
+                              </li>
+  
+                          </ul>
+                      
+                              
+                              </li>
+                              -->
+<li><a href="spike.la.asu.edu:5000/scientific_committee">Scientific Committee</a></li>
+<li><a href="spike.la.asu.edu:5000/acknowledgements">Acknowledgements</a></li>
+                          </ul>
+                      
+              </li>
+              <li id="projects_menu"><img src="public/images/projects_new.png" style="float:left;" /><a href="http://spike.la.asu.edu:5000/projects">Projects</a></li>
+              <li><a href="#">Help</a></li>
+          </ul>
+      </div>
+     <!-- End of Menu -->
+
+
+                        
+<!--<div id="content_others" />
+ main contents of page will follow.. <table> finished in footer.jsp -->
+

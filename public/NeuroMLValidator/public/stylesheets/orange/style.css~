@@ -1,0 +1,30 @@
+
+h
+
+a:link{ color: #CF7F18; }
+
+a:visited{ color: #AD660C; }
+
+a:hover, a:focus{ color: #FF9814;	text-decoration:none; }
+
+p{	margin:1em 0; }
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{	margin-top:-0.05em;}
+
+
+ol, ul{	margin: 1em 0 1em 2em; }
+
+ol ol, ol ul, ul ol, ul ul{ margin-top:0; margin-bottom:0; }
+
+ol li{	list-style:decimal }
+ol li ol li{ list-style:upper-alpha; }
+ol li ol li ol li{ list-style:upper-roman; }
+
+ul li{ list-style:disc;}
+
+em{font-style:italic;}
+
+strong{font-weight:bold;}
+
+em strong, strong em{ font-weight:bold; font-style:italic; }
+

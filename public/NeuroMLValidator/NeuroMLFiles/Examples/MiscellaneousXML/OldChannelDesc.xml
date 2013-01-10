@@ -1,0 +1,35 @@
+<!-- This is out of date. It was the initial ChannelDB suggestion for the ChannelML format. The current 
+     ChannelML specification covers this type of channel description -->
+
+
+<neuroml class="DBChannel" description="Hodgkin-Huxley squid Na channel" author="Dave Beeman"
+      keywords="Hodgkin-Huxley sodium fast Na squid"
+      uniqueID="10262779060208A7B@dogstar.colorado.edu"
+      notes="An implemention of the GENESIS Na_squid_hh channel" Erest="-0.07V">
+   <channels>
+      <channel name="Na_squid_hh" class="HHChannel" permeantSpecie="Na" Erev="0.045V"
+            Gmax="1200.0S/m^2" ivlaw="ohmic">
+         <gates>
+            <gate name="X" class="HHVGate" timeUnit="sec" voltageUnit="V" vmin="-0.1" vmax="0.05"
+                  instantCalculation="false" useState="false" power="3">
+               <forwardRate class="ParameterizedHHRate" A="-4500" B="-100000"
+                     C="-1.0" D="1.0" E="0.045" F="-0.01"/>
+               <backwardRate class="ParameterizedHHRate" A="4000.0" B="0.0" C="0.0" D="1.0"
+                     E="0.07" F="0.018"/>
+            </gate>
+            <gate name="Y" class="HHVGate" timeUnit="sec" voltageUnit="V" vmin="-0.1" vmax="0.05"
+                  instantCalculation="false" useState="false" power="1">
+               <forwardRate class="ParameterizedHHRate" A="70.0" B="0.0" C="0.0" D="1.0" E="0.07"
+                     F="0.02"/>
+               <backwardRate class="ParameterizedHHRate" A="1000.0" B="0.0" C="1.0" D="1.0"
+                     E="0.04" F="-0.01"/>
+            </gate>
+         </gates>
+         <log author="Dave Beeman" date="Jul 9, 2002 11:11:46 PM"
+               literatureReference="A.L. Hodgkin and A.F. Huxley, J. Physiol. (Lond) 117, pp 500-544 (1952)">
+            <logEntries>
+            </logEntries>
+         </log>
+      </channel>
+   </channels>
+</neuroml>

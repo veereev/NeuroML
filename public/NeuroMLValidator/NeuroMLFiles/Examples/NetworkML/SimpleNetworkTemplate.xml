@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    This example shows a Level 3 compliant file, containing a simple network
+-->
+
+<networkml xmlns="http://morphml.org/networkml/schema"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:meta="http://morphml.org/metadata/schema" 
+    xsi:schemaLocation="http://morphml.org/networkml/schema http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level3/NetworkML_v1.8.1.xsd"
+    length_units="micrometer">
+                        
+
+    <meta:notes>A simple network, where neither exact positions nor connection instances are specified. Only a pattern for 
+    placing the population and a set of connectivity rules are described. </meta:notes>
+
+
+    <populations>
+        
+        <population name="CellGroupA" cell_type="CellA">
+            
+            <pop_location>     <!-- A number of cells are arranged randomly in 3D space in a spherical region-->
+                <random_arrangement>
+                    <population_size>200</population_size>
+                    <spherical_location>
+                        <meta:center x="0" y="0" z="0" diameter="100"/>
+                    </spherical_location>
+                </random_arrangement>
+            </pop_location>
+        </population>
+        
+        <population name="CellGroupB" cell_type="CellB">
+            
+            <pop_location>     <!-- A number of cells are arranged in 3D space in a spherical region-->
+                <random_arrangement>
+                    <population_size>50</population_size>
+                    <spherical_location>
+                        <meta:center x="100" y="0" z="0" diameter="100"/>
+                    </spherical_location>
+                </random_arrangement>
+            </pop_location>
+        </population>
+        
+    </populations>
+    
+    
+
+    <projections units="Physiological Units">
+        <projection name="NetworkConnection" source="CellGroupA" target="CellGroupA">
+            
+            <synapse_props synapse_type="DoubExpSynA" internal_delay="5" weight="1" threshold="-20"/>
+            
+            <connectivity_pattern>
+                <per_cell_connection direction = "PreToPost" num_per_source= "3" max_per_target = "2"/>
+            </connectivity_pattern>
+        </projection>
+    </projections>
+
+    
+    
+    <inputs units="SI Units">
+        
+        <input name="RandomInput"> <!-- A random 20Hz stimulation applied to 50% of the cells -->
+            <random_stim frequency="20" synaptic_mechanism="DoubExpSynA" />
+            <target population="CellGroupA"> 
+                <site_pattern>
+                    <percentage_cells percentage="50"/>
+                </site_pattern>
+            </target>
+        </input>
+    </inputs>
+        
+        
+        
+</networkml>
+
+
+
+
+

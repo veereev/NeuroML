@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:morphml xmlns:n="http://morphml.org/morphml/schema/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://morphml.org/morphml/schema/1.0.0 
+                        ../../Schemata/MorphML/v1.4/MorphML_v1.4.xsd">
+                        
+                        
+<n:name>MorphML file with cell with sections included</n:name>
+
+<n:notes>A simple MorphML file with a single cell, to illustrate the suggested v1.4 functionality</n:notes>
+
+<n:lengthUnits>Micrometers</n:lengthUnits>
+        
+
+<n:cells>
+    <n:cell>
+        <n:name>SectionsCell</n:name>
+        <n:notes>Test cell for showing mapping to NEURON/GENESIS when sections are specified 
+                 (e.g. as in a MorphML file where the segments have been grouped into cables in preparation for mapping to a simulator)</n:notes>
+        
+        <n:segments>
+        
+            <n:segment>
+                        <n:id>0</n:id>
+                        <n:proximal><n:x>0</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>10</n:diameter></n:proximal>
+                        <n:distal><n:x>10</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>10</n:diameter></n:distal>
+                        <n:name>SomaSeg</n:name>
+                        <n:section>0</n:section>
+            </n:segment>
+        
+            <n:segment>
+                        <n:id>1</n:id>
+                        <n:proximal><n:x>5</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:proximal>
+                        <n:distal><n:x>5</n:x><n:y>20</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:distal>
+                        <n:name>DendSeg1</n:name>
+                        <n:parent>0</n:parent>
+                        <n:section>1</n:section>
+            </n:segment>     
+            
+            <n:segment>
+                        <n:id>2</n:id>
+                        <n:distal><n:x>5</n:x><n:y>40</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:distal>
+                        <n:name>DendSeg2</n:name>
+                        <n:parent>1</n:parent>
+                        <n:section>1</n:section>
+            </n:segment>  
+            
+            <n:segment>
+                        <n:id>3</n:id>
+                        <n:distal><n:x>5</n:x><n:y>60</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:distal>
+                        <n:name>DendSeg3</n:name>
+                        <n:parent>2</n:parent>
+                        <n:section>1</n:section>
+            </n:segment>    
+            
+            
+            <n:segment>
+                        <n:id>4</n:id>
+                       <!-- <n:proximal><n:x>0</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>2</n:diameter></n:proximal>-->
+                        <n:distal><n:x>-10</n:x><n:y>-10</n:y><n:z>0</n:z><n:diameter>2</n:diameter></n:distal>
+                        <n:name>DendSeg4</n:name>
+                        <n:parent>0</n:parent>
+                        <n:section>2</n:section>
+            </n:segment>                
+                        
+            <n:segment>
+                        <n:id>5</n:id>
+                        <n:distal><n:x>-20</n:x><n:y>-20</n:y><n:z>0</n:z><n:diameter>2</n:diameter></n:distal>
+                        <n:name>DendSeg5</n:name>
+                        <n:parent>4</n:parent>
+                        <n:section>2</n:section>
+            </n:segment>                
+            
+
+            
+        </n:segments>
+        
+        
+        <n:sections>
+        
+        
+        <n:section>
+            <n:id>0</n:id>
+            <n:name>SomaSec</n:name>
+            <n:group>soma_group</n:group>
+        </n:section>
+        
+        <n:section>
+            <n:id>1</n:id>
+            <n:name>DendSec1</n:name>
+            <n:fractAlongParent>0.5</n:fractAlongParent>
+            <n:group>dendrite_group</n:group>
+        </n:section>
+        
+        <n:section>
+            <n:id>2</n:id>
+            <n:name>DendSec2</n:name>
+            <n:group>dendrite_group</n:group>
+        </n:section>
+        
+        
+        </n:sections>
+
+    </n:cell>
+</n:cells>
+
+
+</n:morphml>

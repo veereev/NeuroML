@@ -1,0 +1,61 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+
+
+<!-- This is just a test file for checking application functioning-->
+
+
+	<xsd:element name="morphml" type="root">
+		<xsd:annotation>
+			<xsd:documentation>The root element.</xsd:documentation>
+		</xsd:annotation>
+                      
+                        
+	</xsd:element>
+        
+        
+	<xsd:complexType name="root">
+            <xsd:sequence>
+                <xsd:element name="inner">
+                                    
+                    <xsd:annotation>
+                    <xsd:documentation>The collectio.</xsd:documentation>
+                </xsd:annotation>
+                    
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="segment" type="myList" maxOccurs="unbounded"/>
+                            <xsd:element name="cable" type="myList" maxOccurs="unbounded"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                    
+                    <xsd:unique name="segId">
+                        <xsd:selector xpath="./segment"/>
+                        <xsd:field xpath="@id"/>
+                        </xsd:unique>
+                        
+                    <xsd:unique name="cableId">
+                        <xsd:selector xpath="./cable"/>
+                        <xsd:field xpath="@id"/>
+                        </xsd:unique>
+                              
+                      <!--                                                       
+                    <xsd:key name="myId">
+                        <xsd:selector xpath="./segment"/>
+                        <xsd:field xpath="@id"/>
+                    </xsd:key>    -->      
+                        
+                </xsd:element>
+                    
+            </xsd:sequence>
+	</xsd:complexType>
+
+
+  
+  
+    <xsd:complexType name="myList">
+    <xsd:attribute name="id" type="xsd:integer"/>
+  </xsd:complexType>
+  
+  
+  
+</xsd:schema>

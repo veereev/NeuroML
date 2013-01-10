@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<morphml xmlns="http://morphml.org/morphml/schema/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://morphml.org/morphml/schema/1.0.0 
+                        ../../Schemata/MorphML/v1.5/MorphML_v1.5.xsd" 
+                        name = "Test Cell MorphML file"
+                        lengthUnits="micron">
+                        
+                       
+
+
+<cells>
+    <cell>
+
+        <segments>
+        
+            <segment id ="0" name="Soma"  cable="1">
+                        <proximal x="0" y="0" z="0" diameter="10"/>
+                        <distal x="10" y="0" z="0" diameter="10"/>
+            </segment>
+            
+            <segment id ="0" name="Dendrite" parent="0" cable="3">
+                        <proximal x="10" y="0" z="0" diameter="3"/>
+                        <distal x="20" y="0" z="0" diameter="3"/>
+            </segment>
+       
+            
+        </segments>
+        
+        <cables>
+			
+            <cable id="1" name="SomaCable" >
+            </cable>
+            
+            <cable id="1" name="DendriteCable" >
+            </cable>
+        </cables>
+        
+
+    </cell>
+</cells>
+
+
+</morphml>

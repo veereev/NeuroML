@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<networkml xmlns="http://morphml.org/networkml/schema"
+    xmlns:meta="http://morphml.org/metadata/schema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://morphml.org/networkml/schema  http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level3/NetworkML_v1.8.1.xsd"
+    length_units="micrometer">
+
+    <meta:notes>A NetworkML file with 50 instances of cell in a spiral pattern, and 49 connections</meta:notes>
+
+        <populations>
+        <population name="SampleCellGroup" cell_type="SampleCell">
+            <instances size="50">
+                <instance id="0">
+                    <location x="0.0" y="0" z="100.0"/>
+                </instance>
+                <instance id="1">
+                    <location x="49.48079185090459" y="2" z="96.89124217106448"/>
+                </instance>
+                <instance id="2">
+                    <location x="95.88510772084061" y="4" z="87.75825618903727"/>
+                </instance>
+                <instance id="3">
+                    <location x="136.32775200466682" y="6" z="73.16888688738209"/>
+                </instance>
+                <instance id="4">
+                    <location x="168.2941969615793" y="8" z="54.03023058681398"/>
+                </instance>
+                <instance id="5">
+                    <location x="189.79692387111723" y="10" z="31.532236239526867"/>
+                </instance>
+                <instance id="6">
+                    <location x="199.4989973208109" y="12" z="7.073720166770291"/>
+                </instance>
+                <instance id="7">
+                    <location x="196.7971893747874" y="14" z="-17.82460556494921"/>
+                </instance>
+                <instance id="8">
+                    <location x="181.85948536513635" y="16" z="-41.61468365471424"/>
+                </instance>
+                <instance id="9">
+                    <location x="155.61463937758424" y="18" z="-62.81736227227391"/>
+                </instance>
+                <instance id="10">
+                    <location x="119.69442882079129" y="20" z="-80.11436155469337"/>
+                </instance>
+                <instance id="11">
+                    <location x="76.33219841046633" y="22" z="-92.43023786324636"/>
+                </instance>
+                <instance id="12">
+                    <location x="28.224001611973442" y="24" z="-98.99924966004454"/>
+                </instance>
+                <instance id="13">
+                    <location x="-21.639026906021673" y="26" z="-99.41296760805463"/>
+                </instance>
+                <instance id="14">
+                    <location x="-70.15664553792396" y="28" z="-93.64566872907963"/>
+                </instance>
+                <instance id="15">
+                    <location x="-114.31226374846875" y="30" z="-82.05593573395608"/>
+                </instance>
+                <instance id="16">
+                    <location x="-151.36049906158564" y="32" z="-65.3643620863612"/>
+                </instance>
+                <instance id="17">
+                    <location x="-178.9978716457167" y="34" z="-44.60874899137928"/>
+                </instance>
+                <instance id="18">
+                    <location x="-195.5060235330194" y="36" z="-21.07957994307797"/>
+                </instance>
+                <instance id="19">
+                    <location x="-199.8585577950756" y="38" z="3.760215288797655"/>
+                </instance>
+                <instance id="20">
+                    <location x="-191.7848549326277" y="40" z="28.366218546322624"/>
+                </instance>
+                <instance id="21">
+                    <location x="-171.7868986853184" y="42" z="51.20854772418407"/>
+                </instance>
+                <instance id="22">
+                    <location x="-141.10806511407839" y="44" z="70.866977429126"/>
+                </instance>
+                <instance id="23">
+                    <location x="-101.65581549985167" y="46" z="86.11924171615209"/>
+                </instance>
+                <instance id="24">
+                    <location x="-55.88309963978517" y="48" z="96.0170286650366"/>
+                </instance>
+                <instance id="25">
+                    <location x="-6.635843309511364" y="50" z="99.94494182244993"/>
+                </instance>
+                <instance id="26">
+                    <location x="43.023997617563104" y="52" z="97.65876257280235"/>
+                </instance>
+                <instance id="27">
+                    <location x="90.00881475612353" y="54" z="89.30063446890767"/>
+                </instance>
+                <instance id="28">
+                    <location x="131.3973197437578" y="56" z="75.39022543433046"/>
+                </instance>
+                <instance id="29">
+                    <location x="164.61617580230111" y="58" z="56.79241732886948"/>
+                </instance>
+                <instance id="30">
+                    <location x="187.5999953549478" y="60" z="34.663531783502584"/>
+                </instance>
+                <instance id="31">
+                    <location x="198.91975582223523" y="62" z="10.379435721925297"/>
+                </instance>
+                <instance id="32">
+                    <location x="197.87164932467635" y="64" z="-14.550003380861353"/>
+                </instance>
+                <instance id="33">
+                    <location x="184.52084204786806" y="66" z="-38.57479374522218"/>
+                </instance>
+                <instance id="34">
+                    <location x="159.69742252469806" y="68" z="-60.201190268482364"/>
+                </instance>
+                <instance id="35">
+                    <location x="124.94479075083848" y="70" z="-78.0845683605749"/>
+                </instance>
+                <instance id="36">
+                    <location x="82.42369704835131" y="72" z="-91.1130261884677"/>
+                </instance>
+                <instance id="37">
+                    <location x="34.77789707608671" y="74" z="-98.47651734673236"/>
+                </instance>
+                <instance id="38">
+                    <location x="-15.03022409236186" y="76" z="-99.71721561963784"/>
+                </instance>
+                <instance id="39">
+                    <location x="-63.90383872445473" y="78" z="-94.75798039779933"/>
+                </instance>
+                <instance id="40">
+                    <location x="-108.80422217787395" y="80" z="-83.90715290764524"/>
+                </instance>
+                <instance id="41">
+                    <location x="-146.9396860809591" y="82" z="-67.83938504738452"/>
+                </instance>
+                <instance id="42">
+                    <location x="-175.939151994334" y="84" z="-47.553692799599254"/>
+                </instance>
+                <instance id="43">
+                    <location x="-193.9995735841357" y="86" z="-24.311342256103"/>
+                </instance>
+                <instance id="44">
+                    <location x="-199.9980413101407" y="88" z="0.4425697988050785"/>
+                </instance>
+                <instance id="45">
+                    <location x="-193.56159950225228" y="90" z="25.16896500717544"/>
+                </instance>
+                <instance id="46">
+                    <location x="-175.0904349376857" y="92" z="48.330475875300586"/>
+                </instance>
+                <instance id="47">
+                    <location x="-145.732995165434" y="94" z="68.48703183835534"/>
+                </instance>
+                <instance id="48">
+                    <location x="-107.31458360008699" y="96" z="84.38539587324921"/>
+                </instance>
+                <instance id="49">
+                    <location x="-62.22387099622546" y="98" z="95.03708470676735"/>
+                </instance>
+            </instances>
+        </population>
+    </populations>
+    <projections units="Physiological Units">
+        <projection name="NetConn_1" source="SampleCellGroup" target="SampleCellGroup">
+            <synapse_props synapse_type="DoubExpSyn" internal_delay="5" weight="1" threshold="-20"/>
+            <connections>
+                <connection id="0" pre_cell_id="0" post_cell_id="1"/>
+                <connection id="1" pre_cell_id="1" post_cell_id="2"/>
+                <connection id="2" pre_cell_id="2" post_cell_id="3"/>
+                <connection id="3" pre_cell_id="3" post_cell_id="4"/>
+                <connection id="4" pre_cell_id="4" post_cell_id="5"/>
+                <connection id="5" pre_cell_id="5" post_cell_id="6"/>
+                <connection id="6" pre_cell_id="6" post_cell_id="7"/>
+                <connection id="7" pre_cell_id="7" post_cell_id="8"/>
+                <connection id="8" pre_cell_id="8" post_cell_id="9"/>
+                <connection id="9" pre_cell_id="9" post_cell_id="10"/>
+                <connection id="10" pre_cell_id="10" post_cell_id="11"/>
+                <connection id="11" pre_cell_id="11" post_cell_id="12"/>
+                <connection id="12" pre_cell_id="12" post_cell_id="13"/>
+                <connection id="13" pre_cell_id="13" post_cell_id="14"/>
+                <connection id="14" pre_cell_id="14" post_cell_id="15"/>
+                <connection id="15" pre_cell_id="15" post_cell_id="16"/>
+                <connection id="16" pre_cell_id="16" post_cell_id="17"/>
+                <connection id="17" pre_cell_id="17" post_cell_id="18"/>
+                <connection id="18" pre_cell_id="18" post_cell_id="19"/>
+                <connection id="19" pre_cell_id="19" post_cell_id="20"/>
+                <connection id="20" pre_cell_id="20" post_cell_id="21"/>
+                <connection id="21" pre_cell_id="21" post_cell_id="22"/>
+                <connection id="22" pre_cell_id="22" post_cell_id="23"/>
+                <connection id="23" pre_cell_id="23" post_cell_id="24"/>
+                <connection id="24" pre_cell_id="24" post_cell_id="25"/>
+                <connection id="25" pre_cell_id="25" post_cell_id="26"/>
+                <connection id="26" pre_cell_id="26" post_cell_id="27"/>
+                <connection id="27" pre_cell_id="27" post_cell_id="28"/>
+                <connection id="28" pre_cell_id="28" post_cell_id="29"/>
+                <connection id="29" pre_cell_id="29" post_cell_id="30"/>
+                <connection id="30" pre_cell_id="30" post_cell_id="31"/>
+                <connection id="31" pre_cell_id="31" post_cell_id="32"/>
+                <connection id="32" pre_cell_id="32" post_cell_id="33"/>
+                <connection id="33" pre_cell_id="33" post_cell_id="34"/>
+                <connection id="34" pre_cell_id="34" post_cell_id="35"/>
+                <connection id="35" pre_cell_id="35" post_cell_id="36"/>
+                <connection id="36" pre_cell_id="36" post_cell_id="37"/>
+                <connection id="37" pre_cell_id="37" post_cell_id="38"/>
+                <connection id="38" pre_cell_id="38" post_cell_id="39"/>
+                <connection id="39" pre_cell_id="39" post_cell_id="40"/>
+                <connection id="40" pre_cell_id="40" post_cell_id="41"/>
+                <connection id="41" pre_cell_id="41" post_cell_id="42"/>
+                <connection id="42" pre_cell_id="42" post_cell_id="43"/>
+                <connection id="43" pre_cell_id="43" post_cell_id="44"/>
+                <connection id="44" pre_cell_id="44" post_cell_id="45"/>
+                <connection id="45" pre_cell_id="45" post_cell_id="46"/>
+                <connection id="46" pre_cell_id="46" post_cell_id="47"/>
+                <connection id="47" pre_cell_id="47" post_cell_id="48"/>
+                <connection id="48" pre_cell_id="48" post_cell_id="49"/>
+            </connections>
+        </projection>
+    </projections>
+</networkml>

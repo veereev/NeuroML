@@ -1,7 +1,7 @@
 <div class="overflowcontent">
 <h1>Validate NeuroML files</h1>
         
-        <p>This page allows you to validate files against the NeuroML <a href="http://www.neuroml.org/specifications.php">specifications</a>.
+        <p>This page allows you to validate files against the NeuroML <a href="http:///specifications.php">specifications</a>.
         Examples of valid NeuroML files can be found <a href="Samples.jsp">here</a>.</p>
         
         <p><b>The current version of the specification is: v1.8.1 
@@ -9,7 +9,7 @@
         
         
 <div id="validate">      
-        <form name ="myform" action="http://www.neuroml.org/NeuroMLValidator/ValidationResults.jsp" method="post">  <!--enctype='multipart/form-data'-->
+        <form name ="myform" action="http:///NeuroMLValidator/ValidationResults.jsp" method="post">  <!--enctype='multipart/form-data'-->
             <textarea name ="pastedFile" rows="20" cols="100" onclick="if (document.myform.pastedFile.value.indexOf('Paste the XML file contents here') >= 0) {document.myform.pastedFile.value=''};">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;info&gt;Paste the XML file contents here&lt;/info&gt</textarea>
             <br />

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vasculatureml xmlns="http://vasculatureml.org"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:meta="http://morphml.org/metadata/schema" 
+               xmlns:mml="http://morphml.org/morphml/schema"
+               xsi:schemaLocation="http://vasculatureml.org  VasculatureML.xsd">
+                   
+    <meta:notes>Simple example of a 'VasculatureML' file...</meta:notes>
+                   
+    <cells>
+        <cell name="CellA" xmlns="http://morphml.org/neuroml/schema">    <!-- A simple cell -->
+            <segments xmlns="http://morphml.org/morphml/schema">
+                <segment id ="0" name="Soma"  cable="0">
+                    <proximal x="0" y="0" z="0" diameter="10"/>
+                    <distal x="10" y="0" z="0" diameter="10"/>
+                </segment>
+                <segment id ="1" name="Dendrite" parent="0" cable="1">
+                    <proximal x="10" y="0" z="0" diameter="3"/>
+                    <distal x="20" y="0" z="0" diameter="3"/>
+                </segment>
+            </segments>
+        </cell>
+    </cells> 
+    
+    <vasculature>
+        <vessel name="v1">                                                                <!-- A simple blood vessel -->
+             <segment id ="0">
+                <mml:proximal x="100" y="0" z="0" diameter="0.5"/>
+                <mml:distal x="100" y="200" z="0" diameter="0.6"/>
+            </segment>
+        </vessel>
+        <vessel name="v2">
+             <segment id ="2">
+                <mml:proximal x="200" y="0" z="100" diameter="0.4"/>
+                <mml:distal x="200" y="0" z="100" diameter="0.3"/>
+            </segment>
+        </vessel>
+    </vasculature>
+        
+</vasculatureml>
+

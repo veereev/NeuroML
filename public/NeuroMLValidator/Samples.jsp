@@ -1,0 +1,186 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+<%@page import="java.io.*"%>
+<%@page import="java.util.*"%>
+<%@page import="org.neuroml.validator.utils.*"%>
+<!--------
+
+File:      Samples.jsp
+Author:    Padraig Gleeson
+
+           This file has been developed as part of the neuroConstruct project
+           This work has been funded by the Medical Research Council
+
+---------->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <head>
+	<link rel="stylesheet" type="text/css" href="application.css" />    
+<script type="text/javascript" src="http://spike.la.asu.edu/NeuroMLValidator/public/javascripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="http://spike.la.asu.edu/NeuroMLValidator/public/javascripts/jquery.dropotron-1.0.js"></script>
+<script type="text/javascript">
+var j = jQuery.noConflict();
+      j(function() {
+          j('#menu > ul').dropotron({
+              mode: 'fade',
+              globalOffsetY: 11,
+              offsetY: -15
+          });
+      });
+  </script>
+        
+        <title>Samples of NeuroML files</title></head>
+        <%GeneralUtils.setCurrentPageRef("samples");%>
+    <body>
+
+<%
+        String currVer = GeneralProperties.getCurrentVersionShort();
+        String currVerFull = GeneralProperties.getCurrentSchemaVersion();
+        
+        
+        String fullPath = application.getRealPath(GeneralProperties.getSamplesDir());
+
+        if (fullPath==null)
+        {
+            fullPath = GeneralProperties.getTempLocalPath()+GeneralProperties.getSamplesDir();
+        }
+               
+        File samplesDir  = new File(fullPath);
+%>
+    <div id="wrapper">
+<%@ include file="header.jsp" %>
+<div class="overflowcontent">
+    <h1>Examples of NeuroML files</h1>
+    
+    <p>These examples demonstrate the capabilities of the current version of the NeuroML <a href="../specifications.php">specifications</a>.</p>
+    <p>We highlight the following 4 examples to illustrate the key elements at the various <a href="../introduction.php">Levels</a>:</p>
+    
+        <ul> 
+            <li style="padding:5px ; margin-left: 10px"><b>Level 1: <a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/MorphML/CablesIncluded.xml">CablesIncluded.xml</a></b>
+            <a href="Transform.jsp?<%=Parameters.LOCAL_FILE%>=NeuroMLFiles/Examples/MorphML/CablesIncluded.xml&<%=Parameters.XSL_FILE%>=NeuroMLFiles/Schemata/v<%=currVerFull%>/Level3/NeuroML_Level3_v<%=currVer%>_HTML.xsl">(More readable view)</a>
+            is an example of a cell with soma and dendrites specified in <a href="Latest.jsp?<%=Parameters.SPEC_PART%>=MorphML">MorphML</a>.</li>
+            
+            <li style="padding:5px ; margin-left: 10px"><b>Level 2: <a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/ChannelML/NaChannel_HH.xml">NaChannel_HH.xml</a></b>
+            <a href="Transform.jsp?<%=Parameters.LOCAL_FILE%>=NeuroMLFiles/Examples/ChannelML/NaChannel_HH.xml&<%=Parameters.XSL_FILE%>=NeuroMLFiles/Schemata/v<%=currVerFull%>/Level3/NeuroML_Level3_v<%=currVer%>_HTML.xsl">(readable)</a>
+            is a <a href="Latest.jsp?<%=Parameters.SPEC_PART%>=ChannelML">ChannelML</a> example of a sodium channel based on the Hodgkin Huxley squid model.</li>
+            
+            <li style="padding:5px ; margin-left: 10px"><b>Level 2: <a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/ChannelML/MossyCellBiophys.xml">MossyCellBiophys.xml</a></b>
+            <a href="Transform.jsp?<%=Parameters.LOCAL_FILE%>=NeuroMLFiles/Examples/ChannelML/MossyCellBiophys.xml&<%=Parameters.XSL_FILE%>=NeuroMLFiles/Schemata/v<%=currVerFull%>/Level3/NeuroML_Level3_v<%=currVer%>_HTML.xsl">(readable)</a>
+            is a Level 2 cell description which includes the <a href="Latest.jsp?<%=Parameters.SPEC_PART%>=Biophysics">Biophysical</a> properties of the cell.</li>
+            
+            <li style="padding:5px ; margin-left: 10px"><b>Level 3: <a href="ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/NetworkML/CompleteNetwork.xml">CompleteNetwork.xml</a></b>
+            <a href="Transform.jsp?<%=Parameters.LOCAL_FILE%>=NeuroMLFiles/Examples/NetworkML/CompleteNetwork.xml&<%=Parameters.XSL_FILE%>=NeuroMLFiles/Schemata/v<%=currVerFull%>/Level3/NeuroML_Level3_v<%=currVer%>_HTML.xsl">(readable)</a>
+            is a description of a full network model including cell, synaptic mechanisms and network connections (in <a href="Latest.jsp?<%=Parameters.SPEC_PART%>=NetworkML">NetworkML</a>).</li>
+            
+        </ul>
+
+    <p>These files can be edited and revalidated or you can <a href="Validation.php">validate your own NeuroML files here</a>.</p>
+<%
+         
+
+    
+    //out.println("Directory: "+ samplesDir);
+    
+    File[] subDirs = samplesDir.listFiles();
+    
+    Vector<File> allDirs = new Vector<File>();
+    // For the correct order...
+    allDirs.add(new File(samplesDir, "MorphML"));
+    allDirs.add(new File(samplesDir, "ChannelML"));
+    allDirs.add(new File(samplesDir, "NetworkML"));
+    
+    if(subDirs!=null)
+    {
+        for(int i=0;i<subDirs.length;i++)
+        {
+            if (!allDirs.contains(subDirs[i])) allDirs.add(subDirs[i]);
+        }
+    }
+         
+    for(int k=0;k<allDirs.size();k++)
+    {
+        File thisDir = allDirs.get(k);
+        
+        if (thisDir.isDirectory() && !thisDir.getName().equals("CVS")&& !thisDir.getName().equals("old"))
+        {
+            String title = thisDir.getName();
+            File moreInfo = new File(thisDir, "README");
+            if (moreInfo.exists())
+            {
+                try
+                {
+                    FileReader fr = new FileReader(moreInfo);
+                    LineNumberReader reader = new LineNumberReader(fr); 
+                    title = reader.readLine();
+                }
+                catch(Exception e){}; // oh well...
+                
+            }
+            out.println("<h3>"+title+"</h3>");     
+            
+            File[] exFiles = thisDir.listFiles();
+            if(exFiles.length==0)
+            {
+                out.println("<p>No example files found in this category</p>");
+                
+            }
+            else
+            {
+                out.println("<table style=\"longlist\"><tr>"
+                                +"<th> &nbsp;</th>" +
+                        "<th>Show HTML</th>" +
+                        "<th>Show XML</th>" +
+                        "<th>Current schema (v"+GeneralProperties.getCurrentSchemaVersion()+")</th>" +
+                        "<th>All schemas</th></tr>");
+       
+            
+                for(int j=0;j<exFiles.length;j++)
+                {
+            
+                    if (!exFiles[j].isDirectory() 
+                        && !exFiles[j].getName().endsWith("~") 
+                        && !exFiles[j].getName().equals("README") 
+                        && ((!exFiles[j].getName().toLowerCase().startsWith("test") 
+                        && !exFiles[j].getName().toLowerCase().startsWith(".")) 
+                            || GeneralProperties.debug()))
+                    {
+                        fullPath = GeneralProperties.getSamplesDir() + "/"
+                                            + thisDir.getName()+ "/" 
+                                            +exFiles[j].getName();
+
+                        out.println("<tr>"
+                                    +"<td width=250>"+exFiles[j].getName()+"</td>"
+                                
+                                
+                                    +"<td width=120 align=\"center\"><a href=\"Transform.jsp?"
+                                        +Parameters.LOCAL_FILE+"="+fullPath+"&"+Parameters.XSL_FILE+"=NeuroMLFiles/Schemata/v"+currVerFull+"/Level3/NeuroML_Level3_v"+currVer+"_HTML.xsl\">View</a></td>"
+                                
+                                    +"<td width=120 align=\"center\"><a href=\"ViewNeuroMLFile.jsp?"
+                                        +Parameters.LOCAL_FILE+"="+fullPath+"\">Source</a></td>"
+                                
+                                    +"<td  width=120 align=\"center\"><a href=\"ValidationResults.jsp?"
+                                        +Parameters.LOCAL_FILE+"="+fullPath+"&onlyUseSchema=v"+GeneralProperties.getCurrentSchemaVersion()+"\">Validate</a></td>"
+                                
+                                    +"<td  width=120 align=\"center\"><a href=\"ValidationResults.jsp?"
+                                        +Parameters.LOCAL_FILE+"="+fullPath+"\">Validate</a></td></tr>");
+                    }
+                    
+                    
+                }
+                out.println("</table>");
+            }
+            
+        }
+    }
+
+%>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+<%@ include file="footer.jsp" %>
+     </div></div>   
+
+</div></div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:morphml xmlns:n="http://morphml.org/morphml/schema/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://morphml.org/morphml/schema/1.0.0 
+                        ../../Schemata/MorphML/v1.2/MorphML_v1.2.xsd">
+                        
+                        
+<n:name>Test Cell MorphML file</n:name>
+
+<n:notes>A simple MorphML file with a single cell, to illustrate the suggested v1.2 functionality</n:notes>
+
+<n:lengthUnits>Micrometers</n:lengthUnits>
+
+
+<n:cells>
+    <n:cell>
+        <n:name>BasicCell</n:name>
+        <n:notes>Test cell for showing suggested section/segment handling</n:notes>
+  
+        
+        <!--A spherical soma (this is indicated by startPoint = the only endPoint)-->
+        
+        <n:sections>
+            <n:section>
+                <n:id>0</n:id>
+                <n:sectionName>Soma</n:sectionName>
+                <n:startPoint n:x="0" n:y="0" n:z="0" n:diameter="10"/>
+                <n:segments>
+                    <n:segment>
+                        <n:id>0</n:id>
+                        <n:segmentName>SomaSeg</n:segmentName>
+                        <!--No parent, i.e. start segment of root section-->
+                        <n:endPoint n:x="0" n:y="0" n:z="0" n:diameter="10"/>
+                    </n:segment>
+                </n:segments>
+                <n:group>soma_group</n:group>
+            </n:section>
+            
+            
+            <!--A section with  2 segment starting at the soma, i.e. a cable 
+                with 3 3D points specified along it-->
+ 
+            <n:section>
+                <n:id>1</n:id>
+                <n:sectionName>Dend1</n:sectionName>
+                <n:startPoint n:x="0" n:y="0" n:z="0" n:diameter="4"/>
+                <n:segments>
+                    <n:segment>
+                        <n:id>1</n:id>
+                        <n:segmentName>Dend1Seg1</n:segmentName>
+                        <n:parentId>0</n:parentId>
+                        <!--No fractionAlongParent, so 1 is assumed-->
+                        <n:endPoint n:x="10" n:y="0" n:z="0" n:diameter="3"/>
+                    </n:segment>
+                    <n:segment>
+                        <n:id>2</n:id>
+                        <n:segmentName>Dend1Seg2</n:segmentName>
+                        <n:parentId>1</n:parentId>
+                        <!--No fractionAlongParent, so 1 is assumed-->
+                        <n:endPoint n:x="20" n:y="0" n:z="0" n:diameter="2"/>
+                    </n:segment>
+                </n:segments>
+                <n:group>dend_group</n:group>
+            </n:section>      
+            
+            
+
+            
+        </n:sections>
+
+    </n:cell>
+</n:cells>
+
+
+</n:morphml>

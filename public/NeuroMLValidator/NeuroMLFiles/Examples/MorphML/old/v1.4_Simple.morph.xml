@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:morphml xmlns:n="http://morphml.org/morphml/schema/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://morphml.org/morphml/schema/1.0.0 
+                        ../../Schemata/MorphML/v1.4/MorphML_v1.4.xsd">
+                        
+                        
+<n:name>Test Cell MorphML file</n:name>
+
+<n:notes>A simple MorphML file with a single cell, to illustrate the suggested v1.4 functionality</n:notes>
+
+<n:lengthUnits>Micrometers</n:lengthUnits>
+        
+
+<n:cells>
+    <n:cell>
+        <n:name>BasicCell</n:name>
+        <n:notes>Test cell for showing suggested section/segment handling</n:notes>
+        
+        <n:segments>
+        
+            <n:segment>
+                        <n:id>0</n:id>
+                        <n:proximal><n:x>0</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>10</n:diameter></n:proximal>
+                        <n:distal><n:x>0</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>10</n:diameter></n:distal>
+                        <n:name>SomaSeg</n:name>
+                        <n:section>0</n:section>
+                        <n:group>soma_group</n:group>
+            </n:segment>
+        
+            <n:segment>
+                        <n:id>1</n:id>
+                        <n:proximal><n:x>0</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:proximal>
+                        <n:distal><n:x>10</n:x><n:y>20</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:distal>
+                        <n:name>DendSeg</n:name>
+                        <n:parent>0</n:parent>
+                        <n:section>1</n:section>
+                        <n:group>dendrite_group</n:group>
+            </n:segment>
+            
+            
+        </n:segments>
+        
+        
+        <n:sections>
+        
+        
+        <n:section>
+            <n:id>0</n:id>
+            <n:name>SomaSec</n:name>
+        </n:section>
+        
+        <n:section>
+            <n:id>1</n:id>
+            <n:name>DendSec</n:name>
+        </n:section>
+        
+        
+        </n:sections>
+
+    </n:cell>
+</n:cells>
+
+
+</n:morphml>

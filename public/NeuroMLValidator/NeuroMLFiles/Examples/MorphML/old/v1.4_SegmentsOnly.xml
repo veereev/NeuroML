@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:morphml xmlns:n="http://morphml.org/morphml/schema/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://morphml.org/morphml/schema/1.0.0 
+                        ../../Schemata/MorphML/v1.4/MorphML_v1.4.xsd">
+                        
+                        
+<n:name>MorphML file with cell with no sections</n:name>
+
+<n:notes>A simple MorphML file with a single cell, to illustrate the suggested v1.4 functionality</n:notes>
+
+<n:lengthUnits>Micrometers</n:lengthUnits>
+        
+
+<n:cells>
+    <n:cell>
+        <n:name>NoSectionsCell</n:name>
+        <n:notes>Test cell for showing mapping to NEURON/GENESIS when no sections are specified (e.g. as in a MorphML file fresh from a neuronal reconstruction)</n:notes>
+        
+        <n:segments>
+        
+            <n:segment>
+                        <n:id>0</n:id>
+                        <n:proximal><n:x>0</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>10</n:diameter></n:proximal>
+                        <n:distal><n:x>10</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>10</n:diameter></n:distal>
+            </n:segment>
+        
+            <n:segment>
+                        <n:id>1</n:id>
+                        <n:proximal><n:x>5</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:proximal>
+                        <n:distal><n:x>5</n:x><n:y>20</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:distal>
+                        <n:parent>0</n:parent>
+            </n:segment>     
+            
+            <n:segment>
+                        <n:id>2</n:id>
+                        <n:distal><n:x>5</n:x><n:y>40</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:distal>
+                        <n:parent>1</n:parent>
+            </n:segment>  
+            
+            <n:segment>
+                        <n:id>3</n:id>
+                        <n:distal><n:x>5</n:x><n:y>60</n:y><n:z>0</n:z><n:diameter>3</n:diameter></n:distal>
+                        <n:parent>2</n:parent>
+            </n:segment>    
+            
+            
+            <n:segment>
+                        <n:id>4</n:id>
+                        <n:proximal><n:x>0</n:x><n:y>0</n:y><n:z>0</n:z><n:diameter>2</n:diameter></n:proximal>
+                        <n:distal><n:x>-10</n:x><n:y>-10</n:y><n:z>0</n:z><n:diameter>2</n:diameter></n:distal>
+                        <n:parent>0</n:parent>
+            </n:segment>                
+                        
+            <n:segment>
+                        <n:id>5</n:id>
+                        <n:distal><n:x>-20</n:x><n:y>-20</n:y><n:z>0</n:z><n:diameter>2</n:diameter></n:distal>
+                        <n:parent>4</n:parent>
+            </n:segment>                
+            
+
+            
+        </n:segments>
+
+    </n:cell>
+</n:cells>
+
+
+</n:morphml>

@@ -1,0 +1,29 @@
+The changes in v1.4 over v1.3beta in brief: 
+
+General: 
+
+- A redirection page has been made to link directly to the latest version of the standard, e.g. http://www.morphml.org:8080/NeuroMLValidator/Latest.jsp?spec=MorphML  will redirect to the current version of MorphML. See http://www.morphml.org:8080/NeuroMLValidator/Latest.jsp for other links. 
+
+MorphML: 
+
+- Metadata for authors, allowing specification of original authors of models and who's converted them to NeuroML. Sufficient until we move to a more detailed (RDF based?) schema for describing this type of metadata. 
+- Now cables groups can be specified by listing cables for each group after the cables have been defined (as opposed to specifying a list of groups as each cable is defined). 
+See: http://www.morphml.org:8080/NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/ChannelML/InhomogeneousBiophys.xml  
+
+Biophysics: 
+
+- The file above also shows how to specify inhomogeneous biophysical parameters, e.g. capacitance which varies with distance from the soma. Based on the NEURON implementation. Note the inhomogeneity isn't shown in the HTML view of the file yet. 
+
+ChannelML:
+
+- Specification of blocking synapses, e.g. NMDA receptor synapses is supported. 
+- Unit information is included for many elements, with some recommended values, as in Double Exponential Synapse (http://www.morphml.org:8080/NeuroMLValidator/Transform.jsp?localFile=NeuroMLFiles/Schemata/v1.4/Level2/ChannelML_v1.4.xsd&xslFile=NeuroMLFiles/Schemata/XSD_Readable.xsl#DoubleExponentialSynapse)  
+
+NetworkML:
+
+- Some values which had been elements are now attributes, for more usage consistency between Levels, e.g. SynapseProperties. (http://www.morphml.org:8080/NeuroMLValidator/Transform.jsp?localFile=NeuroMLFiles/Schemata/v1.4/Level3/NetworkML_v1.4.xsd&xslFile=NeuroMLFiles/Schemata/XSD_Readable.xsl#SynapseProperties)  
+- More cell location and cell connectivity schemes are supported, e.g. 2D Grids, AllToAll, FixedProbability, etc. See here (http://www.morphml.org:8080/NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/NetworkML/2DGridTemplate.xml)  
+
+All previous NeuroML files, except some NetworkML files should still be valid with the new specs. 
+Thanks to Andrew Davison and the Facets project for recommendations about the units and network connectivity. 
+

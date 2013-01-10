@@ -1,0 +1,19 @@
+<!-- Just a test file for checking functionality of the application...-->
+
+
+<morphml xsi:noNamespaceSchemaLocation="../../Schemata/Miscellaneous/TestArea.xsd" 
+    xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  
+  
+  <inner>
+    <segment id="0"/>
+    <segment id="1"/>
+    <cable id="1"/>
+    <cable id="1"/>
+    
+
+  </inner>
+  
+  
+  
+</morphml>

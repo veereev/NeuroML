@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- Very preliminary version! Based on a coupling of Michael Hines' initial suggestions for the schema,
+     and the one culled from the old NeuroML spec-->
+
+<xsd:schema targetNamespace="http://morphml.org/channelml/schema" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns="http://morphml.org/channelml/schema" 
+elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:element name="channelml" type="Channel">
+		<xsd:annotation>
+			<xsd:documentation>The root element.</xsd:documentation>
+		</xsd:annotation>
+                  
+	</xsd:element>
+        
+	<xsd:complexType name="Channel">
+		<xsd:annotation>
+			<xsd:documentation>Channel description.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+                
+			<xsd:element name="ion" type="Ion" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="channel_type" type="ChannelType" minOccurs="0"/>
+		
+		</xsd:sequence>
+	</xsd:complexType>
+        
+        <xsd:complexType name="ChannelType">
+		<xsd:annotation>
+			<xsd:documentation>Definition of a channel type</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="current_voltage_relation" type="CurrentVoltageRelation" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="density" type="xsd:string"/>
+	</xsd:complexType>     
+           
+        <xsd:complexType name="CurrentVoltageRelation">
+		<xsd:annotation>
+			<xsd:documentation>Definition of a CurrentVoltageRelation</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ohmic" type="Ohmic" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="density" type="xsd:string"/>
+	</xsd:complexType>
+      
+        
+        <xsd:complexType name="Ohmic">
+		<xsd:annotation>
+			<xsd:documentation>Definition of an ohmic relation</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="conductance">  
+                            <xsd:complexType>
+                                <xsd:attribute name="default_gmax" type="xsd:double"/>
+                            </xsd:complexType>
+                        </xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="NonSpecific" type="xsd:string"  use="optional"/>
+		<xsd:attribute name="default_erev" type="xsd:double"  use="optional"/>
+		<xsd:attribute name="ion" type="xsd:string"  use="optional"/>
+	</xsd:complexType>  
+    
+                
+     
+            <xsd:complexType name="Ion">
+		<xsd:annotation>
+			<xsd:documentation>Definition of an ion</xsd:documentation>
+		</xsd:annotation>
+                <xsd:attribute name="name" type="xsd:string"/>
+                <xsd:attribute name="charge" type="xsd:integer"/>
+            </xsd:complexType>
+      
+        
+</xsd:schema>

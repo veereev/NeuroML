@@ -1,0 +1,4 @@
+In this folder the MorphML is subcategorised into version numbers with a single 
+XSD file in each. Any number of XSL transformation files are allowed in the subfolders,
+and when an XML file is valid according to the XSD file, the user gets offered to convert the
+XML file via the XSL files.

@@ -197,7 +197,7 @@
         <h2>Create models with a subset of components in NeuroML</h2>
 
         <p>While there are a number of model types which are currently supported in NeuroML, and while a number of
-            cell and network models can be fully expressed in NeuroML (see <a href="http://www.neuroml.org/models.php">here</a>) some
+            cell and network models can be fully expressed in NeuroML (see <a href="http:///models.php">here</a>) some
             components of a cell model might not be supported in the current version of the language (e.g. a custom channel type created with NMODL for NEURON).
         </p>
         <p>If these types of models are sufficiently widely used they can be incorporated into the language (see <a href="#extend_v1.0">below</a>),
@@ -213,7 +213,7 @@
 
         <p> Some of the options for model specification which mix NeuroML and native scripts include:  </p>
             <ul>
-                <li>The native NeuroML import function (e.g. <a href="tool_support.php#NEURON">NEURON</a>, <a href="tool_support.php#PSICS">PSICS</a>) of 
+                <li>The native NeuroML import function (e.g. <a href="tool_support#NEURON">NEURON</a>, <a href="tool_support#PSICS">PSICS</a>) of 
                     the application can be used for the NeuroML based model components and the "traditional" script format for the rest of the model. 
                     The example file presented <a href="#ExtendNetSpec.xml">in the previous section</a> shows how a channel in a native simulator script
                     (Na_Channel_NMODL) could be referenced in a valid Level 2 cell description.</li><br>
@@ -256,11 +256,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attributeFormDefault=<span style="color:blue">"unqualified"</span></a>&gt;</b></span><span style="color:green"><br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;</span><b>&lt;xs:import namespace=<span style="color:blue">"http://morphml.org/metadata/schema"</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemaLocation=<span style="color:blue">"http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level1/Metadata_v1.8.1.xsd"</span>/</a>&gt;</b></span><span style="color:green"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemaLocation=<span style="color:blue">"http:///NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level1/Metadata_v1.8.1.xsd"</span>/</a>&gt;</b></span><span style="color:green"><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;</span><b>&lt;xs:import namespace=<span style="color:blue">"http://morphml.org/morphml/schema"</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemaLocation=<span style="color:blue">"http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level1/MorphML_v1.8.1.xsd"</span>/</a>&gt;</b></span><span style="color:green"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemaLocation=<span style="color:blue">"http:///NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level1/MorphML_v1.8.1.xsd"</span>/</a>&gt;</b></span><span style="color:green"><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;</span><b>&lt;xs:import namespace=<span style="color:blue">"http://morphml.org/neuroml/schema"</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemaLocation=<span style="color:blue">"http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level3/NeuroML_Level3_v1.8.1.xsd"</span>/</a>&gt;</b></span><span style="color:green"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemaLocation=<span style="color:blue">"http:///NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level3/NeuroML_Level3_v1.8.1.xsd"</span>/</a>&gt;</b></span><span style="color:green"><br/>
 <br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;</span><b>&lt;xs:element name=<span style="color:blue">"vasculatureml"</span> type=<a href =#VascML><span style="color:blue">"VascML"</span></a>/</a>&gt;</b></span><span style="color:green"><br/>
@@ -377,7 +377,7 @@
         <p>
 
         <p>Most of these types of extensions would involve minor alterations to existing elements for subcases which weren't built in initially, e.g.
-            allowing the <a href="http://www.neuroml.org/NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/ChannelML/GateDepQ10.xml">q10 factor to be expressed independently per gate</a>.</p>
+            allowing the <a href="http:///NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/ChannelML/GateDepQ10.xml">q10 factor to be expressed independently per gate</a>.</p>
 
         <p>Other adjustments which are currently planned include allowing a table of experimental data to be used for gating variables
             (see <a href="http://sourceforge.net/mailarchive/message.php?msg_name=4B4DFC72.8010607%40ucl.ac.uk">here</a>, planned for v1.8.2).</p>

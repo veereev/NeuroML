@@ -1,0 +1,28 @@
+The changes in version 1.6 over version 1.5: 
+
+General: 
+- Added <status> element in Metadata (used in channel_type, synapse_type, ion_concentration currently) which can be used to indicate 
+  stable/in_progress/known_issues status of files. Can be used to automatically detect unstable parts of complex models.
+- Comment can be included with author info.
+- Updated index.jsp to highlight 3 examples at each level as particularly useful to learn the structure of the specifications (suggestions for enhancements welcome).
+- Enabled links from elements in (formatted) XML view of examples to HTML representation of XSDs (e.g. link from <meta:notes> to Metadata.xsd)
+- Added Nicolas's XSDtoRNG.xsl to transform XSD files into Relax NG format
+
+
+MorphML:  
+- Minor changes made to position of some <text>...</text> tags in NEURON/GENESIS mapping
+
+
+Biophysics: 
+- Removed ReversalPotentialValue, added ConductanceDensityValue
+- Moved Units element to Metadata
+
+
+ChannelML:
+- Allowed extra rate params (gamma, zeta) in case tau/inf need to be expressed in parameterised forms other than alpha and beta (see Kdr.xml)
+- Included fixed_q10 option, when a Q10 adjustment should be included but is specified for only one temperature
+
+
+NetworkML:
+- num_per_source made required and max_per_target made optional in PerCellConnection, and restrictions on values updated.
+- Added non_spatial_grid option to GridArrangement, to specify a grid in a network simulation where 3D location is unimportant

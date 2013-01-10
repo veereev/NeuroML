@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    This example shows a Level 3 compliant file, containing a simple network distributed over a number of nodes
+-->
+
+<networkml xmlns="http://morphml.org/networkml/schema"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:meta="http://morphml.org/metadata/schema" 
+    xsi:schemaLocation="http://morphml.org/networkml/schema http://www.neuroml.org/NeuroMLValidator/NeuroMLFiles/Schemata/v1.8.1/Level3/NetworkML_v1.8.1.xsd"
+    length_units="micrometer">
+                        
+
+    <meta:notes>A network with a single cell group with interconnections. Node ids are specified to indicate the distribution
+                of the cells over a number of computational nodes. </meta:notes>
+
+
+    <populations>
+        <population name="CellGroupA" cell_type="CellA">
+            <meta:notes>A population physically separated into 2 groups of 3. Each group is on its own node.</meta:notes>
+            
+            <instances size="6">
+                
+                <instance id="0" node_id="0"><location x="0" y="0" z="0"/></instance>
+                <instance id="1" node_id="0"><location x="100" y="0" z="0"/></instance>
+                <instance id="2" node_id="0"><location x="200" y="0" z="0"/></instance>
+                
+                <instance id="3" node_id="1"><location x="0" y="100" z="0"/></instance>
+                <instance id="4" node_id="1"><location x="100" y="100" z="0"/></instance>
+                <instance id="5" node_id="1"><location x="200" y="100" z="0"/></instance>
+                
+            </instances>
+        </population>
+    </populations>
+    
+    <projections units="Physiological Units">
+        <projection name="NetworkConnection" source="CellGroupA" target="CellGroupA">
+            
+            <meta:notes>There are 3 connections inside each of the groups, but only one between them. </meta:notes>
+            
+            <synapse_props synapse_type="DoubExpSynA" internal_delay="5" weight="1" threshold="-20"/>
+            
+            <connections>
+                
+            <!-- Connections on node 0 -->
+                
+                <connection id="0" pre_cell_id="0" post_cell_id="1"/>
+                <connection id="1" pre_cell_id="1" post_cell_id="2"/>
+                <connection id="2" pre_cell_id="2" post_cell_id="0"/>
+                
+            <!-- Connection between nodes -->
+                
+                <connection id="3" pre_cell_id="1" post_cell_id="5"/>
+                
+            <!-- Connections on node 1 -->
+                
+                <connection id="4" pre_cell_id="3" post_cell_id="4"/>
+                <connection id="5" pre_cell_id="4" post_cell_id="5"/>
+                <connection id="6" pre_cell_id="5" post_cell_id="3"/>
+                
+            </connections>
+        </projection>
+    </projections>
+    
+
+
+</networkml>

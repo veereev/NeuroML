@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Based on Josef/Sharon's culling of ChannelML stuff from the old NeuroML
+    PG changed the Refs to strings so the file would validate-->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ChannelML">
+		<xs:annotation>
+			<xs:documentation>Markup language for models of ionic conductance channels.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Channel">
+		<xs:sequence>
+			<xs:element name="name"/>
+			<xs:element name="description"/>
+			<xs:element name="author"/>
+			<xs:element name="uniqueId"/>
+			<xs:element name="Erest"/>
+			<xs:element name="gates">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="gate"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HHChannel">
+		<xs:sequence>
+			<xs:element name="permeantSpecie" type="xs:string"/>
+			<xs:element name="gates">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gate" type="HHGate"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Erev" type="xs:string"/>
+		<xs:attribute name="Gmax" type="xs:string"/>
+		<xs:attribute name="ivlaw" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="HHGate">
+		<xs:attribute name="power" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="TabulatedHHGate">
+		<xs:attribute name="power" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="TabulatedHHVGate">
+		<xs:sequence>
+			<xs:element name="voltagePoints" type="xs:double"/>
+			<xs:element name="forwardRates" type="xs:double"/>
+			<xs:element name="backwardRates" type="xs:double"/>
+			<xs:element name="interpolation" type="xs:string"/>
+			<xs:element name="power" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParameterizedHHVGate">
+		<xs:sequence>
+			<xs:element name="forwardRate" type="ParameterizedHHRate"/>
+			<xs:element name="backwardRate" type="ParameterizedHHRate"/>
+		</xs:sequence>
+		<xs:attribute name="power" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="ThermodynamicHHVGate">
+		<xs:attribute name="forwardRate" type="xs:string"/>
+		<xs:attribute name="backwardRate" type="xs:string"/>
+		<xs:attribute name="gatingCharge" type="xs:string"/>
+		<xs:attribute name="gamma" type="xs:string"/>
+		<xs:attribute name="power" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="HHRate"/>
+	<xs:complexType name="EquationHHRate">
+		<xs:attribute name="rateExpression" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="ParameterizedHHRate">
+		<xs:sequence>
+			<xs:element name="timeUnit" type="xs:string"/>
+			<xs:element name="voltageUnit" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="A" type="xs:double"/>
+		<xs:attribute name="B" type="xs:double"/>
+		<xs:attribute name="C" type="xs:double"/>
+		<xs:attribute name="D" type="xs:double"/>
+		<xs:attribute name="E" type="xs:double"/>
+		<xs:attribute name="F" type="xs:double"/>
+	</xs:complexType>
+	<xs:complexType name="KSChannel">
+		<xs:sequence>
+			<xs:element name="states">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="state" type="KSState"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="transitions">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="transition" type="KSTransition"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="pore" type="Pore"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KSState">
+		<xs:attribute name="relativeConductance" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="KSTransition">
+		<xs:sequence>
+			<xs:element name="sourceState" type="xs:string"/>
+			<xs:element name="targetState" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KSTDepTransition">
+		<xs:sequence>
+			<xs:element name="sourceState" type="xs:string"/>
+			<xs:element name="targetState" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="alpha" type="xs:string"/>
+		<xs:attribute name="beta" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="KSVDepTransition">
+		<xs:sequence>
+			<xs:element name="sourceState" type="xs:string"/>
+			<xs:element name="targetState" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="z" type="xs:string"/>
+		<xs:attribute name="gamma" type="xs:string"/>
+		<xs:attribute name="r_max" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="KSConcDepTransition">
+		<xs:sequence>
+			<xs:element name="specie" type="Specie"/>
+			<xs:element name="sourceState" type="xs:string"/>
+			<xs:element name="targetState" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="Kd" type="xs:string"/>
+		<xs:attribute name="tau" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="KSRelativeTransition">
+		<xs:attribute name="forwardFactor" type="xs:double"/>
+		<xs:attribute name="backwardFactor" type="xs:double"/>
+	</xs:complexType>
+	<xs:complexType name="Pore">
+		<xs:sequence>
+			<xs:element name="permeators">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="permeator" type="PorePermeator"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="ivlaw" type="xs:string"/>
+		<xs:attribute name="Erev" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="PorePermeator">
+		<xs:sequence>
+			<xs:element name="specie" type="Specie"/>
+		</xs:sequence>
+		<xs:attribute name="conductance" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="Solution">
+		<xs:attribute name="ionName" type="xs:string"/>
+		<xs:attribute name="valency" type="xs:int"/>
+		<xs:attribute name="initialConcentration" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="Specie">
+		<xs:attribute name="symbol" type="xs:string"/>
+		<xs:attribute name="valency" type="xs:int"/>
+		<xs:attribute name="mobility" type="xs:string"/>
+	</xs:complexType>
+</xs:schema>
