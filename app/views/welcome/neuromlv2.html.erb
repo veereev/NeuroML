@@ -1,0 +1,265 @@
+<div class="overflowcontent">
+ <h1>NeuroML version 2.0</h1>
+
+    <p>Developments towards NeuroML version 2.0 are well under way, but <a href="specifications.php">version 1.8.x</a> should be considered the stable version for now,
+        especially for application/model developers who want maximum compatibility with <a href="tool_support">other tools</a>.</p>
+
+    <p>For details of the meetings which have taken place to date where NeuroML v2.0 has been discussed see <a href="meetings.php">here</a>.</p>
+
+    <h2>NeuroML v2alpha Schema</h2>
+
+    <p>A draft specification for <b>NeuroML v2alpha</b> has been created. The working structure of NeuroML v2alpha is defined by a single <a href="http://www.w3schools.com/schema/default.asp">XML Schema</a> file:
+        <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/Schemas/NeuroML2/NeuroML_v2alpha.xsd">NeuroML_v2alpha.xsd</a>. </p>
+    <p>Most of the work listed below
+        aims to handle XML files valid according to this schema. This should be the target structure for anyone wishing to implement NeuroML 2 support at this stage.</p>
+
+
+
+    <p align="center"><img alt="NeuroML v2alpha structure" src="images/neuroml2_inkscape.png"/></p>
+    <p align="center"><i>This image shows some of the elements currently defined in NeuroML v2alpha. The overall structure is similar to NeuroML version 1.x Level 3 (see figures 4-6
+            <a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000815">here</a>). Note that there are a greater range of cell models supported
+            (e.g. <a href="http:///NeuroML2CoreTypes/Cells.html#izhikevichCell">Izhikevich spiking cell</a>,
+            <a href="http:///NeuroML2CoreTypes/Cells.html#adExIaFCell">adaptive exponential integrate & fire</a>) in addition to the multicompartmental conductance based models which were a focus of version 1.x.</i></p>
+
+    <p>Examples of NeuroML 2 files using this schema are available here:</p>
+    <ul>
+        <li>A <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/examples/NML2_SimpleMorphology.nml">simple cell</a> with morphology & segment groups</li>
+        <li>A cell with <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/examples/NML2_FullCell.nml">biophysical properties</a> (channel densities, passive electrical properties, etc.)</li>
+        <li>A simple <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/examples/NML2_SimpleIonChannel.nml">HH Na<sup>+</sup> channel</a></li>
+        <li>Some of the <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/examples/NML2_AbstractCells.nml">simplified spiking neuron models</a> which are supported</li>
+        <li>Some <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/examples/NML2_SynapseTypes.nml">synapse models</a> (single/double exponential conductances, NMDA-R synapse)</li>
+        <li>A <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/examples/NML2_NestedNetworks.nml">network of populations of cells</a> in 3D</li>
+        <li>A <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/examples/NML2_FullNeuroML.nml">full NeuroML v2alpha network model description</a> with cells, channels, populations and networks</li>
+    </ul>
+
+    <br/>
+    <table id="highlighted" align="center" >
+        <tr><td>NeuroML v2.0 is being developed <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2">here</a>. To obtain the
+                latest Schema document, all of the examples, Component definitions and <a href="#libNeuroML">libNeuroML</a> check out the latest code from the
+                <a href="http://subversion.tigris.org/">Subversion</a> repository with:<br/><br/>
+                <span style="color:#883333">svn co https://neuroml.svn.sourceforge.net/svnroot/neuroml/NeuroML2</span></td></tr></table>
+
+<br>
+<br>
+<h2>Development of LEMS & mapping to NeuroML 2</h2>
+
+    <p><a href="lems/index.html">LEMS (Low Entropy Model Specification)</a> is a new XML based language with interpreter developed by Robert Cannon for specifying
+        generic models of dynamical systems. <b>ComponentType</b> (<b>ComponentClass</b> has also been used as a name for these, see <a href="#NineML">below</a>)
+        elements which specify <b>Parameter</b>s, <b>StateVariable</b>s and their dynamical <b>Behaviour</b>s can be defined as templates for model elements (e.g.
+        HH ion channels, abstract cells, etc.). <b>Components</b> are instances of these with specific values of <b>Parameters</b> (e.g. HH squid axon Na<sup>+</sup>
+        channel, I&amp;F cell with threshold -60mV, etc.). </p>
+
+    <p>A Java package, the LEMS Reference Implementation (LRI) which includes examples of LEMS files together with the interpreter for executing them is available
+        <a href="lems/interpreter.html">here</a>.</p>
+
+    <p>A core set of <b>ComponentType</b>s describing the behaviour of dynamical elements in NeuroML 2 has been defined in LEMS:</p>
+    <ul>
+        <li>Cell models: <a href="http:///NeuroML2CoreTypes/Cells.html">Cells.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Cells.xml?view=markup">source in LEMS</a>)</li>
+        <li>Network elements: <a href="http:///NeuroML2CoreTypes/Networks.html">Networks.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Networks.xml?view=markup">source in LEMS</a>)</li>
+        <li>Ion channels: <a href="http:///NeuroML2CoreTypes/Channels.html">Channels.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Channels.xml?view=markup">source in LEMS</a>)</li>
+        <li>Synapse models: <a href="http:///NeuroML2CoreTypes/Synapses.html">Synapses.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Synapses.xml?view=markup">source in LEMS</a>)</li>
+        <li>Mapping of PyNN cells & synapses: <a href="http:///NeuroML2CoreTypes/PyNN.html">PyNN.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/PyNN.xml?view=markup">source in LEMS</a>)</li>
+        <li>Dimensions/units allowed: <a href="http:///NeuroML2CoreTypes/NeuroMLCoreDimensions.html">NeuroMLCoreDimensions.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/NeuroMLCoreDimensions.xml?view=markup">source in LEMS</a>)</li>
+    </ul>
+    <p>These serve as the basis for <b>Component</b> definitions in NeuroML 2 files, e.g. <a href="http:///NeuroML2CoreTypes/Cells.html#izhikevichCell">izhikevichCell</a>,
+            <a href="http:///NeuroML2CoreTypes/Cells.html#iafTauCell">iafTauCell</a>,
+            <a href="http:///NeuroML2CoreTypes/Channels.html#ionChannelHH">ionChannelHH</a>, etc. The behaviour of the model element (e.g. the behaviour of v in terms of threshold, reset, tau in a
+        simple I&amp;F cell) is specified in the <b>ComponentType</b>, and the user only has to supply the name of the <b>ComponentType</b> and give parameter values to create a <b>Component</b>
+        in their NeuroML file.</p><br/>
+
+    <p align="center"><img alt="ComponentTypes & Components" src="images/LEMS_NML2_Ex0_IaF.png"/></p>
+    <p align="center"><i>This image shows the usage of LEMS ComponentTypes & Components in NeuroML</i></p>
+
+
+    <p>Note that specifying a <b>Component</b> does not imply that an instance of the model is created. Instances will only be instantiated when the cells are created in a
+        <b>population</b> which is present in a <b>network</b>.</p>
+
+    <p>Using LEMS to specify the core of NeuroML version 2 has the following significant advantages:</p>
+    <table id="highlighted" align="center" >
+        <tr><td>
+                NeuroML 2 XML files can be used standalone by applications in the same way as NeuroML v1.x, without using LEMS, easing the transition for v1.x compliant applications
+                <br/><br/>Any NeuroML 2 <b>ComponentType</b> can be extended and will be usable by any application (e.g. the <a href="lems/interpreter.html">LEMS Reference Implementation</a>) which understands LEMS</td></tr>
+    </table>
+
+    <p>The first point above means that a parsing application does not have to natively read the LEMS type definition for, e.g. an <b>izhikevichCell</b> element, it just has to map the NeuroML element
+        parameters onto its own object implementing that entity. The behaviour should be the same and should be tested against the reference LEMS implementation.</p>
+
+    <p>The second point above means that if an application does support LEMS, it can automatically parse
+        (and generate code for) a wide range of NeuroML 2 cells, channels and synapses, including any
+        new <b>ComponentType</b> derived from these, without having to natively know anything about channels, cell models, etc.</p>
+<br>
+<h1>libNeuroML<a name="libNeuroML"></a></h1>
+    <h2>Java implementation of libNeuroML </h2>
+
+    <table id="highlighted" align="center" >
+        <tr><td>
+                libNeuroML (Java implementation) = LEMS Reference Implementation + NeuroML 2 ComponentType definitions + Import & export functionality.<br/><br/>
+            NOTE: libNeuroML is not a good name for this, given that packages such as libSBML and the developing Python based
+            <a href="http://libneuroml.readthedocs.org/en/latest/">libNeuroML</a> concentrate on providing an API for reading, writing and validating files.<br/><br/>
+            A standalone Java package with the features below will be maintained, but will probably be renamed in future.</td></tr>
+    </table>
+
+    <p>libNeuroML is a package in Java which extends the basic LEMS Reference Implementation with a number of neuroscience specific features, most notably, it includes the
+        core <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/">NeuroML 2 ComponentType definitions</a>. libNeuroML also features pluggable
+        extensions for importing various model description formats into equivalent LEMS descriptions, and export modules for generating native scripts in various formats
+        which can be used for more efficient simulations than the LRI. </p>
+
+
+    <!--<p>Note: libNeuroML in Java is currently different in scope to other libraries for programmatic access to modelling languages (e.g.
+        <a href="http://sbml.org/Software/libSBML">libSBML</a>, <a href="http://www.cellml.org/tools/api">CellML API</a>) as it is not <b>yet</b> an API to facilitate
+        reading, validating, editing and writing NeuroML models. Integrated ability to execute LEMS based the models is a key feature of libNeuroML, and the API for editing is
+    currently aimed at manipulating LEMS entities (e.g. creating/modifying ComponentTypes/Component instances) rather than NeuroML entities (such as <b>izhikevichCell</b>). </p>
+
+    <p>An integrated package for building, testing and executing NeuroML v2.0 models is essential at this stage of its development. Over time, as the core class names become
+    stabilised, libNeuroML will develop into a true multi language API for manipulating the model classes (most likely using code developed for the 
+    <a href="tool_support#NeuroML Java API">NeuroML Java API</a>), while also allowing access to the underlying definitions in LEMS.</p>-->
+
+    <p align="center"><img alt="libNeuroML" src="images/libNeuroML.png"/></p>
+    <p align="center"><i>Java implementation of libNeuroML and its relationship to the <a href="lems/interpreter.html">LEMS Reference Implementation</a>, the 
+            <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes?view=markup">NeuroML 2 ComponentType definitions</a> and the various import & export formats.
+        Dashed line represent features in early stages of development.</i></p>
+
+    <h3>Installing Java libNeuroML</h3>
+<p>The latest version of libNeuroML for Java can be obtained from the <a href="http://subversion.tigris.org/">Subversion</a> repository:</p>
+
+    <p class="code">svn co https://neuroml.svn.sourceforge.net/svnroot/neuroml/NeuroML2
+    <br/>cd NeuroML2</p>
+
+    <p>This can be compiled/executed (assuming you have <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java</a> installed) using the included <b>make</b> and <b>nml2</b> utilities, e.g. (on Windows):</p>
+
+    <p class="code">make.bat<br/>nml2.bat examples\LEMS_NML2_Ex0_IaF.xml</p>
+
+    <p>Similarly on Mac/Linux:</p>
+
+    <p class="code">./make.sh<br/>./nml2 examples/LEMS_NML2_Ex0_IaF.xml</p>
+
+
+    <p>To allow the <b>nml2</b> utility to be used from any directory, add an environment variable <b>NML2_HOME</b>, set to the install directory, and add this value also to your <b>PATH</b>.</p>
+
+
+    <p>If <a href="http://ant.apache.org/">Apache Ant</a> is installed, the options for compiling/running examples with this include:
+        <p class="code">
+          ant               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  <i>(build the main jar file)</i><br/>
+          ant nml2_0, ant nml2_1, ...          &nbsp;                <i>(run the main NeuroML 2/LEMS examples)</i><br/>
+          ant test           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <i>(perform a number of tests including running all examples)</i><br/><br/>
+          ant -p             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 <i>(list all ant options)</i>
+        </p>
+
+
+
+    <p>A number of  <a href="lems/neuroml2.html">examples</a> are available showing the usage of NeuroML 2 elements, and these can all be loaded and executed by libNeuroML.
+        Most of these examples mix LEMS elements and NeuroML 2 elements in a single file, but there is also <a href="lems/neuroml2.html#Ex5">an example</a> of a LEMS simulation where a "pure" NeuroML 2 file is included for simulation by the LEMS interpreter.
+
+    <p align="center"><img src="lems/Izh.png" alt="Izhikevich"/></p>
+
+    <p align="center"><i>This shows the behaviour of 2 instances of <a href="http://www.izhikevich.org/publications/whichmod.htm">Izhikevich simple spiking neurons</a> which were
+            specified as <b>Component</b>s in NeuroML v2alpha. The behaviour of the <b>ComponentType</b> for the cell model is described in LEMS.
+            See <a href="lems/neuroml2.html#Izhikevich">here</a> for more details.</i></p>
+
+    <h3>Python implementation of libNeuroML<a name="pylibNeuroML"></a></h3>
+
+
+<table id="highlighted" align="center" width="40%">
+<tr><td>Note: a new implementation of a Python API for NeuroML is being created <a href="http://libneuroml.readthedocs.org/en/latest/">here</a>.
+</td></tr></table>
+<br/>
+ <h3>Interaction with neuroConstruct</h3>
+
+    <p>Java libNeuroML is incorporated into the latest version of <a href="http://www.neuroConstruct.org">neuroConstruct</a>, allowing cell model in NeuroML v2alpha to be used in 3D network simulations.
+    Get the <a href="http://www.neuroconstruct.org/download/index.html">latest version of the application</a> from its Subversion repository, run the <b>nCupdate</b> script to pull the latest code from
+    the NeuroML repository and open the project <b>nCexamples/Ex10_NeuroML2/Ex10_NeuroML2.ncx</b>
+    for some working NeuroML v2.0 examples.</p>
+<h1>Compatability with other MLs: SBML, CellML, NineML & mappings to simulators</h1>
+
+    <p>There are a number of other modelling language initiatives which have overlapping aims to NeuroML. One of the goals of NeuroML 2 is to
+        avoid the temptation to be "one modelling language to build them all", but to acknowledge that these other languages exist with active communities,
+        there are large model repositories of <a href="http://www.ebi.ac.uk/biomodels-main/">SBML</a> & <a href="http://models.cellml.org/cellml">CellML</a> models and corresponding
+        tools available, and that many researchers will want to use these as
+        components in computational neuroscience simulations with the minimum of effort.</p>
+
+
+    <a name="SBML"/>
+    <h3>SBML</h3>
+    <p>There is a preliminary <a href="http://www.sbml.org">SBML</a> export function from libNeuroML which
+        generates an SBML file containing the model as defined in LEMS/NeuroML 2 <b>Components</b>/<b>ComponentType</b>s. Try downloading libNeuroML
+        and running: </p><p class="code">ant testSBML</p>
+
+        <p>This export function requires more work, particularly related to the unit handling,
+        but see <a href="lems/neuroml2.html#Ex9">here</a> for a working example.</p>
+
+    <p>It should be possible to import a large class of SBML models into the LEMS framework to allow seamless use of SBML model elements beside NeuroML 2 elements for any simulator which understands
+        LEMS. This is a work in progress using <a href="http://sbml.org/Software/JSBML">JSBML</a>. To test this try: </p><p class="code">ant testSBMLRead</p>
+
+
+    <h3>CellML</h3>
+    <p>Similar export/import options should be possible for <a href="http://www.CellML.org">CellML</a> as SBML. Work is also in progress towards this.</p>
+
+    <a name="NineML"/>
+    <h3>NineML</h3>
+
+    <p><a href="http://www.nineml.org">NineML</a> is being developed as part of the <a href="http://www.incf.org/core/programs/modeling">INCF Multiscale Modelling Program</a>, and
+        developments in LEMS and NeuroML 2 have benefitted from discussions within that forum. </p>
+
+    <p>libNeuroML can export files containing the equivalent NineML Abstraction Layer & User Layer entities (component/node/network)
+        for a model read in in LEMS (with ComponentType, Component, network, etc.). A limited number of LEMS examples can be exported in this format, try downloading the application
+        and running: </p><p class="code">ant testNineML</p> <p>This export will be updated as the NineML language evolves.</p>
+
+
+    <table id="highlighted" align="center" >
+        <tr><td>ComponentType was the original name for ComponentClass/ComponentType in LEMS.
+                ComponentClass was adopted by both LEMS & NineML in early 2010, as an object with similar scope was being used in the NineML Abstraction Layer.
+                However, as there are no current plans to incorporate key features of LEMS such as extension or composition of ComponentTypes into NineML, and so the LEMS
+                element has been renamed ComponentType, to distinguish it.<br/><br/>
+
+            These differences and future work towards greater compatibility between these formats will be discussed at the <a href="workshop2012.php">fourth NeuroML Development Workshop</a>. </td></tr></table>
+            <a name="NEURON">&nbsp;</a>
+    <h3>NEURON</h3>
+    <p>There is a basic export function implemented for many LEMS based abstract cell models to <a href="http://www.neuron.yale.edu/neuron/">NEURON</a>. Try downloading the application
+        and running: </p><p class="code">ant testNEURON</p>
+
+    <img src="images/adEx.png"/>
+<p align="center"><i>This shows 3 adaptive exponential integrate-and-fire model cells which have been specified in NeuroML 2 and run with the
+            libNeuroML (left plots). The NEURON export function uses the LEMS <b>ComponentType</b> definition to generate NMODL files for the cell behaviour and NEURON Python files
+            to execute the network (right plots). See <a href="lems/neuroml2.html#Ex8">here</a> for more details.</i></p>
+
+
+
+    <!--    <h2>Metadata & structured annotations</h2>-->
+
+
+
+    <h2>Object model for 3D hierarchical network generation</h2>
+
+
+    <p>A package has been developed for prototyping ideas about specification of <a href="NeuroMLValidator/Networks.jsp">hierarchical network structures</a> in NeuroML 2.</p>
+
+    <p align="center"><a name="nCnet" href="NeuroMLValidator/Networks.jsp">
+            <img alt="Hierarchical network" src="http://spike.la.asu.edu/NeuroMLValidator/images/Netv2.png" align="middle" width="500"/></a>
+    </p>
+    <p align="center"><i>A network containing a 3x3 grid, each element of which is a subnetwork of 3 populations (2 laid out on regular 3D grids,
+            and one randomly placed in a rectangular box above the others)</i>
+
+    <p>A <a href="NeuroMLValidator/Networks.jsp#JavaAPI">Java package</a> has been produced which can generate network descriptions in this form. The NeuroML 2
+        files produced are valid according to the <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/Schemas/NeuroML2/NeuroML_v2alpha.xsd">
+            NeuroML v2alpha Schema</a> mentioned above.</p>
+
+    <p>This package does not yet interact with LEMS, but it is planned to harmonise the network descriptions used here with those LEMS uses to create networks</p>
+
+
+
+    <h2>What's missing?</h2>
+    <p>A summary of the holes & areas of current work in the current specifications...</p>
+    <ul>
+        <li><b>Network connection templates:</b> more advanced options for defining connectivity between populations of cells is required.
+            This is being worked on in LEMS and for NineML.</li>
+
+        <li><b>Support for multi compartment modelling in LEMS:</b> While the <a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/Schemas/NeuroML2/NeuroML_v2alpha.xsd">
+                NeuroML v2alpha Schema</a> supports description of multi compartmental conductance based neuronal models, the LEMS interpreter can only execute single compartment cell models at present.</li>
+
+        <li><b>Better numerical integration in LEMS:</b> At present the LEMS interpreter uses a simple forward Euler numerical integration method, limiting the size and speed of simulations.</li>
+    </ul>
+
+
+
+</div>
+

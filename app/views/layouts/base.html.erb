@@ -117,28 +117,11 @@ var j = jQuery.noConflict();
               <li id="documents"><%= image_tag "documents.png",:style=>"float:left;" %><span  class="opener">Documents<b></b></span>
               <ul>
                       <li><a href="/introduction">Introduction</a></li>
-                      <li>
-                          <span>Specifications<b></b></span>
-                          <ul>
-                              <li><span>NeuroML V1.X Schemas<b></b></span>
-<ul>
-                              <li><a href="/level1">Level 1</a></li>
-                              <li><a href="/level2">Level 2</a></li>
-                              <li><a href="/level3">Level 3</a></li>
-                                <li><a href="http://spike.la.asu.edu/NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Schemata/v1.8.1/RELEASE_NOTES&viewFormat=plaintext">General Release Notes</a></li>
-                          </ul>
-
-
-                              </li>
-
-                             <!-- <li><a href="#">NeuroML 2.0</a></li>-->
-
-   
-                          </ul>
-                      </li>
+                      <li><a href="/specifications">Specifications</a></li>
   
                       <li><a href="/extend_neuroml">Extending NeuroML</a></li>
-                      <li>
+		      <li><a href="/neuromlv2">NeuroML V2.0</a></li>
+                      <!-- <li>
                           <span>NeuroML V2.0<b></b></span>
                           <ul>
                               <li><a href="/alpha_schema">NeuroML V2alpha schema</a></li>
@@ -146,37 +129,16 @@ var j = jQuery.noConflict();
                               <li><a href="/libnml">libNeuroML</a></li>
                               <li><a href="/compatibility">Compatibility with other MLs</a></li>
                           </ul>
-                      </li>
+                      </li> -->
                       <li><a href="/lems">LEMS</a></li>
                       <li><a href="/relevant_publications">Publications</a></li>
   
                      <!-- <li><a href="/presentations">Presentations</a></li>-->
-  <li><span class="opener">Examples<b></b></span>
-              <ul>
-                      <li><a href="/level1_eg">Level1: Anatomy only cells specified in MorphML</a></li>
-                      <li><a href="/level2_eg">Level2: ChannelIML and biophysical cell models</a></li>
-                      <li><a href="/level3_eg">Level3: Networks of cells specified using NetworkML</a></li>
-                      <li><a href="/level4_eg">Level2: ChannelIML based synaptic mechanisms</a></li>
-                      
-  
-              </ul>
+  <li><a href="/examples">Examples</a>
               </li>
-<li><span class="opener">Workshop Reports<b></b></span>
-
-<ul>
-                       <li><a href="/workshop2012">2012</a></li>
- 			<li><a href="/workshop2011">2011</a></li>
-			<li><a href="/workshop2010">2010</a></li>
-			<li><a href="/workshop2009">2009</a></li>
-			<li><a href="CNS_workshop">2008</a></li>
-
-                      
-  
-              </ul>
+<li><a href="workshops">Workshop Reports</a></li>
 </li>
-
-              </ul>	
-              </li>
+</ul>
 <!--
               <li><span class="opener">Examples<b></b></span>
               <ul>
@@ -191,11 +153,10 @@ var j = jQuery.noConflict();
               <li id="tools"><%= image_tag "tools.png",:style=>"float:left;" %>
                   <span  class="opener">Tools<b></b></span>
                   <ul>
-                      <li><a href="/validate">Validator</a></li>
-		      <li><a href="/current_app_support">Tool Support</a></li>
+		      <li><a href="/tool_support">Tool Support</a></li>
+                      <li><a href="/validate">NML Validator</a></li>
                       <li><a href="/neuron_tools">NEURON Tools</a></li>
                       <li><a href="/pynn">PyNN</a></li>
-                      
                       <li><a href="/x3dtools">X3D Tools</a></li>
                   </ul>
               </li>
@@ -243,8 +204,8 @@ var j = jQuery.noConflict();
                           </ul>
                       
               </li>
-              <li id="projects_menu"><%= image_tag "projects_new.png",:style=>"float:left;" %><a href="/projects">Projects</a></li>
-              <li id="help"><%= image_tag "help_new.png",:style=>"float:left;" %><a href="#">Help</a></li>
+              <li id="projects_menu"><%= image_tag "projects_new.png",:style=>"float:left;" %><a href="/projects">Development</a></li>
+              <!-- <li id="help"><%= image_tag "help_new.png",:style=>"float:left;" %><a href="#">Help</a></li> -->
           </ul>
       </div>
      <!-- End of Menu -->
