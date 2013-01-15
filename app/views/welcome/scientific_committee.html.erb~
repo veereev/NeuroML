@@ -1,0 +1,108 @@
+<div class="overflowcontent">
+<h1>NeuroML Scientific Committee</h1>
+
+
+
+
+
+<div class="contributors">
+<div class="contributor">
+ <div class="contributor_image"><a href="http://www.ncbs.res.in/bhalla" target="_blank"><img src="../images/bhalla.jpg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Upi Bhalla</b><br/>NCBS,<br/>Bangalore,India</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://krasnow1.gmu.edu/CENlab/avrama.html" target="_blank"><img src="../images/avrama.jpeg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b> Avrama Blackwell</b><br />Krasnow Institute of Advanced Studies,<br />George Mason University, USA</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://www.textensor.com/" target="_blank"><img src="../images/cannon.jpg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Robert Cannon</b><br />Textensor Limited,<br />Edinburgh, UK</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://neurospaces.sourceforge.net/" target="_blank"><img src="../images/hugo.jpeg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Hugo Cornelis</b><br />K.U. Leuven,<br />Belgium</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://math.la.asu.edu/~crook/" target="_blank"><img src="../images/crook.jpg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Sharon Crook</b><br />Arizona State University<br />USA</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://www.andrewdavison.info/" target="_blank"><img src="../images/andrew.jpg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Andrew Davison<b><br />CNRS, Gif-sur-Yvette,<br />France</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://www.neuroconstruct.org/" target="_blank"><img src="../images/padraig.jpeg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Padraig Gleeson</b><br />University College London,<br />UK</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://www.neurophys.biomedicale.univ-paris5.fr/~graham/" target="_blank"><img src="../images/lyle.JPG" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Lyle Graham</b><br /> Université Paris Descartes,<br />France,Paris</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://www.neuron.yale.edu/neuron/credits" target="_blank"><img src="../images/michael.gif" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Michael Hines</b><br />Yale University,<br />USA</div>
+</div>
+
+
+<div class="contributor">
+ <div class="contributor_image"><a href="http://www.ucl.ac.uk/silverlab/" target="_blank"><img src="../images/angus.jpg" width="100%" height="100%" /></a></div>
+ <div class="contributor_description"><b>Angus Silver</b><br />University College London,<br/>UK</div>
+</div>
+</div>
+
+<div style="clear:both">
+The responsibilities of the Scientific Committee have been agreed to be:
+
+<br />
+<br />
+<ul>
+    <li>To advise on the scientific focus of the NeuroML initiative; to ensure 
+that the structure of the language is based on the latest knowledge of 
+neuronal anatomy and physiology</li>
+
+
+    <li>To agree on the technical implementation for the core specifications 
+and to ensure that best practices are encouraged in model specification
+</li>
+
+
+    <li>To promote NeuroML internationally, both the core specifications and 
+the tools which support the language
+
+</li>
+
+
+    <li>To define the governance structure of the NeuroML Initiative and 
+outline a path towards a specification process with dedicated, elected 
+editors
+
+</li>
+
+
+    <li>To engage with other standardisation and databasing initiatives in the computational neuroscience and wider biology fields</li>
+
+
+    <li>To review and agree on extensions to the core specifications and the 
+scope of the initiative; to address issues the community raises 
+regarding the direction of the initiative</li>
+</ul>
+
+
+</div>
+</div>

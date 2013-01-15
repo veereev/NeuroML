@@ -1059,9 +1059,9 @@ p.progress-info {clear: left; font-size: 80%; margin-top:-4px; color:#777;}
 
 #roadmap table.progress td { height: 1.2em; }
 /***** Tabs *****/
-#content .tabs {height: 2.6em; margin-bottom:1.2em; position:relative; overflow:hidden;}
-#content .tabs ul {margin:0; position:absolute; bottom:0; padding-left:0.5em; width: 2000px; border-bottom: 1px solid #bbbbbb;}
-#content .tabs ul li {
+#content_others .tabs {height: 2.6em; margin-bottom:1.2em; position:relative; overflow:hidden;}
+#content_others .tabs ul {margin:0; position:absolute; bottom:0; padding-left:0.5em; width: 2000px; border-bottom: 1px solid #bbbbbb;}
+#content_others .tabs ul li {
   float:left;
   list-style-type:none;
   white-space:nowrap;
@@ -1070,7 +1070,7 @@ p.progress-info {clear: left; font-size: 80%; margin-top:-4px; color:#777;}
   position:relative;
   margin-bottom:-1px;
 }
-#content .tabs ul li a{
+#content_others .tabs ul li a{
   display:block;
   font-size: 0.9em;
   text-decoration:none;
@@ -1085,19 +1085,19 @@ p.progress-info {clear: left; font-size: 80%; margin-top:-4px; color:#777;}
   border-top-right-radius:3px;
 }
 
-#content .tabs ul li a:hover {
+#content_others .tabs ul li a:hover {
   background-color: #ffffdd;
   text-decoration:none;
 }
 
-#content .tabs ul li a.selected {
+#content_others .tabs ul li a.selected {
   background-color: #fff;
   border: 1px solid #bbbbbb;
   border-bottom: 1px solid #fff;
   color:#444;
 }
 
-#content .tabs ul li a.selected:hover {background-color: #fff;}
+#content_others .tabs ul li a.selected:hover {background-color: #fff;}
 
 div.tabs-buttons { position:absolute; right: 0; width: 48px; height: 24px; background: white; bottom: 0; border-bottom: 1px solid #bbbbbb; }
 
@@ -1644,10 +1644,10 @@ font-size:1.2em;
 .contributor{
 border:1px solid #dedede;
 float:left;
-height:300px;
+height:250px;
 margin-bottom:20px;
 margin-left:20px;
-width:30%;
+width:20%;
 position:relative;
 border-radius:20px;
 -moz-border-radius:20px;
@@ -1670,7 +1670,15 @@ background: -o-linear-gradient(45deg,  rgba(228,245,252,1) 0%,rgba(191,232,249,1
 background: -ms-linear-gradient(45deg,  rgba(228,245,252,1) 0%,rgba(191,232,249,1) 99%,rgba(42,176,237,1) 100%); /* IE10+ */
 background: linear-gradient(45deg,  rgba(228,245,252,1) 0%,rgba(191,232,249,1) 99%,rgba(42,176,237,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.contributor_image img{
 
+border-top-right-radius:20px;
+-moz-border-top-right-radius:20px;
+-webkit-border-top-right-radius:20px;
+border-top-left-radius:20px;
+-moz-border-top-left-radius:20px;
+-webkit-border-top-left-radius:20px;
 
 }
 .contributor_description{
@@ -1693,7 +1701,9 @@ background: -o-linear-gradient(45deg,  rgba(73,192,240,1) 0%,rgba(44,175,227,1) 
 background: -ms-linear-gradient(45deg,  rgba(73,192,240,1) 0%,rgba(44,175,227,1) 26%); /* IE10+ */
 background: linear-gradient(45deg,  rgba(73,192,240,1) 0%,rgba(44,175,227,1) 26%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49c0f0', endColorstr='#2cafe3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+color:white;
+padding-top:10px;
+text-align:center;
 }
 .contributors{
 margin-left:auto;
@@ -1922,4 +1932,14 @@ position:relative;
 position:relative;
 top:-8px;
 }
-
+p.code{
+background-color:rgb(250,250,250);
+border:1px solid rgb(192,192,192);
+color:black;
+font-family:courier;
+line-height:18px;
+padding:6px;
+}
+ul.references li{
+background:none !important;
+}

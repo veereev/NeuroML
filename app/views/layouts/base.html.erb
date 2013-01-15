@@ -211,13 +211,13 @@ var j = jQuery.noConflict();
      <!-- End of Menu -->
 
 
-
-<div id="main" class="<%= sidebar_content? ? '' : 'nosidebar' %>">
+<!--
+<div id="main" class="<%#= sidebar_content? ? '' : 'nosidebar' %>">
     <div id="sidebar">
-        <%= yield :sidebar %>
-        <%= view_layouts_base_sidebar_hook_response %>
+        <%#= yield :sidebar %>
+        <%#= view_layouts_base_sidebar_hook_response %>
     </div>
-
+-->
     <div id="content_others">
         <%= render_flash_messages %>
         <%= yield %>
@@ -225,7 +225,7 @@ var j = jQuery.noConflict();
         
         <%= call_hook :view_layouts_base_content %>
         <div style="clear:both;"></div>
-    </div>
+    </div> 
 
 <div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
 <div id="ajax-modal" style="display:none;"></div>
