@@ -21,7 +21,7 @@ h4 {border-bottom: 1px dotted #bbb;}
 border:2px solid #37ABC8;
 }
 
-#top-menu {/*background: #006D00;*/ color: #fff; height:1.8em; font-size: 0.8em; padding: 2px 2px 0px 6px;
+#top-menu {/*background: #006D00;*/ color: #fff; height:1.8em; font-size: 1.2em; padding: 2px 2px 0px 6px;
 background: #1e5799; /* Old browsers */
 background: -moz-linear-gradient(left,  #1e5799 45%, #7db9e8 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, right top, color-stop(45%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
@@ -60,7 +60,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 #header a {color:#f8f8f8;}
 #header h1 a.ancestor { font-size: 80%; }
-#quick-search {float:right;}
+#quick-search {float:right; font-size: 1.2em;}
 
 #main-menu {position: absolute;  bottom: 0px;  left:6px; margin-right: -500px;}
 #main-menu ul {margin: 0;  padding: 0;}
