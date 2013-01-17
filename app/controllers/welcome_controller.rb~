@@ -21,7 +21,7 @@ class WelcomeController < ApplicationController
   def index
     @news = News.latest User.current
     @projects = Project.latest User.current
-   render :layout => 'homepage'
+   #render :layout => 'homepage'
      end
 
   def robots

@@ -23,7 +23,8 @@ class WelcomeController < ApplicationController
     @projects = Project.latest User.current
    #render :layout => 'homepage'
      end
-
+ def mission
+ end
   def robots
     @projects = Project.all_public.active
     render :layout => false, :content_type => 'text/plain'

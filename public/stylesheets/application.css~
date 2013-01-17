@@ -1949,21 +1949,27 @@ float:left;
 margin:4px;
 }
 #socialmedia{
-height:621px;
+height:442px;
 border:1px solid #ababab;
 width:10px;
 float:left;
 margin-top:14px;
+margin-left:4px;
+width:218px;
 }
 .homebox{
 width:490px;
-height:300px;
+height:210px;
 border:1px solid #ababab;
 float:left;
 margin:10px;
 position:relative;
-}
 
+}
+.homebox p{
+line-height:20px;
+padding:10px;
+}
 .box_title
 {
 height:35px;
@@ -2000,4 +2006,6 @@ text-align:center;
 .readmore:hover{
 font-weight:bold;
 cursor:pointer;
+color:white;
 }
+
