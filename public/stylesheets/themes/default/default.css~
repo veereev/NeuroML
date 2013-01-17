@@ -17,7 +17,7 @@ Supports Thumbs: true
     box-shadow: 0px 1px 5px 0px #4a4a4a;
 width:1100px;
 margin:0 auto;
-z-index:-1;
+z-index:0;
 }
 .theme-default .nivoSlider img {
 	position:absolute;
