@@ -1,5 +1,17 @@
 <div class="overflowcontent">
+<script language="JavaScript" type="text/javascript">
+<!--
+function Tog(x) {
+var expandable = document.getElementById('expandable');
+expandable.style.display = x;
+}
+function Tog2(x) {
+var expandable = document.getElementById('expandable2');
+expandable.style.display = x;
+}
 
+// -->
+</script>
 <h1>Extending NeuroML</h1>
 
 <p>One of the most frequently asked questions we get is: How can I extend NeuroML to support my model?</p>
@@ -63,8 +75,8 @@
 
         <p>The <a href="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Metadata#metadata">metadata group of elements</a> in the
             <a href="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Metadata">Metadata schema</a> provides a useful set of base elements for this type of extra data. 
-            The following presents examples of some options for adding custom metadata to a NeuroML file:</p>
-
+            The following <a href="javascript:Tog('block')">examples</a> present some options for adding custom metadata to a NeuroML file:</p>
+<div id = "expandable" style="overflow:hidden;display:none">
         <a name="ExtendNetSpec.xml"/>
         <table border =0 bgcolor="#F3F3F3" width ="70%" cellpadding=5 style="font-family: system">
             <tr><td><p> <p style="font-size: 90%">&nbsp;&nbsp;&nbsp;&nbsp;</span><b>&lt;<a href="http://spike.la.asu.edu/NeuroMLValidator/Latest.jsp?spec=Level3#cells" style="text-decoration:none" >cells</a>&gt;</b></span><span style="color:green"><br/>
@@ -186,8 +198,8 @@
 
         <p>The full NeuroML file can be viewed <a href="http://spike.la.asu.edu/NeuroMLValidator/ViewNeuroMLFile.jsp?localFile=NeuroMLFiles/Examples/NetworkML/ExtendNetSpec.xml">here</a>.</p>
 
-
-
+<a href="javascript:Tog('none')">Close Example</a>
+</div>
 
 
 
@@ -239,8 +251,8 @@
 
         <p>This can be accomplished by defining a new schema and including the existing NeuroML <a href="../specifications.php">schemas</a> as appropriate.</p>
 
-        <p>In the example below <i>"VasculatureML"</i> is defined. This new dummy language is intended to incorporate models of both neurons and vasculature.</p>
-        
+        <p>In the example below <a href="javascript:Tog2('block')"><i>"VasculatureML"</i></a> is defined. This new dummy language is intended to incorporate models of both neurons and vasculature.</p>
+       <div id = "expandable2" style="overflow:hidden;display:none"> 
         <p>Schema of the new language: </p>
 
         <table border =0 bgcolor="#F3F3F3" width ="70%" cellpadding=5 style="font-family: system">
@@ -348,6 +360,8 @@
                 </td>
             </tr>
         </table>
+<a href="javascript:Tog2('none')">Close Example</a>
+</div>
 
         <p>This approach has the advantage that communities focusing on a specific domain can define and update their schemas independent of
             the NeuroML initiative and reuse only the elements of this language that are appropriate.<p>

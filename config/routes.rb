@@ -27,6 +27,7 @@ RedmineApp::Application.routes.draw do
   match 'workshop2009', :to => 'welcome#workshop2009', :as => 'workshop2009'
   match 'CNS_workshop', :to => 'welcome#CNS_workshop', :as => 'CNS_workshop'
   match 'introduction', :to => 'welcome#introduction', :as => 'introduction'
+  match 'newsevents', :to => 'welcome#news_events', :as => 'newsevents'
   match 'level1', :to => 'welcome#level1', :as => 'level1'
   match 'level2', :to => 'welcome#level2', :as => 'level2'
   match 'level3', :to => 'welcome#level3', :as => 'level3'
