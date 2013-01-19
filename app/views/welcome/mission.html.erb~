@@ -1,3 +1,4 @@
+<div class="overflowcontent">
 <h1 class="text_center">Model Descriptions for Computational Neuroscience</h1>
 		
 
@@ -25,4 +26,4 @@
 			<li>
 				To encourage researchers with models within the scope of NeuroML to exchange and publish their models in this format.</li>
 		</ul>
-		
+		</div>

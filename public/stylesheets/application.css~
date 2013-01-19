@@ -235,7 +235,7 @@ width:100%;
 width:100%;
 height:100%;
 margin-top:32px;
-text-align:justify;
+text-align:left;
 }
 	#sidebar_content {
 	width: 200px;
@@ -1614,7 +1614,7 @@ padding:6px;
 border-radius:10px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
-float:left;
+float:right;
 }
 .leftfloat{
 float:left;
@@ -1964,7 +1964,7 @@ border:1px solid #ababab;
 float:left;
 margin:10px;
 position:relative;
-
+text-align:justify;
 }
 .homebox p{
 line-height:20px;
@@ -2006,6 +2006,23 @@ text-align:center;
 .readmore:hover{
 font-weight:bold;
 cursor:pointer;
+}
+.readmore a{
 color:white;
 }
+#box1{
+height:442px;
+}
+.homebox h3{
+text-align:center;
+}
 
+#box1 ul li,#box3 ul li{
+line-height:20px;
+text-align:normal;
+padding-right:8px;
+}
+#box3 ul li a{
+text-decoration:none;
+color:#005C7A;
+}

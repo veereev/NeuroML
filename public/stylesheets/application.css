@@ -1964,7 +1964,7 @@ border:1px solid #ababab;
 float:left;
 margin:10px;
 position:relative;
-
+text-align:justify;
 }
 .homebox p{
 line-height:20px;
@@ -2009,4 +2009,23 @@ cursor:pointer;
 }
 .readmore a{
 color:white;
+}
+#box1{
+height:442px;
+}
+.homebox h3{
+text-align:center;
+}
+
+#box1 ul li,#box3 ul li{
+line-height:20px;
+text-align:normal;
+padding-right:8px;
+}
+#box3 ul li a{
+text-decoration:none;
+color:#005C7A;
+}
+#box3 ul li a:hover{
+color:blue;
 }
