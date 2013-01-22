@@ -2,15 +2,45 @@
 <div class="overflowcontent">
 <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
-                <img src="images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" data-transition="slideInLeft"/>
-                <a href="#"><img src="images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" data-transition="slideInLeft" /></a>
-                <img src="../images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
-                <img src="../images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" data-transition="slideInLeft" />
-                <img src="../images/openworm_tool.png" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" data-transition="slideInLeft" />
+               <img src="../images/moose0.png" data-thumb="images/nemo.jpg" alt="" title="#model0" data-transition="slideInLeft" />
+                <img src="../images/moose1.png" data-thumb="images/nemo.jpg" alt="" title="#model1" data-transition="slideInLeft" />
+               <img src="../images/moose2.png" data-thumb="images/nemo.jpg" alt="" title="#model2" data-transition="slideInLeft" />
+                <img src="../images/moose3.png" data-thumb="images/nemo.jpg" alt="" title="#model3" data-transition="slideInLeft" />
+                <img src="../images/moose4.png" data-thumb="images/nemo.jpg" alt="" title="#model4" data-transition="slideInLeft" />
+                <img src="../images/moose5.png" data-thumb="images/nemo.jpg" alt="" title="#model5" data-transition="slideInLeft" />
+                <img src="../images/moose6.png" data-thumb="images/nemo.jpg" alt="" title="#model6" data-transition="slideInLeft" />
+                <img src="../images/openworm1.jpg" data-thumb="images/nemo.jpg" alt="" title="#model7" data-transition="slideInLeft" />
+                <img src="../images/openworm2.png" data-thumb="images/nemo.jpg" alt="" title="#model8" data-transition="slideInLeft" />
             </div>
-            <div id="htmlcaption" class="nivo-html-caption">
-                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+ <div id="model0" class="nivo-html-caption">
+                 <a href="#"><em>Multiscale Modeling with MOOSE</em></a>. 
             </div>
+            <div id="model1" class="nivo-html-caption">
+<a href="#"><em>Olfactory Bulb Model</em></a>. 
+            </div>
+<div id="model2" class="nivo-html-caption">
+<a href="#"><em>Olfactory Bulb Model: Two Glomeruli</em></a>. 
+            </div>
+<div id="model3" class="nivo-html-caption">
+<a href="#"><em>Simulation of Purkinje Cell Model</em></a>. 
+            </div>
+<div id="model4" class="nivo-html-caption">
+<a href="#"><em>Kinetikit 12: Viewing and Editing a Biochemical Model</em></a>. 
+            </div>
+<div id="model5" class="nivo-html-caption">
+<a href="#"><em>Plotting</em></a>. 
+            </div>
+<div id="model6" class="nivo-html-caption">
+<a href="#"><em>Interoperability and Standards</em></a>. 
+            </div>
+<div id="model7" class="nivo-html-caption">
+<a href="#"><em>Interoperability and Standards</em></a>. 
+            </div>
+<div id="model8" class="nivo-html-caption">
+<a href="#"><em>Interoperability and Standards</em></a>. 
+            </div>
+
+
         </div>
 
 <div id="boxes">
