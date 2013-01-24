@@ -1,22 +1,30 @@
 <div class="overflowcontent">
 <h1 class="text_center">News & Events</h1>
+<script type="text/javascript">
+var y=1;
+function togglenews()
+{
+ if(y==1){
+ new Effect.SlideUp('expandable');
+ y=0;
+ document.getElementById("news_marker").innerHTML="[ show ]";
+ }
+ else{
+ new Effect.SlideDown('expandable');
+ y=1;
+ document.getElementById("news_marker").innerHTML="[ collapse ]";
+ }
 
-<script language="JavaScript" type="text/javascript">
-<!--
-function Tog(x) {
-var expandable = document.getElementById('expandable');
-expandable.style.display = x;
+
 }
-// -->
-</script>
-
 </script>
 <div id="news_header">
 <span id="news">News</span>
-<a id="news_marker" class="marker" href="javascript:Tog('none')">[ collapse ]</a>
+<a id="news_marker" class="marker" onclick="javascript:togglenews()">[ collapse ]</a>
 
 </div>
 <div id="news_listing">
+<div id = "expandable">
 <table class="news_table">
 <tr>
   <th>Date(s)</th>
@@ -24,8 +32,6 @@ expandable.style.display = x;
   <th>Location</th>
   <th>Abstract</th>
 </tr>
- <a href="javascript:Tog('none')">Less</a>
-<div id = "expandable" style="overflow:hidden;display:none">
 <tr>
 <td> March 12&ndash;16, 2012
 </td><td> <a href="workshop2012" class="external text" title="http://co.mbine.org/events/COMBINE_2012" >Fourth NeuroML Development Workshop</a>
@@ -56,9 +62,7 @@ held at ASU before the main meeting and a number of <a href="http://math.la.asu.
 to the Wellcome Trust, the INCF, and the NSF for their generous support of this endeavour.
 </td></tr></table>
 </td></tr>
-<br /><a href="javascript:Tog('block')">More</a>
 </div>
-</table>
 </div>
 <!-- ====================================== End of news ====================== -->
 <br />
