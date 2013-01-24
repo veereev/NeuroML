@@ -19,6 +19,7 @@ RedmineApp::Application.routes.draw do
   root :to => 'welcome#index', :as => 'home'
   match 'home', :to  => 'welcome#index', :as => 'home'
   match 'neuro_workshop', :to => 'welcome#neuro_workshop', :as => 'neuro_workshop'
+  match 'python_test', :to => 'welcome#python_test', :as => 'python_test'
   match 'other_workshop', :to => 'welcome#other_workshop', :as => 'other_workshop'
   match 'workshops', :to => 'welcome#workshops', :as => 'workshops'
   match 'workshop2011', :to => 'welcome#workshop2011', :as => 'workshop2011'

@@ -49,7 +49,6 @@ class WelcomeController < ApplicationController
  #===================Documents Menu================
  def introduction
 
-  
  end
  def specifications
 end

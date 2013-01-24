@@ -16,3 +16,10 @@ support for NeuroML in neuroConstruct can be found <a href="http://www.neurocons
 
 <p>There are also a number of standalone <a href="http://spike.la.asu.edu/NeuroMLValidator/Samples.jsp">examples of NeuroML files</a> available on this website.</p>
 </div>
+
+
+<%= form_tag("python_test", :method => "post") do %>
+    <%= label_tag(:q, "Enter keyword(s) to search for here :") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+<% end %>

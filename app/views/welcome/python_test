@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<br>
+<br>
+<br>
+<html>
+<head>
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="Hello World";
+}
+</script>
+</head>
+<body>
+
+<p>Click the button to trigger a function.</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+<%= `/usr/bin/python` %>
+<%= serch=params[:q] %>
+<%= puts $serch%>
+</body>
+</html>
