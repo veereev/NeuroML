@@ -7,19 +7,18 @@
 <script>
 function myFunction()
 {
-document.getElementById("demo").innerHTML="Hello World";
+//document.getElementById("demo").innerHTML="Hello World";
 }
 </script>
 </head>
 <body>
 
 <p>Click the button to trigger a function.</p>
-
 <button onclick="myFunction()">Click me</button>
-
 <p id="demo"></p>
-<%= `/usr/bin/python` %>
 <%= serch=params[:q] %>
+<%= `/usr/bin/python /home/neuromine/oas_py/pseudo_main.py $serch` %>
+<%= @restest %>
 <%= puts $serch%>
 </body>
 </html>

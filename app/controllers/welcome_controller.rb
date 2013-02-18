@@ -17,7 +17,14 @@
 
 class WelcomeController < ApplicationController
   caches_action :robots
-  
+def python_test
+puts params[:q];
+@restest=`/usr/bin/python /tmp/test.py`;
+puts @restest
+connection = ActiveRecord::Base.connection();
+#@restest = connection.execute("select id,type from users where id=2")
+#puts @results.id
+end  
   def index
     @news = News.latest User.current
     @projects = Project.latest User.current

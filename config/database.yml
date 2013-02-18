@@ -24,9 +24,9 @@ test:
 
 production:
   adapter: mysql
-  database: redmine
+  database: nml_db 
   host: localhost
-  username: root
-  password: veer
+  username: neuromldb2
+  password: neuromldbv2
   encoding: utf8
 

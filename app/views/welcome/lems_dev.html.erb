@@ -14,18 +14,18 @@
 
 <h2>Development of LEMS & mapping to NeuroML 2</h2>
 
-    <p><a href="lems/index.html">LEMS (Low Entropy Model Specification)</a> is a new XML based language with interpreter developed by Robert Cannon for specifying 
-        generic models of dynamical systems. <b>ComponentType</b> (<b>ComponentClass</b> has also been used as a name for these, see <a href="#NineML">below</a>)
+    <p><a href="lems">LEMS (Low Entropy Model Specification)</a> is a new XML based language with interpreter developed by Robert Cannon for specifying 
+        generic models of dynamical systems. <b>ComponentType</b> (<b>ComponentClass</b> has also been used as a name for these, see <a href="compatibility#NineML">below</a>)
         elements which specify <b>Parameter</b>s, <b>StateVariable</b>s and their dynamical <b>Behaviour</b>s can be defined as templates for model elements (e.g.
         HH ion channels, abstract cells, etc.). <b>Components</b> are instances of these with specific values of <b>Parameters</b> (e.g. HH squid axon Na<sup>+</sup>
         channel, I&amp;F cell with threshold -60mV, etc.). </p>
 
     <p>A Java package, the LEMS Reference Implementation (LRI) which includes examples of LEMS files together with the interpreter for executing them is available
-        <a href="lems/interpreter.html">here</a>.</p>
+        <a href="lems_download">here</a>.</p>
 
     <p>A core set of <b>ComponentType</b>s describing the behaviour of dynamical elements in NeuroML 2 has been defined in LEMS:</p>
     <ul>
-        <li>Cell models: <a href="http:///NeuroML2CoreTypes/Cells.html">Cells.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Cells.xml?view=markup">source in LEMS</a>)</li>
+        <li>Cell models: <a href="http://spike.la.asu.edu/NeuroML2CoreTypes/Cells.html">Cells.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Cells.xml?view=markup">source in LEMS</a>)</li>
         <li>Network elements: <a href="http:///NeuroML2CoreTypes/Networks.html">Networks.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Networks.xml?view=markup">source in LEMS</a>)</li>
         <li>Ion channels: <a href="http:///NeuroML2CoreTypes/Channels.html">Channels.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Channels.xml?view=markup">source in LEMS</a>)</li>
         <li>Synapse models: <a href="http:///NeuroML2CoreTypes/Synapses.html">Synapses.xml</a> (<a href="http://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/Synapses.xml?view=markup">source in LEMS</a>)</li>
