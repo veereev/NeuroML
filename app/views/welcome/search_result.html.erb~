@@ -1,0 +1,25 @@
+<div class="overflowcontent">
+<h1>Keyword Search</h1>
+<div id="searchbox">
+<label for="search_text">Enter the search keyword(s) here:</label>
+<input type="text" id="keyword_search_box" class="keyword_search_box" size="75" />
+</div>
+<div id="search_container">
+<div id="keyword_search_results">
+<div id="keyword_header">
+<h2>Keyword Search Results</h2>
+</div>
+<div id="keyword_results">
+</div>
+</div>
+<div id="ontology_search_results">
+<div id="ontology_header">
+<h2>Ontology Search Results</h2>
+</div>
+<div id="ontology_results">
+</div>
+</div>
+
+
+</div>
+</div>

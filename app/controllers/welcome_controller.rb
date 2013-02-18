@@ -32,6 +32,12 @@ end
      end
  def mission
  end
+ def search_result
+ #@search_text=params[:q]
+ #@search_keywords_array=@search_text.split(/,|\sor\s|\sand\s|\snot\s/).map(&:strip).reject(&:empty?)
+ 
+puts @search_keywords_array
+ end
   def robots
     @projects = Project.all_public.active
     render :layout => false, :content_type => 'text/plain'

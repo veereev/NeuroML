@@ -18,8 +18,10 @@ support for NeuroML in neuroConstruct can be found <a href="http://www.neurocons
 </div>
 
 
-<%= form_tag("python_test", :method => "post") do %>
+<%= form_tag("search_result", :method => "post") do %>
     <%= label_tag(:q, "Enter keyword(s) to search for here :") %>
     <%= text_field_tag(:q) %>
     <%= submit_tag("Search") %>
 <% end %>
+
+
