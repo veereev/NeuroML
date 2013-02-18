@@ -73,6 +73,7 @@ RedmineApp::Application.routes.draw do
   match 'sbml', :to => 'welcome#sbml', :as => 'sbml'
   match 'login', :to => 'account#login', :as => 'signin'
   match 'logout', :to => 'account#logout', :as => 'signout'
+  match 'search_result', :to => 'welcome#search_result', :as => 'search_result'
   match 'mission', :to => 'welcome#mission', :as => 'mission'
    match 'register', :to => 'account#register', :via => [:get, :post], :as => 'register'
    match 'workshop2009', :to => 'welcome#workshop2009', :as => 'workshop2009'
