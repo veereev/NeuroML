@@ -142,7 +142,7 @@ list-style-type:none;
 }
 #page-bottom  ul li{
 display:inline;
-font-size:11px;
+font-size:14px;
 }
 #page-bottom  ul li a span{
 font-weight:bold;
@@ -209,27 +209,31 @@ text-align:center;
 font-size:1.2em;
 }
 #contactus{
-border:1px solid #ababab;
+
 height:79%;
 position:absolute;
 right:40%;
 top:2%;
-width:220px;
+width:300px;
 text-align:center;
 padding-top:10px;
 }
 #contactus #message{
-font-size:1.5em;
+font-size:14px;
 font-weight:bold;
 }
 #contactus #email{
-font-size:1.5em;
+font-size:14px;
 font-weight:bold;
 color:yellow;
 background-color:blue;
 width:100%;
+margin-top:8px;
 }
+#contactus #email a{
+text-decoration:none;
 
+}
 .overflowcontent{
 
 width:100%;
@@ -245,13 +249,14 @@ text-align:left;
 
 /*=========================== End of slider content ======================= */
 #menu {
+height:34px;
 	padding: 0 45px 0 45px;
 	position: absolute;
 	/*background: #209D9D url("../images/menu_back.jpeg") repeat-x top left;*/
         /*background:#3e7e00;*/
 
 	margin: 0;
-	height: 29px;
+	
 	width: 93%;
 	border-top: 1px solid #393AFF;
 	
@@ -283,13 +288,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 	margin-right: 9px;
 	display: inline-block;
 	border-right:2px solid #dedede;
+        height:24px;
 }
 
 #menu ul li a, #menu ul li span {
 	text-decoration: none;
 	color: #FFFFFF;
 	letter-spacing: 1px;
-	font-size: 1.2em;
+	font-size: 1.3em;
 		
 }
 
@@ -1647,7 +1653,7 @@ float:left;
 height:300px;
 margin-bottom:20px;
 margin-left:20px;
-width:22%;
+width:217px;
 position:relative;
 border-radius:20px;
 -moz-border-radius:20px;
@@ -1708,7 +1714,7 @@ text-align:center;
 .contributors{
 margin-left:auto;
 margin-right:auto;
-width:850px;
+width:1200px;
 }
 #longlist{
 border-collapse:collapse;
@@ -1771,8 +1777,17 @@ text-align:center;
 #longlist tr{
 border:1px solid black;
 }
+#longlist tr td{
+padding-top:8px;
+padding-bottom:5px;
+
+}
 .alt{
 background-color:#dedede;
+}
+.middle_col{
+padding-right:22px;
+text-align:justify;
 }
 .overflowcontent ul,.content_slide ul
 {
@@ -1868,70 +1883,54 @@ width:85%;
 float:right;
 }
 .home{
-position:relative;
+background-image:url("../images/home.png");
+background-repeat:no-repeat;
+background-position:0 0;
+padding-left:33px !important;
+
 }
-.home a img{
-position:absolute;
-top:-3px;
-left:-30px;
-}
+
 #documents{
-/*background-image:url("../images/documents.png");*/
+background-image:url("../images/documents.png");
 background-repeat:no-repeat;
-background-position:-1% 50%;
-padding-left:33px;
-position:relative;
+background-position:0 0;
+padding-left:33px !important;
+
 }
-#documents img{
-position:relative;
-top:-8px;
-}
+
 #tools{
-/*background-image:url("../images/tools.png");*/
+background-image:url("../images/tools.png");
 background-repeat:no-repeat;
-background-position:-1% 50%;
-padding-left:33px;
-position:relative;
+background-position:0 0;
+padding-left:33px !important;
+
 }
-#tools img{
-position:relative;
-top:-6px;
-}
+
 #community{
+background-image:url("../images/community.png");
 background-repeat:no-repeat;
-background-position:-1% 50%;
-padding-left:33px;
-position:relative;
+background-position:0 0;
+padding-left:33px !important;
+
 }
-#community img{
-position:relative;
-top:-9px;
-}
+
+
 #help,#projects_menu{
+background-image:url("../images/projects_new.png");
 background-repeat:no-repeat;
-background-position:-1% 50%;
-padding-left:33px;
-position:relative;
+background-position:0 0;
+padding-left:33px !important;
+
 }
-#help img{
-position:relative;
-top:-6px;
-}
-#projects_menu img
-{
-position:relative;
-top:-7px;
-}
+
 #models_menu{
+background-image:url("../images/models_menu.png");
 background-repeat:no-repeat;
-background-position:-1% 50%;
-padding-left:33px;
-position:relative;
+background-position:0 0;
+padding-left:33px !important;
+
 }
-#models_menu img{
-position:relative;
-top:-8px;
-}
+
 p.code{
 background-color:rgb(250,250,250);
 border:1px solid rgb(192,192,192);
