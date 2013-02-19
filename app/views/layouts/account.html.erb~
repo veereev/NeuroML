@@ -248,8 +248,8 @@ var j = jQuery.noConflict();
 <li><a href="#" target="_blank">QuickLink4</a></li>
 </ul>i-->
 <div id="contactus">
-<span id="message">For Queries or Assistance</span>
-<div id="email">abc@neuroml.org</div>
+<span id="message">Contact us through the NeuroML Mailing List</span>
+<div id="email"><a href="https://lists.sourceforge.net/lists/listinfo/neuroml-technology" target="_blank">neuroml-technology@lists.sourceforge.net</a></div>
 </div>
 <div id="copyrights">
 Website & Images<br />
