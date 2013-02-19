@@ -1,7 +1,7 @@
 html {overflow-y:scroll;}
 body { font-family: arial,Georgia,Verdana,serif, sans-serif; font-size: 12px; color:black; margin: 0;padding: 0;
 
-/*background:url("../images/backgrid.jpg");*/background:#ababab;
+background:url("../images/backgrid.jpg");
 
 padding-top:40px;
 padding-bottom:40px;
@@ -1633,7 +1633,7 @@ font-size:1.2em;
 .contributor{
 border:1px solid #dedede;
 float:left;
-height:300px;
+height:280px;
 margin-bottom:20px;
 margin-left:20px;
 width:217px;
