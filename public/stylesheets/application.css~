@@ -1,7 +1,7 @@
 html {overflow-y:scroll;}
 body { font-family: arial,Georgia,Verdana,serif, sans-serif; font-size: 12px; color:black; margin: 0;padding: 0;
 
-background:url("../images/backgrid.jpg");
+/*background:url("../images/backgrid.jpg");*/background:#ababab;
 
 padding-top:40px;
 padding-bottom:40px;
@@ -51,7 +51,7 @@ height:150px;
 #header h1 a.ancestor { font-size: 80%; }
 #quick-search {float:right; font-size: 1.2em;}
 #header img{position:absolute;top:0px;}
-#main-menu {position: absolute;  bottom: 0px;  left:6px; margin-right: -500px;}
+#main-menu {position: absolute;  bottom: 0px;  left:6px; margin-right: -500px;top:163px;}
 #main-menu ul {margin: 0;  padding: 0;}
 #main-menu li {
   float:left;
@@ -67,6 +67,8 @@ height:150px;
   font-weight: bold;
   margin: 0;
   padding: 4px 10px 4px 10px;
+color:black;
+font-size:16px;
 }
 /* ======================================= Drop Down Menu ================== */
 /*============================= Start of slider content ================== */

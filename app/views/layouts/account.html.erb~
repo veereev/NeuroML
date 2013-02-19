@@ -96,8 +96,9 @@ var j = jQuery.noConflict();
     <% end %>
 
    <!-- <h1><%#= page_header_title %></h1>-->
-  <h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>
-
+  <!--<h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>-->
+<!--<img src="../images/neuro.png" width="450" height="124" />-->
+<%= image_tag "neuro.png",:width=>"450",:heithg => "124" %>
 
 
     <% if display_main_menu?(@project) %>
