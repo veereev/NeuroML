@@ -1,9 +1,9 @@
 <div class="overflowcontent">
 <%= call_hook :view_account_login_top %>
-<div id="login-form">
+<div id="login-form" >
 <%= form_tag(signin_path) do %>
 <%= back_url_hidden_field_tag %>
-<table>
+<table class="box">
 <tr>
     <td align="right"><label for="username"><%=l(:field_login)%>:</label></td>
     <td align="left"><%= text_field_tag 'username', nil, :tabindex => '1' %></td>
