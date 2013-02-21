@@ -4,11 +4,11 @@
 # Be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
-  adapter: postgresql
-  database: neuroml
+  adapter: mysql2
+  database: neuroml_dev
   host: localhost
-  username: neuroml
-  password: neuroml
+  username: neuromldb2 
+  password: neuromldbv2 
   encoding: utf8
 
 # Warning: The database defined as "test" will be erased and

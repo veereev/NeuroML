@@ -31,17 +31,17 @@ end
 # Database gems
 platforms :mri, :mingw do
   group :postgresql do
-    gem "pg", ">= 0.11.0" #Commented by Veer
+   # gem "pg", ">= 0.11.0" #Commented by Veer
   end
 
   group :sqlite do
-    gem "sqlite3"
+    #gem "sqlite3"
   end
 end
 
 platforms :mri_18, :mingw_18 do
   group :mysql do
-    gem "mysql"
+    #gem "mysql"
   end
 end
 

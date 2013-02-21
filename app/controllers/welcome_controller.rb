@@ -33,9 +33,11 @@ end
  def mission
  end
  def search_result
- #@search_text=params[:q]
+ @search_text=params[:q]
  #@search_keywords_array=@search_text.split(/,|\sor\s|\sand\s|\snot\s/).map(&:strip).reject(&:empty?)
- 
+connection = ActiveRecord::Base.connection(); 
+#result = connection.execute_procedure("execute test");
+#@restest = connection.execute(call test,"test",2);
 puts @search_keywords_array
  end
   def robots
