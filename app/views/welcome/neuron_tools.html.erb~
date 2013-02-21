@@ -1,9 +1,12 @@
 <div class="overflowcontent">
 <h1>NEURON tools and utilites for NeuroML</h1>
 
-<p class="toolsupportbox rightfloat"><img src="images/cerebellum.png" style="float:right;" alt="Neuron" width="280"/></p>
+<p class="toolsupportbox rightfloat"><img src="images/cerebellum.png" style="float:right;" alt="Neuron" width="280"/>
+<br />
 Cerebellum model generated using 
 <a href="http://www.neuroconstruct.org">neuroConstruct</a>.
+</p>
+
 
 
 <h3> Tools for Using NeuroML with <a href="http://www.neuron.yale.edu/neuron">NEURON</a> </h3>
@@ -55,4 +58,4 @@ integration between NeuroML & SBML in realistic neuronal models.
 be available from this site.
 
 <br>
-
+</div>

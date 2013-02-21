@@ -19,10 +19,11 @@ class WelcomeController < ApplicationController
   caches_action :robots
 def python_test
 puts params[:q];
-@restest=`/usr/bin/python /tmp/test.py`;
-puts @restest
+parser_text=params[:q]
+@resultset=`/usr/bin/python /tmp/test.py`;
+puts @resultset
 connection = ActiveRecord::Base.connection();
-#@restest = connection.execute("select id,type from users where id=2")
+#@resultset = connection.execute("select id,type from users where id=2")
 #puts @results.id
 end  
   def index
@@ -32,20 +33,33 @@ end
      end
  def mission
  end
- def search_result
- @search_text=params[:q]
+ def search_process
+search_text=params[:q].to_s
+parameter_search_text=search_text.split.join(" ")
+ keyword_array=parameter_search_text.split(' ')
+ keyword_count=keyword_array.size
  #@search_keywords_array=@search_text.split(/,|\sor\s|\sand\s|\snot\s/).map(&:strip).reject(&:empty?)
-connection = ActiveRecord::Base.connection(); 
-#result = connection.execute_procedure("execute test");
-#@restest = connection.execute(call test,"test",2);
-puts @search_keywords_array
+connection = ActiveRecord::Base.connection();
+
+@resultset = connection.execute("call keyword_search('#{parameter_search_text}',#{keyword_count})");
+ActiveRecord::Base.clear_active_connections!()
+@resultset.each do |res|
+puts res
+end
+
+render :partial => 'keyword_results_list',:locals => {:keywords => @resultset}
+
+
+
+ end
+ def search_result
  end
   def robots
     @projects = Project.all_public.active
     render :layout => false, :content_type => 'text/plain'
   end
   
-  #===================Home Menu=====================
+ #===================Home Menu=====================
   def welcome
     @projects = Project.latest User.current
    render :layout => 'homepage'

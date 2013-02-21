@@ -1,9 +1,15 @@
 <div class="overflowcontent">
 <h1>Keyword Search</h1>
 <div id="searchbox">
-<form action="" method="post">
+<%= form_tag("", :method => "post") do %>
+    <%= label_tag(:q, "Enter keyword(s) to search for here :") %>
+    <%= text_field_tag(:q) %>
+    <%= link_to "Search",:url=>'search_process',:method =>'get',:update =>'keyword_results',:remote => true %>
+   <%= submit_tag "temp" %>
+
+
 <label for="search_text">Enter the search keyword(s) here:</label>
-<%= @search_text %>
+
 <input type="text" id="keyword_search_box" class="keyword_search_box" size="75" />
 <input type="submit" value="Search" />
 </form>
@@ -24,6 +30,6 @@
 </div>
 </div>
 
-
+<% end %>
 </div>
 </div>

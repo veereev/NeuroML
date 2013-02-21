@@ -1616,7 +1616,8 @@ padding:6px;
   line-height:1.5em;
   border: 1px solid #ababab;
   width:279px;
- height:243px;
+ height:282px;
+text-align:center;
 border-radius:10px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
@@ -1670,6 +1671,7 @@ border-top-left-radius:20px;
 -webkit-border-top-left-radius:20px;
 
 }
+
 .contributor_description{
 position:absolute;
 border-top:1px solid #dedede;
