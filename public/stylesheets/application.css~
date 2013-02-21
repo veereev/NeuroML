@@ -1670,10 +1670,11 @@ border-top-left-radius:20px;
 -webkit-border-top-left-radius:20px;
 
 }
+
 .contributor_description{
 position:absolute;
 border-top:1px solid #dedede;
-height:35%;
+height:30%;
 width:100%;
 bottom:0px;
 border-bottom-right-radius:20px;
