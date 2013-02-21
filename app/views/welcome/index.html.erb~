@@ -34,10 +34,10 @@
 <a href="#"><em>Interoperability and Standards</em></a>. 
             </div>
 <div id="model7" class="nivo-html-caption">
-<a href="#"><em>Interoperability and Standards</em></a>. 
+<a href="#"><em>Featured Model1</em></a>. 
             </div>
 <div id="model8" class="nivo-html-caption">
-<a href="#"><em>Interoperability and Standards</em></a>. 
+<a href="#"><em>Featured Model2</em></a>. 
             </div>
 
 
@@ -89,28 +89,36 @@ The current approach in the project uses <a href="http://www.w3schools.com/schem
 <h2>News and Events</h2>
 </div>
 
-
+<marquee  behavior="scroll" height="60%" scrollamount="2" direction="up">
 <ul>
-<li><a href="#">Fourth annual NeuroML Development Workshop</a></li>
-<li><a href="#">Third annual NeuroML Development Workshop</a></li>
-<li><a href="#">A paper describing the latest stable version of NeuroML</a></li>
-<li><a href="#">Second joint NeuroML and SBML meeting</a></li>
-<li><a href="#">Second NeuroML Development Workshop</a></li>
-<li><a href="#">First joint NeuroML and SBML meeting</a></li>
+<li><a href="workshop2012">Fourth annual NeuroML Development Workshop</a></li>
+<li><a href="workshop2011">Third annual NeuroML Development Workshop</a></li>
+<li><a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000815">NeuroML paper published in PLoS</a></li>
+<li><a href="/files/NeuroMLSBML_May2010.pdf">Second joint NeuroML and SBML meeting</a></li>
+<li><a href="workshop2010">Second NeuroML Development Workshop</a></li>
+<li><a href="/files/NeuroMLSBML_HinxtonOct09.pdf">First joint NeuroML and SBML meeting</a></li>
+<li><a href="workshop2009">First annual NeuroML Development Workshop</a></li>
+<li><a href="#">First NeuroML Demo at INCF</a></li>
+<li><a href="CNS_workshop">Computational Neuroscience Workshop</a></li>
 
 </ul>
-
+</marquee>
 
 
 
 <div class="readmore">
-Read More
+<a href="/newsevents">Read More</a>
 </div>
 </div>
 
 </div>
 
 <div id="socialmedia">
+<!-- BEGIN: Twitter Website Box (http://twitterforweb.com) -->
+<div style="width:218px;font-size:8px;text-align:right;"><script type="text/javascript">//<![CDATA[
+document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=NeuroML&settings=1,1,2,218,474,f4f4f4,0,ffffff,101010' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>Created by: <a href="http://twitterforweb.com">Twitter on web</a></div>
+<!-- END: Twitter Website Box (http://twitterforweb.com) -->
 </div>
     
 </div>
