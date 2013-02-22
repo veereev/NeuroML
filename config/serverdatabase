@@ -6,7 +6,7 @@
 development:
   adapter: mysql2
   database: neuroml_dev
-  host: 149.169.30.15 #spike.la.asu.edu
+  host: localhost
   username: neuromldb2 
   password: neuromldbv2 
   encoding: utf8
