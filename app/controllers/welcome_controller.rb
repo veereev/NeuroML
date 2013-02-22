@@ -53,6 +53,7 @@ end
 render :partial => 'keyword_results_list',:locals => {:keywords => @resultset}
  end
  def search_result
+render :layout => 'temp'
  end
   def robots
     @projects = Project.all_public.active
@@ -113,7 +114,7 @@ end
 
  end
  def lems
-
+render :layout => 'temp'
  end
  def relevant_publications
 

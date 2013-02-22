@@ -16,8 +16,7 @@
   <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="/javascripts/jquery.dropotron-1.0.js"></script>
   <script type="text/javascript" src="/javascripts/jquery.slidertron-1.1.js"></script>
- <script type="text/javascript" src="/javascripts/scriptaculous.js"></script>
-  <script type="text/javascript" src="/javascripts/prototype.js"></script>
+
  <script type="text/javascript" src="/javascripts/builder.js"></script>
 <script type="text/javascript" src="/javascripts/controls.js"></script>
 <script type="text/javascript" src="/javascripts/dragdrop.js"></script>
@@ -44,15 +43,15 @@
 	<script type="text/javascript" src="/javascripts/jquery.nivo.slider.js"></script>
     
    <script>
-var j = jQuery.noConflict();
-	j(window).load(function() {
-        j('#slider').nivoSlider();
+
+	$(window).load(function() {
+        $('#slider').nivoSlider();
     });
 	</script>
 <!-- ================================ End of slidorion ===============-->
   <script type="text/javascript">
-      j(function() {
-          j('#menu > ul').dropotron({
+      $(function() {
+          $('#menu > ul').dropotron({
               mode: 'fade',
               globalOffsetY: 11,
               offsetY: -15
