@@ -27552,3 +27552,61 @@ Processing by WelcomeController#search_result as HTML
   [1m[35mUserPreference Load (0.2ms)[0m  SELECT `user_preferences`.* FROM `user_preferences` WHERE `user_preferences`.`user_id` = 1 LIMIT 1
   [1m[36mSQL (0.2ms)[0m  [1mSELECT `members`.`id` AS t0_r0, `members`.`user_id` AS t0_r1, `members`.`project_id` AS t0_r2, `members`.`created_on` AS t0_r3, `members`.`mail_notification` AS t0_r4, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `roles`.`id` AS t2_r0, `roles`.`name` AS t2_r1, `roles`.`position` AS t2_r2, `roles`.`assignable` AS t2_r3, `roles`.`builtin` AS t2_r4, `roles`.`permissions` AS t2_r5, `roles`.`issues_visibility` AS t2_r6 FROM `members` LEFT OUTER JOIN `projects` ON `projects`.`id` = `members`.`project_id` LEFT OUTER JOIN `member_roles` ON `member_roles`.`member_id` = `members`.`id` LEFT OUTER JOIN `roles` ON `roles`.`id` = `member_roles`.`role_id` WHERE `members`.`user_id` = 1 AND (projects.status<>9) ORDER BY projects.name[0m
 Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 174.26.149.229 at 2013-02-21 19:54:14 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` 
+  [1m[36mSetting Load (0.1ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1[0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mSetting Load (0.1ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `news`.`id` AS t0_r0, `news`.`project_id` AS t0_r1, `news`.`title` AS t0_r2, `news`.`summary` AS t0_r3, `news`.`description` AS t0_r4, `news`.`author_id` AS t0_r5, `news`.`created_on` AS t0_r6, `news`.`comments_count` AS t0_r7, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `users`.`id` AS t2_r0, `users`.`login` AS t2_r1, `users`.`hashed_password` AS t2_r2, `users`.`firstname` AS t2_r3, `users`.`lastname` AS t2_r4, `users`.`mail` AS t2_r5, `users`.`admin` AS t2_r6, `users`.`status` AS t2_r7, `users`.`last_login_on` AS t2_r8, `users`.`language` AS t2_r9, `users`.`auth_source_id` AS t2_r10, `users`.`created_on` AS t2_r11, `users`.`updated_on` AS t2_r12, `users`.`type` AS t2_r13, `users`.`identity_url` AS t2_r14, `users`.`mail_notification` AS t2_r15, `users`.`salt` AS t2_r16 FROM `news` LEFT OUTER JOIN `projects` ON `projects`.`id` = `news`.`project_id` LEFT OUTER JOIN `users` ON `users`.`id` = `news`.`author_id` AND `users`.`type` IN ('User', 'AnonymousUser') WHERE (((projects.status <> 9 AND projects.id IN (SELECT em.project_id FROM enabled_modules em WHERE em.name='news')) AND (projects.is_public = 1))) ORDER BY news.created_on DESC LIMIT 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (((projects.status <> 9) AND (projects.is_public = 1))) ORDER BY created_on DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/base (0.1ms)
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1[0m
+Completed 200 OK in 340ms (Views: 45.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/browse_models" for 174.26.149.229 at 2013-02-21 19:54:44 -0700
+Processing by WelcomeController#browse_models as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` 
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  Rendered welcome/browse_models.html.erb within layouts/base (1.9ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/search_result" for 174.26.149.229 at 2013-02-21 19:55:01 -0700
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sa04xGB8H35UfL3UP6azTSVGpmVW3IKYBAfVtmgPsbw=", "q"=>"tyu", "commit"=>"Search"}
+  [1m[35m (0.2ms)[0m  SELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` 
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (1.9ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 71.223.244.33 at 2013-02-21 20:33:22 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` 
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mRole Load (0.2ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `news`.`id` AS t0_r0, `news`.`project_id` AS t0_r1, `news`.`title` AS t0_r2, `news`.`summary` AS t0_r3, `news`.`description` AS t0_r4, `news`.`author_id` AS t0_r5, `news`.`created_on` AS t0_r6, `news`.`comments_count` AS t0_r7, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `users`.`id` AS t2_r0, `users`.`login` AS t2_r1, `users`.`hashed_password` AS t2_r2, `users`.`firstname` AS t2_r3, `users`.`lastname` AS t2_r4, `users`.`mail` AS t2_r5, `users`.`admin` AS t2_r6, `users`.`status` AS t2_r7, `users`.`last_login_on` AS t2_r8, `users`.`language` AS t2_r9, `users`.`auth_source_id` AS t2_r10, `users`.`created_on` AS t2_r11, `users`.`updated_on` AS t2_r12, `users`.`type` AS t2_r13, `users`.`identity_url` AS t2_r14, `users`.`mail_notification` AS t2_r15, `users`.`salt` AS t2_r16 FROM `news` LEFT OUTER JOIN `projects` ON `projects`.`id` = `news`.`project_id` LEFT OUTER JOIN `users` ON `users`.`id` = `news`.`author_id` AND `users`.`type` IN ('User', 'AnonymousUser') WHERE (((projects.status <> 9 AND projects.id IN (SELECT em.project_id FROM enabled_modules em WHERE em.name='news')) AND (projects.is_public = 1))) ORDER BY news.created_on DESC LIMIT 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (((projects.status <> 9) AND (projects.is_public = 1))) ORDER BY created_on DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/base (0.1ms)
+Completed 200 OK in 16ms (Views: 7.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search_result" for 71.223.244.33 at 2013-02-21 20:33:30 -0700
+Processing by WelcomeController#search_result as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` 
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (2.0ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.4ms)
