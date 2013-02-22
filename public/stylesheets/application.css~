@@ -1616,7 +1616,8 @@ padding:6px;
   line-height:1.5em;
   border: 1px solid #ababab;
   width:279px;
- height:243px;
+ height:282px;
+text-align:center;
 border-radius:10px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
@@ -2065,4 +2066,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 #searchbox label{
 font-size:16px;
 margin-left:15px;
+}
+#results{
+margin:15px;
+color:#37ABC8;
 }

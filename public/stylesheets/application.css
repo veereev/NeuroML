@@ -2067,3 +2067,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 font-size:16px;
 margin-left:15px;
 }
+#results{
+margin:15px;
+color:blue;
+}

@@ -74,6 +74,7 @@ RedmineApp::Application.routes.draw do
   match 'login', :to => 'account#login', :as => 'signin'
   match 'logout', :to => 'account#logout', :as => 'signout'
   match 'search_result', :to => 'welcome#search_result', :as => 'search_result'
+match 'search_process_test', :to => 'welcome#search_process_test', :as => 'search_process_test'
  match 'search_process', :to => 'welcome#search_process', :as => 'search_process'  
 match 'mission', :to => 'welcome#mission', :as => 'mission'
    match 'register', :to => 'account#register', :via => [:get, :post], :as => 'register'
