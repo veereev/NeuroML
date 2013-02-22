@@ -5,10 +5,10 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
   adapter: mysql2
-  database: redmine
-  host: localhost
-  username: root 
-  password: veer 
+  database: neuroml_dev
+  host: 149.169.30.15 #spike.la.asu.edu
+  username: neuromldb2 
+  password: neuromldbv2 
   encoding: utf8
 
 # Warning: The database defined as "test" will be erased and
