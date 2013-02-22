@@ -1634,17 +1634,17 @@ font-size:1.2em;
 .contributor{
 border:1px solid #dedede;
 float:left;
-height:280px;
+height:212px;
 margin-bottom:20px;
 margin-left:20px;
-width:217px;
+width:170px;
 position:relative;
 border-radius:20px;
 -moz-border-radius:20px;
 -webkit-border-radius:20px;
 }
 .contributor_image{
-height:70%;
+height:140px;
 width:100%;
 border-top-right-radius:20px;
 -moz-border-top-right-radius:20px;
@@ -1673,9 +1673,10 @@ border-top-left-radius:20px;
 }
 
 .contributor_description{
+font-size:12px;
 position:absolute;
 border-top:1px solid #dedede;
-height:30%;
+height:72px;
 width:100%;
 bottom:0px;
 border-bottom-right-radius:20px;
@@ -1699,7 +1700,7 @@ text-align:center;
 .contributors{
 margin-left:auto;
 margin-right:auto;
-width:1200px;
+width:980px;
 }
 #longlist{
 border-collapse:collapse;
