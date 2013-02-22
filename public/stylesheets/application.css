@@ -2040,6 +2040,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c667', end
     height: 100%;
     margin-left: 2%;
     width: 47%;
+    overflow:auto;
 }
 #ontology_search_results{
   background:white;
@@ -2047,6 +2048,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c667', end
     height: 100%;
     margin-left: 2%;
     width: 47%;
+    overflow:auto;
 }
 #keyword_header,#ontology_header{
 font-size:22px;

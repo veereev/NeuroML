@@ -2069,5 +2069,5 @@ margin-left:15px;
 }
 #results{
 margin:15px;
-color:#37ABC8;
+color:blue;
 }
