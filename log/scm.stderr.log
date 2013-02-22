@@ -9,3 +9,53 @@ fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
 fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
 sh: 1: bzr: not found
 sh: 1: cvs: not found
+<<<<<<< HEAD
+=======
+sh: 1: bzr: not found
+sh: 1: bzr: not found
+sh: 1: darcs: not found
+sh: 1: cvs: not found
+sh: 1: bzr: not found
+sh: 1: darcs: not found
+sh: 1: cvs: not found
+sh: 1: darcs: not found
+sh: 1: cvs: not found
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+sh: 1: cvs: not found
+sh: 1: bzr: not found
+sh: 1: cvs: not found
+sh: 1: cvs: not found
+sh: 1: darcs: not found
+sh: 1: bzr: not found
+sh: 1: cvs: not found
+sh: 1: bzr: not found
+sh: 1: cvs: not found
+sh: 1: darcs: not found
+sh: 1: cvs: not found
+sh: 1: bzr: not found
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
+sh: 1: cvs: not found
+sh: 1: cvs: not found
+sh: 1: bzr: not found
+>>>>>>> 807aa36af2730a938e45305e2e71442c506de20d
+fatal: Not a git repository: 'git://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'git://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'git://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'git://github.com/LEMS/jLEMS.git'
+fatal: Not a git repository: 'git://github.com/LEMS/jLEMS.git'
