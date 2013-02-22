@@ -41,13 +41,13 @@ end
 
 platforms :mri_18, :mingw_18 do
   group :mysql do
-    #gem "mysql"
+    gem "mysql"
   end
 end
-
+gem "mysql2"
 platforms :mri_19, :mingw_19 do
   group :mysql do
-    gem "mysql2", "~> 0.3.11"
+    #gem "mysql2", "~> 0.3.11"
   end
 end
 

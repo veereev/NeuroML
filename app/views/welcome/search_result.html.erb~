@@ -1,8 +1,13 @@
 <div class="overflowcontent">
 <h1>Keyword Search</h1>
 <div id="searchbox">
+
+<form id="myForm" onsubmit="return retrieve_results()">
 <label for="search_text">Enter the search keyword(s) here:</label>
+
 <input type="text" id="keyword_search_box" class="keyword_search_box" size="75" />
+<input type="submit" value="Search" />
+</form>
 </div>
 <div id="search_container">
 <div id="keyword_search_results">
@@ -20,6 +25,18 @@
 </div>
 </div>
 
+</form>
+</div>
+</div>
+<script type="text/javascript" language="javascript">
+function retrieve_results()
+{
+var input_text=document.getElementById('keyword_search_box').value;
+new Ajax.Request("search_process_test"+"?q="+input_text,{onSuccess:function(request){
+$('keyword_results').update(request.responseText);
+}});
+return false;
 
-</div>
-</div>
+
+}
+</script>

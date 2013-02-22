@@ -27552,6 +27552,7 @@ Processing by WelcomeController#search_result as HTML
   [1m[35mUserPreference Load (0.2ms)[0m  SELECT `user_preferences`.* FROM `user_preferences` WHERE `user_preferences`.`user_id` = 1 LIMIT 1
   [1m[36mSQL (0.2ms)[0m  [1mSELECT `members`.`id` AS t0_r0, `members`.`user_id` AS t0_r1, `members`.`project_id` AS t0_r2, `members`.`created_on` AS t0_r3, `members`.`mail_notification` AS t0_r4, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `roles`.`id` AS t2_r0, `roles`.`name` AS t2_r1, `roles`.`position` AS t2_r2, `roles`.`assignable` AS t2_r3, `roles`.`builtin` AS t2_r4, `roles`.`permissions` AS t2_r5, `roles`.`issues_visibility` AS t2_r6 FROM `members` LEFT OUTER JOIN `projects` ON `projects`.`id` = `members`.`project_id` LEFT OUTER JOIN `member_roles` ON `member_roles`.`member_id` = `members`.`id` LEFT OUTER JOIN `roles` ON `roles`.`id` = `member_roles`.`role_id` WHERE `members`.`user_id` = 1 AND (projects.status<>9) ORDER BY projects.name[0m
 Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 174.26.149.229 at 2013-02-21 19:54:14 -0700
@@ -27610,3 +27611,796 @@ Processing by WelcomeController#search_result as HTML
   Current user: anonymous
   Rendered welcome/search_result.html.erb within layouts/base (2.0ms)
 Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+=======
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 21 16:01:32 -0700 2013
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.7ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.7ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT `news`.`id` AS t0_r0, `news`.`project_id` AS t0_r1, `news`.`title` AS t0_r2, `news`.`summary` AS t0_r3, `news`.`description` AS t0_r4, `news`.`author_id` AS t0_r5, `news`.`created_on` AS t0_r6, `news`.`comments_count` AS t0_r7, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `users`.`id` AS t2_r0, `users`.`login` AS t2_r1, `users`.`hashed_password` AS t2_r2, `users`.`firstname` AS t2_r3, `users`.`lastname` AS t2_r4, `users`.`mail` AS t2_r5, `users`.`admin` AS t2_r6, `users`.`status` AS t2_r7, `users`.`last_login_on` AS t2_r8, `users`.`language` AS t2_r9, `users`.`auth_source_id` AS t2_r10, `users`.`created_on` AS t2_r11, `users`.`updated_on` AS t2_r12, `users`.`type` AS t2_r13, `users`.`identity_url` AS t2_r14, `users`.`mail_notification` AS t2_r15, `users`.`salt` AS t2_r16 FROM `news` LEFT OUTER JOIN `projects` ON `projects`.`id` = `news`.`project_id` LEFT OUTER JOIN `users` ON `users`.`id` = `news`.`author_id` AND `users`.`type` IN ('User', 'AnonymousUser') WHERE (((projects.status <> 9 AND projects.id IN (SELECT em.project_id FROM enabled_modules em WHERE em.name='news')) AND (projects.is_public = 1))) ORDER BY news.created_on DESC LIMIT 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mProject Load (0.6ms)[0m  SELECT `projects`.* FROM `projects` WHERE (((projects.status <> 9) AND (projects.is_public = 1))) ORDER BY created_on DESC LIMIT 5
+  Rendered welcome/index.html.erb within layouts/base (2.8ms)
+  [1m[36mSetting Load (0.7ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.6ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 1661ms (Views: 1320.4ms | ActiveRecord: 19.7ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 16:06:37 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (96.1ms)
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 786ms (Views: 704.8ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at Thu Feb 21 16:06:46 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"commit"=>"temp", "q"=>"", "authenticity_token"=>"rn/PiFwiz7iiUpzZgUoLThZ6oZkn7eKjsR6kqUalUUk=", "utf8"=>"✓"}
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (1.4ms)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search_result?method=get&remote=true&update=keyword_results&url=search_process_test" for 127.0.0.1 at Thu Feb 21 16:06:48 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"method"=>"get", "remote"=>"true", "update"=>"keyword_results", "url"=>"search_process_test"}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (1.4ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:36:21 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.7ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.7ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (3.8ms)
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.6ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 1240ms (Views: 1086.8ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at Thu Feb 21 19:36:32 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"authenticity_token"=>"rn/PiFwiz7iiUpzZgUoLThZ6oZkn7eKjsR6kqUalUUk=", "utf8"=>"✓", "commit"=>"temp", "q"=>""}
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (0.9ms)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started POST "/search_result" for 127.0.0.1 at Thu Feb 21 19:38:46 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"temp", "q"=>"", "authenticity_token"=>"rn/PiFwiz7iiUpzZgUoLThZ6oZkn7eKjsR6kqUalUUk="}
+  [1m[36m (0.1ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (92.0ms)
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 833ms (Views: 750.1ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at Thu Feb 21 19:38:50 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"temp", "q"=>"", "authenticity_token"=>"rn/PiFwiz7iiUpzZgUoLThZ6oZkn7eKjsR6kqUalUUk="}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (0.9ms)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started POST "/search_result" for 127.0.0.1 at Thu Feb 21 19:40:06 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"q"=>"", "utf8"=>"✓", "authenticity_token"=>"rn/PiFwiz7iiUpzZgUoLThZ6oZkn7eKjsR6kqUalUUk=", "commit"=>"temp"}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (97.2ms)
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.1ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 809ms (Views: 722.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/search_result?onclick=retrieve_results%28%29%3Breturn+false%3B" for 127.0.0.1 at Thu Feb 21 19:40:10 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"onclick"=>"retrieve_results();return false;"}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (2.8ms)
+Completed 200 OK in 25ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lems" for 127.0.0.1 at Thu Feb 21 19:41:24 -0700 2013
+Processing by WelcomeController#lems as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/lems.html.erb within layouts/base (0.9ms)
+Completed 200 OK in 106ms (Views: 102.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search_result?onclick=retrieve_results%28%29%3Breturn+false%3B" for 127.0.0.1 at Thu Feb 21 19:42:00 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"onclick"=>"retrieve_results();return false;"}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (1.2ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search_result?onclick=retrieve_results%28%29%3Breturn+false%3B" for 127.0.0.1 at Thu Feb 21 19:42:02 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"onclick"=>"retrieve_results();return false;"}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (2.6ms)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result?onclick=retrieve_results%28%29%3Breturn+false%3B" for 127.0.0.1 at Thu Feb 21 19:44:04 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"onclick"=>"retrieve_results();return false;"}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.4ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (103.8ms)
+  [1m[36mSetting Load (0.1ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 856ms (Views: 754.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:44:09 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (1.5ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search_result?onclick=retrieve_results%28%29%3Breturn+false%3B" for 127.0.0.1 at Thu Feb 21 19:44:11 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"onclick"=>"retrieve_results();return false;"}
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (0.9ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:45:08 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (97.3ms)
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 820ms (Views: 733.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/search_result?onclick=retrieve_results%28%29%3Breturn+false%3B" for 127.0.0.1 at Thu Feb 21 19:45:11 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  Parameters: {"onclick"=>"retrieve_results();return false;"}
+  [1m[36m (0.1ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (0.8ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_resul" for 127.0.0.1 at Thu Feb 21 19:46:26 -0700 2013
+
+ActionController::RoutingError (No route matches [GET] "/search_resul"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:46:28 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.1ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (2.0ms)
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 835ms (Views: 652.3ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:46:35 -0700 2013
+
+ActionController::RoutingError (No route matches [POST] "/search_process_test"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:46:39 -0700 2013
+
+ActionController::RoutingError (No route matches [POST] "/search_process_test"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:48:08 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (1.9ms)
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 858ms (Views: 761.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:48:11 -0700 2013
+
+ActionController::RoutingError (No route matches [POST] "/search_process_test"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:48:13 -0700 2013
+
+ActionController::RoutingError (No route matches [POST] "/search_process_test"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:50:18 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (90.4ms)
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 834ms (Views: 750.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:51:13 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered welcome/search_result.html.erb within layouts/base (0.3ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:51:16 -0700 2013
+
+ActionController::RoutingError (No route matches [POST] "/search_process_test"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 19:52:38 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.1ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (94.5ms)
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 861ms (Views: 769.5ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:52:42 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User', 'AnonymousUser')[0m
+  Rendered welcome/_keyword_results_list.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 44.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:52:47 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (3.4ms)[0m  SELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` 
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User', 'AnonymousUser')
+  Rendered welcome/_keyword_results_list.html.erb (0.2ms)
+Completed 200 OK in 130ms (Views: 3.7ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 19:55:38 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User', 'AnonymousUser')[0m
+  Rendered welcome/_keyword_results_list.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 20:03:09 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (88.3ms)
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 783ms (Views: 699.8ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 20:03:13 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User', 'AnonymousUser')[0m
+  Rendered welcome/_keyword_results_list.html.erb (2.7ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (can't convert Fixnum into String):
+    1: <div id="results">
+    2: <% count=1 %>
+    3: <% keywords.each do |keyword| %>
+    4: <%= "("+count+")"+keyword.firstname %>
+    5: <br />
+    6: <% count=count+1 %>
+    7: <% end %>
+  app/views/welcome/_keyword_results_list.html.erb:4:in `+'
+  app/views/welcome/_keyword_results_list.html.erb:4:in `_app_views_welcome__keyword_results_list_html_erb__766906301__623712478'
+  app/views/welcome/_keyword_results_list.html.erb:3:in `each'
+  app/views/welcome/_keyword_results_list.html.erb:3:in `_app_views_welcome__keyword_results_list_html_erb__766906301__623712478'
+  app/controllers/welcome_controller.rb:37:in `search_process_test'
+
+
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 20:03:40 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (89.2ms)
+  [1m[36mSetting Load (0.2ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 802ms (Views: 708.5ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 20:03:43 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User', 'AnonymousUser')[0m
+  Rendered welcome/_keyword_results_list.html.erb (0.6ms)
+Completed 200 OK in 13ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 20:04:10 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (89.5ms)
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 795ms (Views: 710.2ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 20:04:13 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User', 'AnonymousUser')[0m
+  Rendered welcome/_keyword_results_list.html.erb (0.6ms)
+Completed 200 OK in 13ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 20:06:58 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (92.0ms)
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 810ms (Views: 725.8ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/search_process_test" for 127.0.0.1 at Thu Feb 21 20:07:02 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User', 'AnonymousUser')[0m
+  Rendered welcome/_keyword_results_list.html.erb (0.6ms)
+Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 20:23:56 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (89.3ms)
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 819ms (Views: 719.7ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/search_process_test?q=veer" for 127.0.0.1 at Thu Feb 21 20:24:01 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+  Parameters: {"q"=>"veer"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered text template (0.0ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+
+
+Started GET "/search_result" for 127.0.0.1 at Thu Feb 21 20:24:44 -0700 2013
+Processing by WelcomeController#search_result as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'rest_api_enabled' LIMIT 1
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mSetting Load (0.3ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'login_required' LIMIT 1
+  Rendered welcome/search_result.html.erb within layouts/base (87.2ms)
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'ui_theme' LIMIT 1[0m
+  [1m[35mSetting Load (0.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'self_registration' LIMIT 1
+Completed 200 OK in 790ms (Views: 699.5ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/search_process_test?q=veer%20is%20invincible%20and%20beer%20is%20double%20invincible" for 127.0.0.1 at Thu Feb 21 20:24:55 -0700 2013
+Processing by WelcomeController#search_process_test as JS
+  Parameters: {"q"=>"veer is invincible and beer is double invincible"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at Thu Feb 21 20:26:14 -0700 2013
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT `news`.`id` AS t0_r0, `news`.`project_id` AS t0_r1, `news`.`title` AS t0_r2, `news`.`summary` AS t0_r3, `news`.`description` AS t0_r4, `news`.`author_id` AS t0_r5, `news`.`created_on` AS t0_r6, `news`.`comments_count` AS t0_r7, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `users`.`id` AS t2_r0, `users`.`login` AS t2_r1, `users`.`hashed_password` AS t2_r2, `users`.`firstname` AS t2_r3, `users`.`lastname` AS t2_r4, `users`.`mail` AS t2_r5, `users`.`admin` AS t2_r6, `users`.`status` AS t2_r7, `users`.`last_login_on` AS t2_r8, `users`.`language` AS t2_r9, `users`.`auth_source_id` AS t2_r10, `users`.`created_on` AS t2_r11, `users`.`updated_on` AS t2_r12, `users`.`type` AS t2_r13, `users`.`identity_url` AS t2_r14, `users`.`mail_notification` AS t2_r15, `users`.`salt` AS t2_r16 FROM `news` LEFT OUTER JOIN `projects` ON `projects`.`id` = `news`.`project_id` LEFT OUTER JOIN `users` ON `users`.`id` = `news`.`author_id` AND `users`.`type` IN ('User', 'AnonymousUser') WHERE (((projects.status <> 9 AND projects.id IN (SELECT em.project_id FROM enabled_modules em WHERE em.name='news')) AND (projects.is_public = 1))) ORDER BY news.created_on DESC LIMIT 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mProject Load (0.6ms)[0m  SELECT `projects`.* FROM `projects` WHERE (((projects.status <> 9) AND (projects.is_public = 1))) ORDER BY created_on DESC LIMIT 5
+  Rendered welcome/index.html.erb within layouts/base (0.6ms)
+Completed 200 OK in 264ms (Views: 9.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Thu Feb 21 20:27:03 -0700 2013
+Processing by ProjectsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` [0m
+  [1m[35mAnonymousUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1
+  Current user: anonymous
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mProject Load (0.7ms)[0m  SELECT `projects`.* FROM `projects` WHERE (projects.status = 1) AND (((projects.status <> 9) AND (projects.is_public = 1))) ORDER BY lft
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT `members`.`id` AS t0_r0, `members`.`user_id` AS t0_r1, `members`.`project_id` AS t0_r2, `members`.`created_on` AS t0_r3, `members`.`mail_notification` AS t0_r4, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `roles`.`id` AS t2_r0, `roles`.`name` AS t2_r1, `roles`.`position` AS t2_r2, `roles`.`assignable` AS t2_r3, `roles`.`builtin` AS t2_r4, `roles`.`permissions` AS t2_r5, `roles`.`issues_visibility` AS t2_r6 FROM `members` LEFT OUTER JOIN `projects` ON `projects`.`id` = `members`.`project_id` LEFT OUTER JOIN `member_roles` ON `member_roles`.`member_id` = `members`.`id` LEFT OUTER JOIN `roles` ON `roles`.`id` = `member_roles`.`role_id` WHERE `members`.`user_id` = 2 AND (projects.status<>9) ORDER BY projects.name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mSetting Load (6.2ms)[0m  SELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'text_formatting' LIMIT 1
+  [1m[36mSetting Load (0.7ms)[0m  [1mSELECT `settings`.* FROM `settings` WHERE `settings`.`name` = 'cache_formatted_text' LIMIT 1[0m
+  Rendered projects/index.html.erb within layouts/base (284.5ms)
+Completed 200 OK in 346ms (Views: 323.7ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Thu Feb 21 20:27:03 -0700 2013
+Processing by ProjectsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX(`settings`.`updated_on`) AS max_id FROM `settings` 
+  [1m[36mAnonymousUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('AnonymousUser') LIMIT 1[0m
+  Current user: anonymous
+  [1m[35mRole Load (0.2ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (projects.status = 1) AND (((projects.status <> 9) AND (projects.is_public = 1))) ORDER BY lft[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT `members`.`id` AS t0_r0, `members`.`user_id` AS t0_r1, `members`.`project_id` AS t0_r2, `members`.`created_on` AS t0_r3, `members`.`mail_notification` AS t0_r4, `projects`.`id` AS t1_r0, `projects`.`name` AS t1_r1, `projects`.`description` AS t1_r2, `projects`.`homepage` AS t1_r3, `projects`.`is_public` AS t1_r4, `projects`.`parent_id` AS t1_r5, `projects`.`created_on` AS t1_r6, `projects`.`updated_on` AS t1_r7, `projects`.`identifier` AS t1_r8, `projects`.`status` AS t1_r9, `projects`.`lft` AS t1_r10, `projects`.`rgt` AS t1_r11, `roles`.`id` AS t2_r0, `roles`.`name` AS t2_r1, `roles`.`position` AS t2_r2, `roles`.`assignable` AS t2_r3, `roles`.`builtin` AS t2_r4, `roles`.`permissions` AS t2_r5, `roles`.`issues_visibility` AS t2_r6 FROM `members` LEFT OUTER JOIN `projects` ON `projects`.`id` = `members`.`project_id` LEFT OUTER JOIN `member_roles` ON `member_roles`.`member_id` = `members`.`id` LEFT OUTER JOIN `roles` ON `roles`.`id` = `member_roles`.`role_id` WHERE `members`.`user_id` = 2 AND (projects.status<>9) ORDER BY projects.name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`builtin` = 2 LIMIT 1
+  Rendered projects/index.html.erb within layouts/base (12.6ms)
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 1.2ms)
+>>>>>>> 2de5db284506094593fa43d62dd4cb0dc7efafc1

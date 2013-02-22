@@ -33,6 +33,9 @@ end
      end
  def mission
  end
+def search_process_test
+render :text => params[:q].to_s
+end
  def search_process
 search_text=params[:q].to_s
 parameter_search_text=search_text.split.join(" ")
@@ -48,9 +51,6 @@ puts res
 end
 
 render :partial => 'keyword_results_list',:locals => {:keywords => @resultset}
-
-
-
  end
  def search_result
  end

@@ -1,13 +1,8 @@
 <div class="overflowcontent">
 <h1>Keyword Search</h1>
 <div id="searchbox">
-<%= form_tag("", :method => "post") do %>
-    <%= label_tag(:q, "Enter keyword(s) to search for here :") %>
-    <%= text_field_tag(:q) %>
-    <%= link_to "Search",:url=>'search_process',:method =>'get',:update =>'keyword_results',:remote => true %>
-   <%= submit_tag "temp" %>
 
-
+<form id="myForm" onsubmit="return retrieve_results()">
 <label for="search_text">Enter the search keyword(s) here:</label>
 
 <input type="text" id="keyword_search_box" class="keyword_search_box" size="75" />
@@ -30,6 +25,18 @@
 </div>
 </div>
 
-<% end %>
+</form>
 </div>
 </div>
+<script type="text/javascript" language="javascript">
+function retrieve_results()
+{
+var input_text=document.getElementById('keyword_search_box').value;
+new Ajax.Request("search_process"+"?q="+input_text,{onSuccess:function(request){
+$('keyword_results').update(request.responseText);
+}});
+return false;
+
+
+}
+</script>
