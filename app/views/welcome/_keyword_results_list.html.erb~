@@ -1,7 +1,7 @@
 <div id="results">
 <% count=1 %>
 <% keywords.each do |keyword| %>
-<%= "("+count.to_s+") "+keyword.firstname %>
+<%= "("+count.to_s+") "+keyword %>
 <br /><br />
 <% count=count+1 %>
 <% end %>
