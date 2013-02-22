@@ -5,4 +5,4 @@
   <% end %>
 <% end %>
 
-<%= render :file => "layouts/new_admin" %>
+<%= render :file => "layouts/base" %>
