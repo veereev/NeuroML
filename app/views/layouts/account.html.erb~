@@ -16,7 +16,8 @@
   <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="/javascripts/jquery.dropotron-1.0.js"></script>
   <script type="text/javascript" src="/javascripts/jquery.slidertron-1.1.js"></script>
-
+ <script type="text/javascript" src="/javascripts/scriptaculous.js"></script>
+  <script type="text/javascript" src="/javascripts/prototype.js"></script>
  <script type="text/javascript" src="/javascripts/builder.js"></script>
 <script type="text/javascript" src="/javascripts/controls.js"></script>
 <script type="text/javascript" src="/javascripts/dragdrop.js"></script>
@@ -24,9 +25,34 @@
 <script type="text/javascript" src="/javascripts/slider.js"></script>
 <script type="text/javascript" src="/javascripts/sound.js"></script>
 <script type="text/javascript" src="/javascripts/unittest.js"></script>
-   <script type="text/javascript">
-      $(function() {
-          $('#menu > ul').dropotron({
+   <!-- ==================slidorion ===============-->
+   <!--<link rel="stylesheet" href="/stylesheets/slidorion/slidorion.css" />-->
+
+<link rel="stylesheet" href="/stylesheets/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/nivo-slider.css" type="text/css" media="screen" />
+
+
+
+
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
+	
+	<!-- <script src="javascripts/slidorion/jquery.min.js"></script>-->
+  <!--  <script src="/javascripts/slidorion/jquery.slidorion.min.js"></script>-->
+	<script type="text/javascript" src="/javascripts/jquery.nivo.slider.js"></script>
+    
+   <script>
+var j = jQuery.noConflict();
+	j(window).load(function() {
+        j('#slider').nivoSlider();
+    });
+	</script>
+<!-- ================================ End of slidorion ===============-->
+  <script type="text/javascript">
+      j(function() {
+          j('#menu > ul').dropotron({
               mode: 'fade',
               globalOffsetY: 11,
               offsetY: -15
@@ -65,8 +91,7 @@
 
    <!-- <h1><%#= page_header_title %></h1>-->
   <!--<h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>-->
-<!--<img src="../images/neuro.png" width="450" height="124" />-->
-<%= image_tag "neuro.png",:width=>"450",:height => "124" %>
+  <%= image_tag "neuro.png",:width=>"450",:height => "124" %>
 
 
     <% if display_main_menu?(@project) %>
@@ -179,6 +204,7 @@
 
      <!-- End of Menu -->
 
+
 <!--
 <div id="main" class="<%#= sidebar_content? ? '' : 'nosidebar' %>">
     <div id="sidebar">
@@ -193,7 +219,7 @@
         
         <%= call_hook :view_layouts_base_content %>
         <div style="clear:both;"></div>
-    </div>
+    </div> 
 
 <div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
 <div id="ajax-modal" style="display:none;"></div>
