@@ -1673,6 +1673,7 @@ border-top-left-radius:20px;
 }
 
 .contributor_description{
+font-size:12px;
 position:absolute;
 border-top:1px solid #dedede;
 height:72px;
