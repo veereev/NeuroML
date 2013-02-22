@@ -8,3 +8,4 @@ fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
 fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
 fatal: Not a git repository: 'https://github.com/LEMS/jLEMS.git'
 sh: 1: bzr: not found
+sh: 1: cvs: not found
