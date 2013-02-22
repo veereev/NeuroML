@@ -16,8 +16,7 @@
   <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="/javascripts/jquery.dropotron-1.0.js"></script>
   <script type="text/javascript" src="/javascripts/jquery.slidertron-1.1.js"></script>
- <script type="text/javascript" src="/javascripts/scriptaculous.js"></script>
-  <script type="text/javascript" src="/javascripts/prototype.js"></script>
+
  <script type="text/javascript" src="/javascripts/builder.js"></script>
 <script type="text/javascript" src="/javascripts/controls.js"></script>
 <script type="text/javascript" src="/javascripts/dragdrop.js"></script>
@@ -156,6 +155,7 @@ var j = jQuery.noConflict();
 		<ul>
                       <li><a href="/browse_models">Browse Models</a></li>
                       <li><a href="/model_submit">Submit Models</a></li>
+                      <li><a href="/search_result">Search Models</a></li>
                   </ul>
               </li>
 
