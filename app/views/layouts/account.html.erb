@@ -10,15 +10,30 @@
 <%= stylesheet_link_tag 'jquery/jquery-ui-1.8.21', 'application', :media => 'all' %>
 <%= stylesheet_link_tag 'rtl', :media => 'all' if l(:direction) == 'rtl' %>
 <%= javascript_heads %>
-<link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" >
-
-
   <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="/javascripts/jquery.dropotron-1.0.js"></script>
-  <script type="text/javascript" src="/javascripts/jquery.slidertron-1.1.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.dropotron-1.0.js"></script><link rel="stylesheet" href="/stylesheets/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/nivo-slider.css" type="text/css" media="screen" />
 
- 
-   <script type="text/javascript">
+
+
+
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
+	
+	<!-- <script src="javascripts/slidorion/jquery.min.js"></script>-->
+  <!--  <script src="/javascripts/slidorion/jquery.slidorion.min.js"></script>-->
+	<script type="text/javascript" src="/javascripts/jquery.nivo.slider.js"></script>
+    
+   <script>
+
+	$(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+	</script>
+<!-- ================================ End of slidorion ===============-->
+  <script type="text/javascript">
       $(function() {
           $('#menu > ul').dropotron({
               mode: 'fade',
@@ -35,6 +50,8 @@
 <body class="<%=h body_css_classes %>">
 <div id="wrapper">
 <div id="wrapper2">
+
+
 <div id="header">
 <div id="top-menu">
     <div id="account">
@@ -43,7 +60,6 @@
     <%= content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged? %>
     <%#= render_menu :top_menu if User.current.logged? || !Setting.login_required? -%>
 </div>
- <!-- Testing header -->
     <% if User.current.logged? || !Setting.login_required? %>
     <div id="quick-search">
         <%= form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
@@ -51,17 +67,13 @@
         <label for='q'>
           <%= link_to l(:label_search), {:controller => 'search', :action => 'index', :id => @project}, :accesskey => accesskey(:search) %>:
         </label>
-        <%= text_field_tag 'q', @question, :size => 20, :class => 'small round_5', :accesskey => accesskey(:quick_search) %>
+        <%= text_field_tag 'q', @question, :size => 20, :class => 'small', :accesskey => accesskey(:quick_search) %>
         <% end %>
         <%= render_project_jump_box %>
     </div>
     <% end %>
 
-   <!-- <h1><%#= page_header_title %></h1>-->
-  <!--<h1><a href="/home" STYLE="text-decoration: none">NeuroML</a></h1>-->
-<!--<img src="../images/neuro.png" width="450" height="124" />-->
-<%= image_tag "neuro.png",:width=>"450",:height => "124" %>
-
+   <%= image_tag "neuro.png",:width=>"450",:height => "124" %>
 
     <% if display_main_menu?(@project) %>
     <div id="main-menu">
@@ -69,7 +81,6 @@
     </div>
     <% end %>
 </div>
-
 <!-- start of Menu -->
 <div id="menu">
           <ul>
@@ -173,21 +184,15 @@
 
      <!-- End of Menu -->
 
-<!--
-<div id="main" class="<%#= sidebar_content? ? '' : 'nosidebar' %>">
-    <div id="sidebar">
-        <%#= yield :sidebar %>
-        <%#= view_layouts_base_sidebar_hook_response %>
-    </div>
--->
-    <div id="content_others">
+<div id="main" >
+    
+    <div id="content">
         <%= render_flash_messages %>
         <%= yield %>
-        
-        
         <%= call_hook :view_layouts_base_content %>
         <div style="clear:both;"></div>
     </div>
+</div>
 
 <div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
 <div id="ajax-modal" style="display:none;"></div>
@@ -226,11 +231,7 @@ All rights reserved
       </div>
       
   </div>
-	<!--
-  <div class="bgl"><div class="bgr">
-    Powered by <%= link_to Redmine::Info.app_name, Redmine::Info.url %> &copy; 2006-2012 Jean-Philippe Lang
-  </div>
- -->
+	
   </div>
 </div>
 </div>
