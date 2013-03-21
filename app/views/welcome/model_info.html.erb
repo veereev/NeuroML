@@ -1,0 +1,128 @@
+<div class="overflowcontent">
+<h1>Model Information</h1>
+<table id="model_info">
+<tr>
+<td class="keyword">
+Model Id:
+</td>
+
+<td class="description">
+<%= @model_id %>
+</td>
+</tr>
+
+
+<tr>
+<td class="keyword">
+Model Type:
+</td>
+
+<td class="description">
+<%= @type %>
+</td>
+</tr>
+
+
+<tr>
+<td class="keyword">
+Model Name:
+</td>
+
+<td class="description">
+<%= @name %>
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+Author(s):
+</td>
+
+<td class="description">
+
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+Publication(s):
+</td>
+
+<td class="description">
+
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+Keyword(s):
+</td>
+
+<td class="description">
+
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+Associated Channel(s):
+</td>
+
+<td class="description">
+
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+Associated Network(s):
+</td>
+
+<td class="description">
+
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+Associated Cell(s):
+</td>
+
+<td class="description">
+
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+Associated Syanpse(s):
+</td>
+
+<td class="description">
+
+</td>
+</tr>
+
+<tr>
+<td class="keyword">
+<% if @type == "Cell" %>
+Morph ML File
+<% elsif @type == "Channel" %>
+Channel ML File
+<% elsif @type == "Network" %>
+Network ML File
+<% else %>
+Synapse ML File
+<% end %>
+</td>
+
+<td class="description">
+<%= @file %>
+</td>
+</tr>
+
+
+
+
+</table>
+</div>

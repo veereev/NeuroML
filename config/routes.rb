@@ -76,6 +76,8 @@ RedmineApp::Application.routes.draw do
   match 'search_result', :to => 'welcome#search_result', :as => 'search_result'
 match 'search_process_test', :to => 'welcome#search_process_test', :as => 'search_process_test'
  match 'search_process', :to => 'welcome#search_process', :as => 'search_process'  
+ match 'search_python', :to => 'welcome#search_python', :as => 'search_python'
+match 'model_info', :to => 'welcome#model_info', :as => 'model_info'
 match 'mission', :to => 'welcome#mission', :as => 'mission'
    match 'register', :to => 'account#register', :via => [:get, :post], :as => 'register'
    match 'workshop2009', :to => 'welcome#workshop2009', :as => 'workshop2009'

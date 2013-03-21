@@ -1,3 +1,26 @@
+<script type="text/javascript">
+var x=0;
+function togglesearch()
+{
+ if(x==1){
+ new Effect.SlideUp('advanced_search');
+ x=0;
+document.getElementById('all_of_these').value="";
+document.getElementById('this_exact_phrase').value="";
+document.getElementById('any_of_these_words').value="";
+document.getElementById('none_of_these_words').value="";
+document.getElementById('keyword_search_box').disabled=false;
+ }
+ else{
+document.getElementById('keyword_search_box').value="";
+document.getElementById('keyword_search_box').disabled=true; 
+
+ new Effect.SlideDown('advanced_search');
+ x=1;
+
+}
+}
+</script>
 <div class="overflowcontent">
 <h1>Keyword Search</h1>
 <div id="searchbox">
@@ -5,8 +28,29 @@
 <form id="myForm" onsubmit="return retrieve_results()">
 <label for="search_text">Enter the search keyword(s) here:</label>
 
-<input type="text" id="keyword_search_box" class="keyword_search_box" size="75" />
+<input type="text" id="keyword_search_box" class="keyword_search_box" size="30" />
 <input type="submit" value="Search" />
+<input type="button" value="Advanced Search" onclick="togglesearch();"/>
+
+<div id="advanced_search" style="display:none;">
+<fieldset>
+<legend>Advanced Search</legend>
+<label for="all_of_these">All of these words: &nbsp;&nbsp;&nbsp;</label>
+<input type="text" id="all_of_these"  name="all_of_these" size="30" />
+
+<br />
+<label for="this_exact_phrase">This exact phrase: &nbsp;&nbsp;&nbsp;</label>
+<input type="text" id="this_exact_phrase"  name="this_exact_phrase" size="30" />
+
+<br />
+<label for="any_of_these_words">Any of these words: &nbsp;</label>
+<input type="text" id="any_of_these_words" name="any_of_these_words" size="30" />
+
+<br />
+<label for="none_of_these_words">None of these words:</label>
+<input  type="text" id="none_of_these_words" name="none_of_these_words" size="30" />
+</fieldset>
+</div>
 </form>
 </div>
 <div id="search_container">
@@ -19,7 +63,7 @@
 </div>
 <div id="ontology_search_results">
 <div id="ontology_header">
-<h2>Ontology Search Results</h2>
+<h2>Neurolex Based Recommendations</h2>
 </div>
 <div id="ontology_results">
 </div>
@@ -32,9 +76,44 @@
 function retrieve_results()
 {
 var input_text=document.getElementById('keyword_search_box').value;
-new Ajax.Request("search_process"+"?q="+input_text,{onSuccess:function(request){
+var all=document.getElementById('all_of_these').value;
+var exact=document.getElementById('this_exact_phrase').value;
+var any=document.getElementById('any_of_these_words').value;
+var none=document.getElementById('none_of_these_words').value;
+new Ajax.Request("search_process"+"?q="+input_text+"&all="+all+"&exact="+exact+"&any="+any+"&none="+none,{onSuccess:function(request){
+document.getElementById('keyword_results').innerHTML="";
 $('keyword_results').update(request.responseText);
-}});
+},
+onLoading:function(){
+var key=document.getElementById("keyword_results");
+key.innerHTML=" ";
+var image1= new Image();
+image1.src="../images/loading.gif"
+key.appendChild(image1);
+
+
+
+
+}
+});
+
+
+
+new Ajax.Request("search_python"+"?q="+input_text,{onSuccess:function(request){
+document.getElementById('ontology_results').innerHTML="";
+$('ontology_results').update(request.responseText);
+},
+
+onLoading:function(){
+var ont=document.getElementById("ontology_results");
+ont.innerHTML=" ";
+var image= new Image();
+image.src="../images/loading.gif"
+ont.appendChild(image);
+ }
+});
+
+
 return false;
 
 

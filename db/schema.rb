@@ -51,6 +51,21 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
 
   add_index "auth_sources", ["id", "type"], :name => "index_auth_sources_on_id_and_type"
 
+  create_table "author_list_associations", :id => false, :force => true do |t|
+    t.integer "AuthorList_ID",                                 :null => false
+    t.integer "Person_ID",                                     :null => false
+    t.string  "is_translator", :limit => 1,   :default => "0", :null => false
+    t.string  "Comments",      :limit => 500
+  end
+
+  add_index "author_list_associations", ["AuthorList_ID"], :name => "FK_authorlist_idx"
+  add_index "author_list_associations", ["Person_ID"], :name => "FK_list_Person_idx"
+
+  create_table "author_lists", :primary_key => "AuthorList_ID", :force => true do |t|
+  end
+
+  add_index "author_lists", ["AuthorList_ID"], :name => "FK_Meta_Author_idx"
+
   create_table "boards", :force => true do |t|
     t.integer "project_id",                      :null => false
     t.string  "name",            :default => "", :null => false
@@ -64,6 +79,35 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
 
   add_index "boards", ["last_message_id"], :name => "index_boards_on_last_message_id"
   add_index "boards", ["project_id"], :name => "boards_project_id"
+
+  create_table "cell_channel_associations", :id => false, :force => true do |t|
+    t.string "Cell_ID",    :limit => 45,  :null => false
+    t.string "Channel_ID", :limit => 45,  :null => false
+    t.string "Comments",   :limit => 500
+  end
+
+  add_index "cell_channel_associations", ["Cell_ID"], :name => "CellID_idx"
+  add_index "cell_channel_associations", ["Cell_ID"], :name => "FK_cell_idx"
+  add_index "cell_channel_associations", ["Channel_ID"], :name => "ChannelID_idx"
+  add_index "cell_channel_associations", ["Channel_ID"], :name => "FK_channel_idx"
+
+  create_table "cell_synapse_associations", :id => false, :force => true do |t|
+    t.string "Cell_ID",    :limit => 45,  :null => false
+    t.string "Synapse_ID", :limit => 45,  :null => false
+    t.string "Comments",   :limit => 500
+  end
+
+  add_index "cell_synapse_associations", ["Cell_ID"], :name => "FK_Synapses_Cell_idx"
+  add_index "cell_synapse_associations", ["Synapse_ID"], :name => "FK_Synapses_Synapse_idx"
+
+  create_table "cells", :primary_key => "Cell_ID", :force => true do |t|
+    t.string   "Cell_Name",    :limit => 250
+    t.string   "MorphML_File", :limit => 250, :null => false
+    t.datetime "Upload_Time",                 :null => false
+    t.string   "Comments",     :limit => 500
+  end
+
+  add_index "cells", ["Cell_ID"], :name => "FK_Model_Cell_idx"
 
   create_table "changes", :force => true do |t|
     t.integer "changeset_id",                               :null => false
@@ -108,6 +152,15 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
   end
 
   add_index "changesets_issues", ["changeset_id", "issue_id"], :name => "changesets_issues_ids", :unique => true
+
+  create_table "channels", :primary_key => "Channel_ID", :force => true do |t|
+    t.string   "Channel_Name",   :limit => 250
+    t.string   "ChannelML_File", :limit => 250, :null => false
+    t.datetime "Upload_Time",                   :null => false
+    t.string   "Comments",       :limit => 500
+  end
+
+  add_index "channels", ["Channel_ID"], :name => "FK_Model_Channel_idx"
 
   create_table "comments", :force => true do |t|
     t.string   "commented_type", :limit => 30, :default => "", :null => false
@@ -296,6 +349,17 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
   add_index "journals", ["journalized_id"], :name => "index_journals_on_journalized_id"
   add_index "journals", ["user_id"], :name => "index_journals_on_user_id"
 
+  create_table "keyword_symbol_tables", :id => false, :force => true do |t|
+    t.string "Model_ID", :limit => 45,  :null => false
+    t.string "Keyword",  :limit => 500, :null => false
+  end
+
+  add_index "keyword_symbol_tables", ["Keyword"], :name => "keyword"
+  add_index "keyword_symbol_tables", ["Model_ID"], :name => "model_ID"
+
+  create_table "later_keyword_query_results", :primary_key => "Model_ID", :force => true do |t|
+  end
+
   create_table "member_roles", :force => true do |t|
     t.integer "member_id",      :null => false
     t.integer "role_id",        :null => false
@@ -336,6 +400,63 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
   add_index "messages", ["last_reply_id"], :name => "index_messages_on_last_reply_id"
   add_index "messages", ["parent_id"], :name => "messages_parent_id"
 
+  create_table "metadatas", :primary_key => "Metadata_ID", :force => true do |t|
+  end
+
+  create_table "model_metadata_associations", :id => false, :force => true do |t|
+    t.integer "Metadata_ID",                :null => false
+    t.string  "Model_ID",    :limit => 45,  :null => false
+    t.string  "Comments",    :limit => 500
+  end
+
+  add_index "model_metadata_associations", ["Metadata_ID"], :name => "FK_Metadata_idx"
+  add_index "model_metadata_associations", ["Model_ID"], :name => "FK_Model_idx"
+
+  create_table "models", :primary_key => "Model_ID", :force => true do |t|
+  end
+
+  create_table "network_cell_associations", :id => false, :force => true do |t|
+    t.string "Network_ID", :limit => 45,  :null => false
+    t.string "Cell_ID",    :limit => 45,  :null => false
+    t.string "Comments",   :limit => 500
+  end
+
+  add_index "network_cell_associations", ["Cell_ID"], :name => "FK_Network_cell_idx"
+  add_index "network_cell_associations", ["Cell_ID"], :name => "NetworkID_idx"
+  add_index "network_cell_associations", ["Network_ID"], :name => "FK_Network_idx"
+
+  create_table "network_cell_channel_association_views", :id => false, :force => true do |t|
+    t.string "Network_ID", :limit => 45
+    t.string "Cell_ID",    :limit => 45
+    t.string "Channel_ID", :limit => 45
+  end
+
+  create_table "network_synapse_associations", :id => false, :force => true do |t|
+    t.string "Network_ID", :limit => 45,  :null => false
+    t.string "Synapse_ID", :limit => 45,  :null => false
+    t.string "Comments",   :limit => 500
+  end
+
+  add_index "network_synapse_associations", ["Network_ID"], :name => "FK_Synapses_Network_idx"
+  add_index "network_synapse_associations", ["Synapse_ID"], :name => "FK_Synapses_Synapse_idx"
+
+  create_table "networks", :primary_key => "Network_ID", :force => true do |t|
+    t.string   "Network_Name",   :limit => 250
+    t.string   "NetworkML_File", :limit => 250, :null => false
+    t.datetime "Upload_Time",                   :null => false
+    t.string   "Comments",       :limit => 500
+  end
+
+  add_index "networks", ["Network_ID"], :name => "FK_Model_Network_idx"
+
+  create_table "neurolexs", :primary_key => "NeuroLex_ID", :force => true do |t|
+    t.string "NeuroLex_URI",  :limit => 500, :null => false
+    t.string "NeuroLex_Term", :limit => 250, :null => false
+    t.string "Comments",      :limit => 500
+  end
+
+  add_index "neurolexs", ["NeuroLex_ID"], :name => "FK_Meta_NeuroLex_idx"
+
   create_table "news", :force => true do |t|
     t.integer  "project_id"
     t.string   "title",          :limit => 60, :default => "", :null => false
@@ -365,6 +486,38 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
     t.string  "salt",       :null => false
   end
 
+  create_table "other_keywords", :primary_key => "Other_Keyword_ID", :force => true do |t|
+    t.string "Other_Keyword_term", :limit => 200, :null => false
+    t.string "Comments",           :limit => 500
+  end
+
+  add_index "other_keywords", ["Other_Keyword_ID"], :name => "FK_Meta_Other_idx"
+
+  create_table "out_query_results", :primary_key => "Model_ID", :force => true do |t|
+  end
+
+  create_table "parent_child_association_views", :id => false, :force => true do |t|
+    t.string "Parent", :limit => 45
+    t.string "Child",  :limit => 45
+  end
+
+  create_table "partof_tables", :id => false, :force => true do |t|
+    t.string "Parent", :limit => 45, :null => false
+    t.string "Child",  :limit => 45, :null => false
+  end
+
+  add_index "partof_tables", ["Child"], :name => "child"
+  add_index "partof_tables", ["Parent"], :name => "parent"
+
+  create_table "persons", :primary_key => "Person_ID", :force => true do |t|
+    t.string "Person_First_Name",  :limit => 100
+    t.string "Person_Middle_Name", :limit => 100
+    t.string "Person_Last_Name",   :limit => 100
+    t.string "Instituition",       :limit => 200
+    t.string "Email",              :limit => 200
+    t.string "Comments",           :limit => 500
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "name",        :default => "",   :null => false
     t.text     "description"
@@ -390,6 +543,14 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
   add_index "projects_trackers", ["project_id", "tracker_id"], :name => "projects_trackers_unique", :unique => true
   add_index "projects_trackers", ["project_id"], :name => "projects_trackers_project_id"
 
+  create_table "publications", :primary_key => "Publication_ID", :force => true do |t|
+    t.string "Pubmed_Ref", :limit => 250
+    t.string "Full_Title", :limit => 500
+    t.string "Comments",   :limit => 500
+  end
+
+  add_index "publications", ["Publication_ID"], :name => "FK_Meta_Publication_idx"
+
   create_table "queries", :force => true do |t|
     t.integer "project_id"
     t.string  "name",          :default => "",    :null => false
@@ -403,6 +564,17 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
 
   add_index "queries", ["project_id"], :name => "index_queries_on_project_id"
   add_index "queries", ["user_id"], :name => "index_queries_on_user_id"
+
+  create_table "query_results", :primary_key => "Model_ID", :force => true do |t|
+  end
+
+  create_table "references", :primary_key => "Reference_ID", :force => true do |t|
+    t.string "Reference_Resource", :limit => 100, :null => false
+    t.string "Reference_URI",      :limit => 500, :null => false
+    t.string "Comments",           :limit => 500
+  end
+
+  add_index "references", ["Reference_ID"], :name => "FK_Meta_Reference_idx"
 
   create_table "repositories", :force => true do |t|
     t.integer "project_id",                  :default => 0,     :null => false
@@ -442,6 +614,21 @@ ActiveRecord::Schema.define(:version => 20130206194314) do
   end
 
   add_index "settings", ["name"], :name => "index_settings_on_name"
+
+  create_table "synapses", :primary_key => "Synapse_ID", :force => true do |t|
+    t.string   "Synapse_Name", :limit => 250
+    t.string   "Synapse_File", :limit => 250, :null => false
+    t.datetime "Upload_Time",                 :null => false
+    t.string   "Comments",     :limit => 500
+  end
+
+  add_index "synapses", ["Synapse_ID"], :name => "FK_Model_Synapse_idx"
+
+  create_table "temp_later_keyword_query_results", :primary_key => "Model_ID", :force => true do |t|
+  end
+
+  create_table "temp_query_results", :primary_key => "Model_ID", :force => true do |t|
+  end
 
   create_table "time_entries", :force => true do |t|
     t.integer  "project_id",  :null => false

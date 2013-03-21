@@ -9,6 +9,5 @@ if Dir.glob(File.join(vendor_plugins_dir, "*")).any?
     "Redmine directory (#{File.join(Rails.root, "plugins")})"
   exit 1
 end
-require 'lib/activerecord-perverted'
 # Initialize the rails application
 RedmineApp::Application.initialize!
